@@ -1,0 +1,79 @@
+{
+  "project_info": {
+    "project_number": "395483047268",
+    "project_id": "strice-investment-tracker",
+    "storage_bucket": "strice-investment-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395483047268:android:4b1c1c16f0798252224671",
+        "android_client_info": {
+          "package_name": "com.minist.strice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395483047268-31th1udjkjuj1mjjm717k2cluh42bcm0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.minist.strice",
+            "certificate_hash": "567bd641c1a4dc733b129433f4ac55a37be66a92"
+          }
+        },
+        {
+          "client_id": "395483047268-7m3qvk71ebf2d05u2m0nevn9cfqh2ivd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.minist.strice",
+            "certificate_hash": "8b4eaf11612e738fdaa12ea3040870b1be83926c"
+          }
+        },
+        {
+          "client_id": "395483047268-9748sgaeprh24ce4dvfmmndmun5vv9m4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.minist.strice",
+            "certificate_hash": "eed1909983ae83f547199716879118b7f8d80cdd"
+          }
+        },
+        {
+          "client_id": "395483047268-cm2oct5n1i1ll79njmjohcpn5gjg1e5h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.minist.strice",
+            "certificate_hash": "a5a8f4b3ab0dfee7063f13add7c17932c8753a30"
+          }
+        },
+        {
+          "client_id": "395483047268-f337041b5feaaqc7rheac3c507u4b23h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.minist.strice",
+            "certificate_hash": "16e473c6945ef6369491454c8f021e01a7a27fc3"
+          }
+        },
+        {
+          "client_id": "395483047268-ksvjcpoml7mmsd8iaank9go6lrir469c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAY3XQp_mjuFsl8cPH5icEpFqQv_4rDG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395483047268-ksvjcpoml7mmsd8iaank9go6lrir469c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

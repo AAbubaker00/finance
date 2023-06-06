@@ -1,0 +1,186 @@
+Date : 2023-03-29 17:23:48
+Directory : c:\Users\A Azi A\Documents\App\finance
+Total : 84 files,  323 codes, 37 comments, 37 blanks, all 397 lines
+
+Languages
++-----------------+------------+------------+------------+------------+------------+
+| language        | files      | code       | comment    | blank      | total      |
++-----------------+------------+------------+------------+------------+------------+
+| JSON            |          4 |        301 |          0 |          3 |        304 |
+| XML             |         15 |        259 |         36 |         14 |        309 |
+| Groovy          |          4 |        109 |          3 |         27 |        139 |
+| YAML            |          1 |         50 |         96 |         12 |        158 |
+| Markdown        |          2 |         13 |          0 |          9 |         22 |
+| Swift           |          1 |         12 |          0 |          2 |         14 |
+| Java Properties |          2 |          9 |          1 |          2 |         12 |
+| C++             |          1 |          1 |          0 |          1 |          2 |
+| Dart            |         54 |       -431 |        -99 |        -33 |       -563 |
++-----------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                  | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                     |         84 |        323 |         37 |         37 |        397 |
+| . (Files)                                                                                                             |          2 |         60 |         96 |         19 |        175 |
+| android                                                                                                               |         16 |        291 |         38 |         39 |        368 |
+| android (Files)                                                                                                       |          4 |         45 |          0 |         12 |         57 |
+| android\app                                                                                                           |         11 |        241 |         37 |         26 |        304 |
+| android\app (Files)                                                                                                   |          2 |        139 |          3 |         16 |        158 |
+| android\app\src                                                                                                       |          9 |        102 |         34 |         10 |        146 |
+| android\app\src\debug                                                                                                 |          1 |          5 |          3 |          4 |         12 |
+| android\app\src\main                                                                                                  |          7 |         92 |         28 |          4 |        124 |
+| android\app\src\main (Files)                                                                                          |          1 |         35 |         10 |          4 |         49 |
+| android\app\src\main\res                                                                                              |          6 |         57 |         18 |          0 |         75 |
+| android\app\src\main\res\drawable                                                                                     |          1 |          9 |          0 |          0 |          9 |
+| android\app\src\main\res\drawable-night                                                                               |          1 |          9 |          0 |          0 |          9 |
+| android\app\src\main\res\drawable-night-v21                                                                           |          1 |          9 |          0 |          0 |          9 |
+| android\app\src\main\res\drawable-v21                                                                                 |          1 |          9 |          0 |          0 |          9 |
+| android\app\src\main\res\values                                                                                       |          1 |         11 |          9 |          0 |         20 |
+| android\app\src\main\res\values-night                                                                                 |          1 |         10 |          9 |          0 |         19 |
+| android\app\src\profile                                                                                               |          1 |          5 |          3 |          2 |         10 |
+| android\gradle                                                                                                        |          1 |          5 |          1 |          1 |          7 |
+| android\gradle\wrapper                                                                                                |          1 |          5 |          1 |          1 |          7 |
+| ios                                                                                                                   |         12 |        403 |          2 |         12 |        417 |
+| ios\Flutter                                                                                                           |          1 |         26 |          0 |          1 |         27 |
+| ios\Runner                                                                                                            |          9 |        361 |          2 |          9 |        372 |
+| ios\Runner (Files)                                                                                                    |          3 |         60 |          0 |          3 |         63 |
+| ios\Runner.xcodeproj                                                                                                  |          1 |          8 |          0 |          1 |          9 |
+| ios\Runner.xcodeproj\project.xcworkspace                                                                              |          1 |          8 |          0 |          1 |          9 |
+| ios\Runner.xcodeproj\project.xcworkspace\xcshareddata                                                                 |          1 |          8 |          0 |          1 |          9 |
+| ios\Runner.xcworkspace                                                                                                |          1 |          8 |          0 |          1 |          9 |
+| ios\Runner.xcworkspace\xcshareddata                                                                                   |          1 |          8 |          0 |          1 |          9 |
+| ios\Runner\Assets.xcassets                                                                                            |          4 |        233 |          0 |          5 |        238 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                                                         |          1 |        122 |          0 |          1 |        123 |
+| ios\Runner\Assets.xcassets\LaunchBackground.imageset                                                                  |          1 |         52 |          0 |          1 |         53 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                                                       |          2 |         59 |          0 |          3 |         62 |
+| ios\Runner\Base.lproj                                                                                                 |          2 |         68 |          2 |          1 |         71 |
+| lib                                                                                                                   |         54 |       -431 |        -99 |        -33 |       -563 |
+| lib (Files)                                                                                                           |          1 |          4 |         -1 |          0 |          3 |
+| lib\models                                                                                                            |          4 |         13 |          0 |          6 |         19 |
+| lib\models\account                                                                                                    |          1 |         -3 |          0 |          0 |         -3 |
+| lib\models\portfolio                                                                                                  |          1 |          0 |          0 |          1 |          1 |
+| lib\models\quote                                                                                                      |          1 |         10 |          0 |          2 |         12 |
+| lib\models\watchlist                                                                                                  |          1 |          6 |          0 |          3 |          9 |
+| lib\pages                                                                                                             |         24 |       -788 |        -16 |        -43 |       -847 |
+| lib\pages (Files)                                                                                                     |          1 |         58 |         -2 |          6 |         62 |
+| lib\pages\calender                                                                                                    |          2 |         79 |          2 |          5 |         86 |
+| lib\pages\community                                                                                                   |          6 |       -971 |        -11 |        -72 |     -1,054 |
+| lib\pages\home                                                                                                        |          4 |       -163 |          0 |        -23 |       -186 |
+| lib\pages\login_register                                                                                              |          3 |        -65 |         -1 |          0 |        -66 |
+| lib\pages\search                                                                                                      |          2 |          9 |          0 |          0 |          9 |
+| lib\pages\settings                                                                                                    |          3 |        -47 |         -3 |         -1 |        -51 |
+| lib\pages\viewPortfolio                                                                                               |          2 |        154 |         -1 |         23 |        176 |
+| lib\pages\watchlist                                                                                                   |          1 |        158 |          0 |         19 |        177 |
+| lib\services                                                                                                          |          5 |        -81 |        -19 |        -30 |       -130 |
+| lib\services\Login                                                                                                    |          1 |          2 |          0 |         -1 |          1 |
+| lib\services\Network                                                                                                  |          1 |        -31 |         -1 |         -5 |        -37 |
+| lib\services\database                                                                                                 |          1 |        -29 |         -2 |         -7 |        -38 |
+| lib\services\marketbeat                                                                                               |          1 |         -4 |          0 |          0 |         -4 |
+| lib\services\yahooapi                                                                                                 |          1 |        -19 |        -16 |        -17 |        -52 |
+| lib\shared                                                                                                            |         20 |        421 |        -63 |         34 |        392 |
+| lib\shared\Custome_Widgets                                                                                            |          7 |         33 |         -2 |          4 |         35 |
+| lib\shared\Custome_Widgets\botomSheet                                                                                 |          1 |         84 |          0 |          3 |         87 |
+| lib\shared\Custome_Widgets\button                                                                                     |          1 |         14 |          0 |          1 |         15 |
+| lib\shared\Custome_Widgets\cards                                                                                      |          4 |        -65 |          0 |          0 |        -65 |
+| lib\shared\Custome_Widgets\loading                                                                                    |          1 |          0 |         -2 |          0 |         -2 |
+| lib\shared\TextStyle                                                                                                  |          1 |          3 |          1 |          1 |          5 |
+| lib\shared\custom_scaffold                                                                                            |          1 |         41 |        -62 |          3 |        -18 |
+| lib\shared\dataObject                                                                                                 |          1 |          2 |          0 |          0 |          2 |
+| lib\shared\dividends                                                                                                  |          1 |          1 |          0 |          0 |          1 |
+| lib\shared\earnings                                                                                                   |          1 |         -1 |          0 |          0 |         -1 |
+| lib\shared\inputDecoration                                                                                            |          1 |         16 |          0 |          0 |         16 |
+| lib\shared\pageLoaders                                                                                                |          6 |        314 |          0 |         19 |        333 |
+| lib\shared\units                                                                                                      |          1 |         12 |          0 |          7 |         19 |
++-----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| filename                                                                                                              | language        | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| c:\Users\A Azi A\Documents\App\finance\README.md                                                                      | Markdown        |         10 |          0 |          7 |         17 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\build.gradle                                                       | Groovy          |         68 |          3 |         16 |         87 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\google-services.json                                               | JSON            |         71 |          0 |          0 |         71 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\debug\AndroidManifest.xml                                      | XML             |          5 |          3 |          4 |         12 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\AndroidManifest.xml                                       | XML             |         35 |         10 |          4 |         49 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\drawable-night-v21\launch_background.xml              | XML             |          9 |          0 |          0 |          9 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\drawable-night\launch_background.xml                  | XML             |          9 |          0 |          0 |          9 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\drawable-v21\launch_background.xml                    | XML             |          9 |          0 |          0 |          9 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\drawable\launch_background.xml                        | XML             |          9 |          0 |          0 |          9 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\values-night\styles.xml                               | XML             |         10 |          9 |          0 |         19 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\values\styles.xml                                     | XML             |         11 |          9 |          0 |         20 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\profile\AndroidManifest.xml                                    | XML             |          5 |          3 |          2 |         10 |
+| c:\Users\A Azi A\Documents\App\finance\android\build.gradle                                                           | Groovy          |         32 |          0 |          6 |         38 |
+| c:\Users\A Azi A\Documents\App\finance\android\gradle.properties                                                      | Java Properties |          4 |          0 |          1 |          5 |
+| c:\Users\A Azi A\Documents\App\finance\android\gradle\wrapper\gradle-wrapper.properties                               | Java Properties |          5 |          1 |          1 |          7 |
+| c:\Users\A Azi A\Documents\App\finance\android\settings.gradle                                                        | Groovy          |          8 |          0 |          4 |         12 |
+| c:\Users\A Azi A\Documents\App\finance\android\settings_aar.gradle                                                    | Groovy          |          1 |          0 |          1 |          2 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Flutter\AppFrameworkInfo.plist                                             | XML             |         26 |          0 |          1 |         27 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner.xcodeproj\project.xcworkspace\xcshareddata\IDEWorkspaceChecks.plist | XML             |          8 |          0 |          1 |          9 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner.xcworkspace\xcshareddata\IDEWorkspaceChecks.plist                   | XML             |          8 |          0 |          1 |          9 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\AppDelegate.swift                                                   | Swift           |         12 |          0 |          2 |         14 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json                    | JSON            |        122 |          0 |          1 |        123 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Assets.xcassets\LaunchBackground.imageset\Contents.json             | JSON            |         52 |          0 |          1 |         53 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json                  | JSON            |         56 |          0 |          1 |         57 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md                      | Markdown        |          3 |          0 |          2 |          5 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Base.lproj\LaunchScreen.storyboard                                  | XML             |         43 |          1 |          0 |         44 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Base.lproj\Main.storyboard                                          | XML             |         25 |          1 |          1 |         27 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Info.plist                                                          | XML             |         47 |          0 |          0 |         47 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Runner-Bridging-Header.h                                            | C++             |          1 |          0 |          1 |          2 |
+| c:\Users\A Azi A\Documents\App\finance\lib\main.dart                                                                  | Dart            |          4 |         -1 |          0 |          3 |
+| c:\Users\A Azi A\Documents\App\finance\lib\models\account\account.dart                                                | Dart            |         -3 |          0 |          0 |         -3 |
+| c:\Users\A Azi A\Documents\App\finance\lib\models\portfolio\portfolio.dart                                            | Dart            |          0 |          0 |          1 |          1 |
+| c:\Users\A Azi A\Documents\App\finance\lib\models\quote\quote.dart                                                    | Dart            |         10 |          0 |          2 |         12 |
+| c:\Users\A Azi A\Documents\App\finance\lib\models\watchlist\watchlist.dart                                            | Dart            |          6 |          0 |          3 |          9 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\calender\calender.dart                                               | Dart            |         81 |          2 |          5 |         88 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\calender\viewDividend.dart                                           | Dart            |         -2 |          0 |          0 |         -2 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\community.dart                                             | Dart            |        -97 |         -1 |         -7 |       -105 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\createPost.dart                                            | Dart            |       -104 |          0 |         -7 |       -111 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\postCard.dart                                              | Dart            |       -254 |         -4 |        -15 |       -273 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\report.dart                                                | Dart            |       -155 |          0 |        -12 |       -167 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\socialPostCard.dart                                        | Dart            |       -202 |         -1 |        -17 |       -220 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\viewPost.dart                                              | Dart            |       -159 |         -5 |        -14 |       -178 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\home\create.dart                                                     | Dart            |         10 |          0 |          1 |         11 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\home\dashboard.dart                                                  | Dart            |       -185 |          0 |        -31 |       -216 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\home\info.dart                                                       | Dart            |         14 |          1 |          8 |         23 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\home\passwordReset.dart                                              | Dart            |         -2 |         -1 |         -1 |         -4 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\login_register\login.dart                                            | Dart            |        -22 |          0 |          0 |        -22 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\login_register\signup.dart                                           | Dart            |        -39 |          0 |          1 |        -38 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\login_register\verify.dart                                           | Dart            |         -4 |         -1 |         -1 |         -6 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\search\search.dart                                                   | Dart            |         -8 |          0 |          0 |         -8 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\search\viewResult.dart                                               | Dart            |         17 |          0 |          0 |         17 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\settings\currency.dart                                               | Dart            |          1 |          0 |          1 |          2 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\settings\profile.dart                                                | Dart            |        -70 |         -3 |         -3 |        -76 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\settings\settings.dart                                               | Dart            |         22 |          0 |          1 |         23 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\viewPortfolio\viewHolding.dart                                       | Dart            |         11 |          0 |          3 |         14 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\viewPortfolio\viewPortfolio.dart                                     | Dart            |        143 |         -1 |         20 |        162 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\watchlist\watchlist.dart                                             | Dart            |        158 |          0 |         19 |        177 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\wrapper.dart                                                         | Dart            |         58 |         -2 |          6 |         62 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\Login\authentication.dart                                         | Dart            |          2 |          0 |         -1 |          1 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\Network\network.dart                                              | Dart            |        -31 |         -1 |         -5 |        -37 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\database\database.dart                                            | Dart            |        -29 |         -2 |         -7 |        -38 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\marketbeat\marketbeat.dart                                        | Dart            |         -4 |          0 |          0 |         -4 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\yahooapi\yahoo_api_provider.dart                                  | Dart            |        -19 |        -16 |        -17 |        -52 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\botomSheet\custome_Bottom_Sheet.dart                | Dart            |         84 |          0 |          3 |         87 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\button\cw_button.dart                               | Dart            |         14 |          0 |          1 |         15 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\cards\eventList.dart                                | Dart            |          1 |          0 |          0 |          1 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\cards\holdingCard.dart                              | Dart            |          6 |          0 |          0 |          6 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\cards\portfolioCard.dart                            | Dart            |        -36 |          0 |          0 |        -36 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\cards\portfolioList.dart                            | Dart            |        -36 |          0 |          0 |        -36 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\loading\loading.dart                                | Dart            |          0 |         -2 |          0 |         -2 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\TextStyle\customTextStyles.dart                                     | Dart            |          3 |          1 |          1 |          5 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\custom_scaffold\custom_navigator.dart                               | Dart            |         41 |        -62 |          3 |        -18 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\dataObject\data_object.dart                                         | Dart            |          2 |          0 |          0 |          2 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\dividends\dividends.dart                                            | Dart            |          1 |          0 |          0 |          1 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\earnings\earnings.dart                                              | Dart            |         -1 |          0 |          0 |         -1 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\inputDecoration\inputDecoration.dart                                | Dart            |         16 |          0 |          0 |         16 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\accountDeleted.dart                                     | Dart            |         61 |          0 |          3 |         64 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\additionConfirm.dart                                    | Dart            |         82 |          0 |          4 |         86 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\noHolding.dart                                          | Dart            |         34 |          0 |          4 |         38 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\noPortfolio.dart                                        | Dart            |         53 |          0 |          4 |         57 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\offline.dart                                            | Dart            |          2 |          0 |          0 |          2 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\removalConfirm.dart                                     | Dart            |         82 |          0 |          4 |         86 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\units\units.dart                                                    | Dart            |         12 |          0 |          7 |         19 |
+| c:\Users\A Azi A\Documents\App\finance\pubspec.yaml                                                                   | YAML            |         50 |         96 |         12 |        158 |
+| Total                                                                                                                 |                 |        323 |         37 |         37 |        397 |
++-----------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+

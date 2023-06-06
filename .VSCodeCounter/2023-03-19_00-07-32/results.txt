@@ -1,0 +1,155 @@
+Date : 2023-03-19 00:07:32
+Directory : c:\Users\A Azi A\Documents\App\finance\lib
+Total : 78 files,  8492 codes, 863 comments, 1036 blanks, all 10391 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         78 |      8,492 |        863 |      1,036 |     10,391 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                   | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                      |         78 |      8,492 |        863 |      1,036 |     10,391 |
+| . (Files)                                                                                              |          1 |         63 |          7 |          8 |         78 |
+| extensions                                                                                             |          1 |         71 |          3 |         14 |         88 |
+| models                                                                                                 |          4 |        108 |          1 |         31 |        140 |
+| models\account                                                                                         |          1 |         21 |          0 |          5 |         26 |
+| models\portfolio                                                                                       |          1 |         25 |          0 |          9 |         34 |
+| models\quote                                                                                           |          1 |         55 |          1 |         15 |         71 |
+| models\user                                                                                            |          1 |          7 |          0 |          2 |          9 |
+| pages                                                                                                  |         27 |      4,577 |        562 |        367 |      5,506 |
+| pages (Files)                                                                                          |          1 |        127 |          2 |         19 |        148 |
+| pages\calender                                                                                         |          2 |        490 |          0 |         46 |        536 |
+| pages\community                                                                                        |          6 |        971 |         11 |         72 |      1,054 |
+| pages\home                                                                                             |          4 |        541 |          3 |         58 |        602 |
+| pages\login_register                                                                                   |          4 |        726 |        236 |         47 |      1,009 |
+| pages\search                                                                                           |          2 |        426 |          0 |         27 |        453 |
+| pages\settings                                                                                         |          4 |        516 |          4 |         40 |        560 |
+| pages\viewPortfolio                                                                                    |          4 |        780 |        306 |         58 |      1,144 |
+| services                                                                                               |          6 |        789 |        131 |        254 |      1,174 |
+| services\Login                                                                                         |          1 |        158 |         10 |         45 |        213 |
+| services\Network                                                                                       |          1 |         45 |          1 |          8 |         54 |
+| services\database                                                                                      |          1 |        106 |          8 |         28 |        142 |
+| services\forex                                                                                         |          1 |         81 |          0 |         13 |         94 |
+| services\marketbeat                                                                                    |          1 |        129 |         30 |         44 |        203 |
+| services\yahooapi                                                                                      |          1 |        270 |         82 |        116 |        468 |
+| shared                                                                                                 |         39 |      2,884 |        159 |        362 |      3,405 |
+| shared\CustomeArcRenderer                                                                              |          1 |         35 |         19 |          4 |         58 |
+| shared\Custome_Widgets                                                                                 |         11 |        813 |          3 |         80 |        896 |
+| shared\Custome_Widgets\ListView                                                                        |          1 |         42 |          0 |          9 |         51 |
+| shared\Custome_Widgets\botomSheet                                                                      |          1 |         60 |          0 |          4 |         64 |
+| shared\Custome_Widgets\button                                                                          |          1 |        172 |          1 |         18 |        191 |
+| shared\Custome_Widgets\cards                                                                           |          5 |        361 |          0 |         20 |        381 |
+| shared\Custome_Widgets\divider.dart                                                                    |          1 |         15 |          0 |          5 |         20 |
+| shared\Custome_Widgets\loading                                                                         |          1 |         42 |          2 |         10 |         54 |
+| shared\Custome_Widgets\scaffold                                                                        |          1 |        121 |          0 |         14 |        135 |
+| shared\GeneralObject                                                                                   |          1 |         43 |          0 |          6 |         49 |
+| shared\TextStyle                                                                                       |          1 |        121 |         11 |         29 |        161 |
+| shared\ads                                                                                             |          2 |         86 |          3 |         18 |        107 |
+| shared\charts                                                                                          |          1 |        144 |          7 |          7 |        158 |
+| shared\customPageRoute                                                                                 |          1 |         54 |          0 |         11 |         65 |
+| shared\custom_scaffold                                                                                 |          2 |        302 |        102 |         42 |        446 |
+| shared\dataObject                                                                                      |          1 |         49 |          0 |         17 |         66 |
+| shared\dateFormat                                                                                      |          1 |        223 |          1 |         14 |        238 |
+| shared\decoration                                                                                      |          1 |         65 |         12 |         13 |         90 |
+| shared\disclaimers                                                                                     |          2 |         34 |          0 |          6 |         40 |
+| shared\dividends                                                                                       |          1 |        158 |          0 |         13 |        171 |
+| shared\earnings                                                                                        |          1 |         90 |          0 |         11 |        101 |
+| shared\files                                                                                           |          1 |         63 |          0 |         15 |         78 |
+| shared\inputDecoration                                                                                 |          1 |         30 |          1 |          4 |         35 |
+| shared\pageLoaders                                                                                     |          5 |        268 |          0 |         19 |        287 |
+| shared\permissions                                                                                     |          1 |         42 |          0 |          8 |         50 |
+| shared\printFunctions                                                                                  |          1 |         15 |          0 |          3 |         18 |
+| shared\sample                                                                                          |          1 |         75 |          0 |         12 |         87 |
+| shared\themes                                                                                          |          1 |        160 |          0 |         15 |        175 |
+| shared\units                                                                                           |          1 |         14 |          0 |         15 |         29 |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                               | language | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\A Azi A\Documents\App\finance\lib\extensions\stringExt.dart                                   | Dart     |         71 |          3 |         14 |         88 |
+| c:\Users\A Azi A\Documents\App\finance\lib\main.dart                                                   | Dart     |         63 |          7 |          8 |         78 |
+| c:\Users\A Azi A\Documents\App\finance\lib\models\account\account.dart                                 | Dart     |         21 |          0 |          5 |         26 |
+| c:\Users\A Azi A\Documents\App\finance\lib\models\portfolio\portfolio.dart                             | Dart     |         25 |          0 |          9 |         34 |
+| c:\Users\A Azi A\Documents\App\finance\lib\models\quote\quote.dart                                     | Dart     |         55 |          1 |         15 |         71 |
+| c:\Users\A Azi A\Documents\App\finance\lib\models\user\user.dart                                       | Dart     |          7 |          0 |          2 |          9 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\calender\calender.dart                                | Dart     |        214 |          0 |         41 |        255 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\calender\viewDividend.dart                            | Dart     |        276 |          0 |          5 |        281 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\community.dart                              | Dart     |         97 |          1 |          7 |        105 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\createPost.dart                             | Dart     |        104 |          0 |          7 |        111 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\postCard.dart                               | Dart     |        254 |          4 |         15 |        273 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\report.dart                                 | Dart     |        155 |          0 |         12 |        167 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\socialPostCard.dart                         | Dart     |        202 |          1 |         17 |        220 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\community\viewPost.dart                               | Dart     |        159 |          5 |         14 |        178 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\home\create.dart                                      | Dart     |         89 |          0 |          8 |         97 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\home\dashboard.dart                                   | Dart     |        185 |          0 |         31 |        216 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\home\info.dart                                        | Dart     |        139 |          2 |          9 |        150 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\home\passwordReset.dart                               | Dart     |        128 |          1 |         10 |        139 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\login_register\agreements.dart                        | Dart     |         32 |        232 |          7 |        271 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\login_register\login.dart                             | Dart     |        266 |          2 |         11 |        279 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\login_register\signup.dart                            | Dart     |        344 |          1 |         17 |        362 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\login_register\verify.dart                            | Dart     |         84 |          1 |         12 |         97 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\search\search.dart                                    | Dart     |        120 |          0 |          8 |        128 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\search\viewResult.dart                                | Dart     |        306 |          0 |         19 |        325 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\settings\currency.dart                                | Dart     |         85 |          0 |          7 |         92 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\settings\profile.dart                                 | Dart     |        191 |          3 |         15 |        209 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\settings\settings.dart                                | Dart     |        192 |          1 |         15 |        208 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\settings\settingsOptionCard.dart                      | Dart     |         48 |          0 |          3 |         51 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\viewPortfolio\allocations.dart                        | Dart     |        219 |        305 |         34 |        558 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\viewPortfolio\sectorCard.dart                         | Dart     |        119 |          0 |          4 |        123 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\viewPortfolio\viewHolding.dart                        | Dart     |        294 |          0 |         15 |        309 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\viewPortfolio\viewPortfolio.dart                      | Dart     |        148 |          1 |          5 |        154 |
+| c:\Users\A Azi A\Documents\App\finance\lib\pages\wrapper.dart                                          | Dart     |        127 |          2 |         19 |        148 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\Login\authentication.dart                          | Dart     |        158 |         10 |         45 |        213 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\Network\network.dart                               | Dart     |         45 |          1 |          8 |         54 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\database\database.dart                             | Dart     |        106 |          8 |         28 |        142 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\forex\forexConversion.dart                         | Dart     |         81 |          0 |         13 |         94 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\marketbeat\marketbeat.dart                         | Dart     |        129 |         30 |         44 |        203 |
+| c:\Users\A Azi A\Documents\App\finance\lib\services\yahooapi\yahoo_api_provider.dart                   | Dart     |        270 |         82 |        116 |        468 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\CustomeArcRenderer\custome_Arc_Renderer.dart         | Dart     |         35 |         19 |          4 |         58 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\ListView\cw_listview.dart            | Dart     |         42 |          0 |          9 |         51 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\botomSheet\custome_Bottom_Sheet.dart | Dart     |         60 |          0 |          4 |         64 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\button\cw_button.dart                | Dart     |        172 |          1 |         18 |        191 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\cards\eventList.dart                 | Dart     |         68 |          0 |          4 |         72 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\cards\holdingCard.dart               | Dart     |         74 |          0 |          4 |         78 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\cards\portfolioCard.dart             | Dart     |         93 |          0 |          4 |         97 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\cards\portfolioList.dart             | Dart     |         72 |          0 |          4 |         76 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\cards\searchResultCard.dart          | Dart     |         54 |          0 |          4 |         58 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\divider.dart\divider.dart            | Dart     |         15 |          0 |          5 |         20 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\loading\loading.dart                 | Dart     |         42 |          2 |         10 |         54 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\Custome_Widgets\scaffold\cw_scaffold.dart            | Dart     |        121 |          0 |         14 |        135 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\GeneralObject\generalObject.dart                     | Dart     |         43 |          0 |          6 |         49 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\TextStyle\customTextStyles.dart                      | Dart     |        121 |         11 |         29 |        161 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\ads\ad.dart                                          | Dart     |         37 |          0 |          4 |         41 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\ads\ad_helper.dart                                   | Dart     |         49 |          3 |         14 |         66 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\charts\charts.dart                                   | Dart     |        144 |          7 |          7 |        158 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\customPageRoute\customePageRoute.dart                | Dart     |         54 |          0 |         11 |         65 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\custom_scaffold\custom_navigator.dart                | Dart     |        160 |         76 |         11 |        247 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\custom_scaffold\custom_scaffold.dart                 | Dart     |        142 |         26 |         31 |        199 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\dataObject\data_object.dart                          | Dart     |         49 |          0 |         17 |         66 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\dateFormat\customeDateFormatter.dart                 | Dart     |        223 |          1 |         14 |        238 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\decoration\customDecoration.dart                     | Dart     |         65 |         12 |         13 |         90 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\disclaimers\disclaimers.dart                         | Dart     |          3 |          0 |          2 |          5 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\disclaimers\disclaimersWidget.dart                   | Dart     |         31 |          0 |          4 |         35 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\dividends\dividends.dart                             | Dart     |        158 |          0 |         13 |        171 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\earnings\earnings.dart                               | Dart     |         90 |          0 |         11 |        101 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\files\fileHandler.dart                               | Dart     |         63 |          0 |         15 |         78 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\inputDecoration\inputDecoration.dart                 | Dart     |         30 |          1 |          4 |         35 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\noEvents.dart                            | Dart     |         52 |          0 |          4 |         56 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\noPosts.dart                             | Dart     |         44 |          0 |          4 |         48 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\noSearchResult.dart                      | Dart     |         60 |          0 |          4 |         64 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\offline.dart                             | Dart     |         54 |          0 |          3 |         57 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\pageLoaders\searchWelcome.dart                       | Dart     |         58 |          0 |          4 |         62 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\permissions\getPermissions.dart                      | Dart     |         42 |          0 |          8 |         50 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\printFunctions\custom_Print_Functions.dart           | Dart     |         15 |          0 |          3 |         18 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\sample\sampleData.dart                               | Dart     |         75 |          0 |         12 |         87 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\themes\themes.dart                                   | Dart     |        160 |          0 |         15 |        175 |
+| c:\Users\A Azi A\Documents\App\finance\lib\shared\units\units.dart                                     | Dart     |         14 |          0 |         15 |         29 |
+| Total                                                                                                  |          |      8,492 |        863 |      1,036 |     10,391 |
++--------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

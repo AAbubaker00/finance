@@ -1,0 +1,95 @@
+Date : 2023-03-15 22:27:04
+Directory : c:\Users\A Azi A\Documents\App\finance\lib
+Total : 30 files,  -758 codes, -136 comments, -73 blanks, all -967 lines
+
+Languages
++-----------------+------------+------------+------------+------------+------------+
+| language        | files      | code       | comment    | blank      | total      |
++-----------------+------------+------------+------------+------------+------------+
+| C++             |          1 |         -1 |          0 |         -1 |         -2 |
+| Java Properties |          2 |         -9 |         -1 |         -2 |        -12 |
+| Swift           |          1 |        -12 |          0 |         -2 |        -14 |
+| Markdown        |          2 |        -13 |          0 |         -9 |        -22 |
+| YAML            |          1 |        -50 |        -96 |        -12 |       -158 |
+| Groovy          |          4 |       -109 |         -3 |        -27 |       -139 |
+| XML             |         15 |       -263 |        -36 |        -17 |       -316 |
+| JSON            |          4 |       -301 |          0 |         -3 |       -304 |
++-----------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                  | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                     |         30 |       -758 |       -136 |        -73 |       -967 |
+| ..                                                                                                                    |         30 |       -758 |       -136 |        -73 |       -967 |
+| .. (Files)                                                                                                            |          2 |        -60 |        -96 |        -19 |       -175 |
+| ..\android                                                                                                            |         16 |       -295 |        -38 |        -42 |       -375 |
+| ..\android (Files)                                                                                                    |          4 |        -45 |          0 |        -12 |        -57 |
+| ..\android\app                                                                                                        |         11 |       -245 |        -37 |        -29 |       -311 |
+| ..\android\app (Files)                                                                                                |          2 |       -139 |         -3 |        -16 |       -158 |
+| ..\android\app\src                                                                                                    |          9 |       -106 |        -34 |        -13 |       -153 |
+| ..\android\app\src\debug                                                                                              |          1 |         -5 |         -3 |         -4 |        -12 |
+| ..\android\app\src\main                                                                                               |          7 |        -96 |        -28 |         -7 |       -131 |
+| ..\android\app\src\main (Files)                                                                                       |          1 |        -39 |        -10 |         -7 |        -56 |
+| ..\android\app\src\main\res                                                                                           |          6 |        -57 |        -18 |          0 |        -75 |
+| ..\android\app\src\main\res\drawable                                                                                  |          1 |         -9 |          0 |          0 |         -9 |
+| ..\android\app\src\main\res\drawable-night                                                                            |          1 |         -9 |          0 |          0 |         -9 |
+| ..\android\app\src\main\res\drawable-night-v21                                                                        |          1 |         -9 |          0 |          0 |         -9 |
+| ..\android\app\src\main\res\drawable-v21                                                                              |          1 |         -9 |          0 |          0 |         -9 |
+| ..\android\app\src\main\res\values                                                                                    |          1 |        -11 |         -9 |          0 |        -20 |
+| ..\android\app\src\main\res\values-night                                                                              |          1 |        -10 |         -9 |          0 |        -19 |
+| ..\android\app\src\profile                                                                                            |          1 |         -5 |         -3 |         -2 |        -10 |
+| ..\android\gradle                                                                                                     |          1 |         -5 |         -1 |         -1 |         -7 |
+| ..\android\gradle\wrapper                                                                                             |          1 |         -5 |         -1 |         -1 |         -7 |
+| ..\ios                                                                                                                |         12 |       -403 |         -2 |        -12 |       -417 |
+| ..\ios\Flutter                                                                                                        |          1 |        -26 |          0 |         -1 |        -27 |
+| ..\ios\Runner                                                                                                         |          9 |       -361 |         -2 |         -9 |       -372 |
+| ..\ios\Runner (Files)                                                                                                 |          3 |        -60 |          0 |         -3 |        -63 |
+| ..\ios\Runner.xcodeproj                                                                                               |          1 |         -8 |          0 |         -1 |         -9 |
+| ..\ios\Runner.xcodeproj\project.xcworkspace                                                                           |          1 |         -8 |          0 |         -1 |         -9 |
+| ..\ios\Runner.xcodeproj\project.xcworkspace\xcshareddata                                                              |          1 |         -8 |          0 |         -1 |         -9 |
+| ..\ios\Runner.xcworkspace                                                                                             |          1 |         -8 |          0 |         -1 |         -9 |
+| ..\ios\Runner.xcworkspace\xcshareddata                                                                                |          1 |         -8 |          0 |         -1 |         -9 |
+| ..\ios\Runner\Assets.xcassets                                                                                         |          4 |       -233 |          0 |         -5 |       -238 |
+| ..\ios\Runner\Assets.xcassets\AppIcon.appiconset                                                                      |          1 |       -122 |          0 |         -1 |       -123 |
+| ..\ios\Runner\Assets.xcassets\LaunchBackground.imageset                                                               |          1 |        -52 |          0 |         -1 |        -53 |
+| ..\ios\Runner\Assets.xcassets\LaunchImage.imageset                                                                    |          2 |        -59 |          0 |         -3 |        -62 |
+| ..\ios\Runner\Base.lproj                                                                                              |          2 |        -68 |         -2 |         -1 |        -71 |
++-----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| filename                                                                                                              | language        | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| c:\Users\A Azi A\Documents\App\finance\README.md                                                                      | Markdown        |        -10 |          0 |         -7 |        -17 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\build.gradle                                                       | Groovy          |        -68 |         -3 |        -16 |        -87 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\google-services.json                                               | JSON            |        -71 |          0 |          0 |        -71 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\debug\AndroidManifest.xml                                      | XML             |         -5 |         -3 |         -4 |        -12 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\AndroidManifest.xml                                       | XML             |        -39 |        -10 |         -7 |        -56 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\drawable-night-v21\launch_background.xml              | XML             |         -9 |          0 |          0 |         -9 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\drawable-night\launch_background.xml                  | XML             |         -9 |          0 |          0 |         -9 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\drawable-v21\launch_background.xml                    | XML             |         -9 |          0 |          0 |         -9 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\drawable\launch_background.xml                        | XML             |         -9 |          0 |          0 |         -9 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\values-night\styles.xml                               | XML             |        -10 |         -9 |          0 |        -19 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\main\res\values\styles.xml                                     | XML             |        -11 |         -9 |          0 |        -20 |
+| c:\Users\A Azi A\Documents\App\finance\android\app\src\profile\AndroidManifest.xml                                    | XML             |         -5 |         -3 |         -2 |        -10 |
+| c:\Users\A Azi A\Documents\App\finance\android\build.gradle                                                           | Groovy          |        -32 |          0 |         -6 |        -38 |
+| c:\Users\A Azi A\Documents\App\finance\android\gradle.properties                                                      | Java Properties |         -4 |          0 |         -1 |         -5 |
+| c:\Users\A Azi A\Documents\App\finance\android\gradle\wrapper\gradle-wrapper.properties                               | Java Properties |         -5 |         -1 |         -1 |         -7 |
+| c:\Users\A Azi A\Documents\App\finance\android\settings.gradle                                                        | Groovy          |         -8 |          0 |         -4 |        -12 |
+| c:\Users\A Azi A\Documents\App\finance\android\settings_aar.gradle                                                    | Groovy          |         -1 |          0 |         -1 |         -2 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Flutter\AppFrameworkInfo.plist                                             | XML             |        -26 |          0 |         -1 |        -27 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner.xcodeproj\project.xcworkspace\xcshareddata\IDEWorkspaceChecks.plist | XML             |         -8 |          0 |         -1 |         -9 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner.xcworkspace\xcshareddata\IDEWorkspaceChecks.plist                   | XML             |         -8 |          0 |         -1 |         -9 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\AppDelegate.swift                                                   | Swift           |        -12 |          0 |         -2 |        -14 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json                    | JSON            |       -122 |          0 |         -1 |       -123 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Assets.xcassets\LaunchBackground.imageset\Contents.json             | JSON            |        -52 |          0 |         -1 |        -53 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json                  | JSON            |        -56 |          0 |         -1 |        -57 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md                      | Markdown        |         -3 |          0 |         -2 |         -5 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Base.lproj\LaunchScreen.storyboard                                  | XML             |        -43 |         -1 |          0 |        -44 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Base.lproj\Main.storyboard                                          | XML             |        -25 |         -1 |         -1 |        -27 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Info.plist                                                          | XML             |        -47 |          0 |          0 |        -47 |
+| c:\Users\A Azi A\Documents\App\finance\ios\Runner\Runner-Bridging-Header.h                                            | C++             |         -1 |          0 |         -1 |         -2 |
+| c:\Users\A Azi A\Documents\App\finance\pubspec.yaml                                                                   | YAML            |        -50 |        -96 |        -12 |       -158 |
+| Total                                                                                                                 |                 |       -758 |       -136 |        -73 |       -967 |
++-----------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
