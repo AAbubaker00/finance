@@ -1,0 +1,1 @@
+data: Theme.of(context).copyWith(accentColor: ColorPalette.fontColor, unselectedWidgetColor:  ColorPalette.fontColor..withOpacity(0.8))

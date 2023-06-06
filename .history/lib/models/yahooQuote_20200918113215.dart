@@ -1,0 +1,8 @@
+class YahooQuote{
+  
+    t
+
+    YahooQuote(){
+
+    }
+}

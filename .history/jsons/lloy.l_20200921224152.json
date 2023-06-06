@@ -1,0 +1,81 @@
+{
+  "address1": "25 Gresham Street",
+  "city": "London",
+  "zip": "EC2V 7HN",
+  "country": "United Kingdom",
+  "phone": "44 20 7626 1500",
+  "website": "http://www.lloydsbankinggroup.com",
+  "industry": "Banks—Regional",
+  "sector": "Financial Services",
+  "longBusinessSummary": "Lloyds Banking Group plc provides range of banking and financial services in the United Kingdom and internationally. It operates through three segments: Retail; Commercial Banking; and Insurance and Wealth. The Retail segment offers a range of financial service products, including current accounts, savings accounts, mortgages, motor finance, unsecured loans, leasing solutions, and credit cards to personal and small business customers. The Commercial Banking segment provides lending, transactional banking, working capital management, risk management, term lending, and debt capital markets services to corporate clients. The Insurance and Wealth segment offers life, home, and car insurance products; pensions and investment products; and advisory services in areas, including investments, planning for retirement, and protection and inheritance tax planning, as well as personal lending. It also provides digital, telephony, and mobile services. The company offers its products and services under the Lloyds Bank, Halifax, Black Horse, Agricultural Mortgage Corporation, Schroders Personal Wealth, Lex Autolease, Birmingham Midshires, MBNA, LDC, Bank of Scotland, and Scottish Widows brands. Lloyds Banking Group plc was founded in 1695 and is headquartered in London, the United Kingdom.",
+  "fullTimeEmployees": 63069,
+  "companyOfficers": [
+    {
+      "maxAge": 1,
+      "name": "Mr. AntÃ³nio Mota de Sousa Horta-OsÃ³rio",
+      "age": 55,
+      "title": "Group Chief Exec. & Exec. Director",
+      "yearBorn": 1964,
+      "fiscalYear": 2019,
+      "totalPay": {
+        "raw": 1856000,
+        "fmt": "1.86M",
+        "longFmt": "1,856,000"
+      },
+      "exercisedValue": { "raw": 0, "fmt": null, "longFmt": "0" },
+      "unexercisedValue": { "raw": 0, "fmt": null, "longFmt": "0" }
+    },
+    {
+      "maxAge": 1,
+      "name": "Mr. William Leon David Chalmers",
+      "age": 51,
+      "title": "CFO & Exec. Director",
+      "yearBorn": 1968,
+      "fiscalYear": 2019,
+      "totalPay": {
+        "raw": 5355400,
+        "fmt": "5.36M",
+        "longFmt": "5,355,400"
+      },
+      "exercisedValue": { "raw": 0, "fmt": null, "longFmt": "0" },
+      "unexercisedValue": { "raw": 0, "fmt": null, "longFmt": "0" }
+    },
+    {
+      "maxAge": 1,
+      "name": "Mr. Juan  ColombÃ¡s",
+      "age": 57,
+      "title": "COO & Exec. Director",
+      "yearBorn": 1962,
+      "fiscalYear": 2019,
+      "totalPay": {
+        "raw": 1069000,
+        "fmt": "1.07M",
+        "longFmt": "1,069,000"
+      },
+      "exercisedValue": { "raw": 0, "fmt": null, "longFmt": "0" },
+      "unexercisedValue": { "raw": 0, "fmt": null, "longFmt": "0" }
+    },
+    {
+      "maxAge": 1,
+      "name": "Markus  Stadalmann",
+      "title": "Chief Investment Officer",
+      "exercisedValue": { "raw": 0, "fmt": null, "longFmt": "0" },
+      "unexercisedValue": { "raw": 0, "fmt": null, "longFmt": "0" }
+    },
+    {
+      "maxAge": 1,
+      "name": "Mr. John  Chambers",
+      "title": "Group Chief Information Officer",
+      "exercisedValue": { "raw": 0, "fmt": null, "longFmt": "0" },
+      "unexercisedValue": { "raw": 0, "fmt": null, "longFmt": "0" }
+    }
+  ],
+  "auditRisk": 10,
+  "boardRisk": 3,
+  "compensationRisk": 9,
+  "shareHolderRightsRisk": 1,
+  "overallRisk": 10,
+  "governanceEpochDate": 1575849600,
+  "compensationAsOfEpochDate": 1577750400,
+  "maxAge": 86400
+}

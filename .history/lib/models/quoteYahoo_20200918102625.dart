@@ -1,0 +1,82 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'quoteYahoo.g.dart';
+
+@JsonSerializable()
+class QuoteYahoo {
+    QuoteYahoo();
+
+    String language;
+    String region;
+    String quoteType;
+    String quoteSourceName;
+    bool triggerable;
+    String currency;
+    num regularMarketChange;
+    num regularMarketChangePercent;
+    num regularMarketTime;
+    num regularMarketPrice;
+    num regularMarketDayHigh;
+    String regularMarketDayRange;
+    num regularMarketDayLow;
+    num regularMarketVolume;
+    num regularMarketPreviousClose;
+    num bid;
+    num ask;
+    num bidSize;
+    num askSize;
+    String fullExchangeName;
+    String financialCurrency;
+    num regularMarketOpen;
+    num averageDailyVolume3Month;
+    num averageDailyVolume10Day;
+    num fiftyTwoWeekLowChange;
+    num fiftyTwoWeekLowChangePercent;
+    String fiftyTwoWeekRange;
+    num fiftyTwoWeekHighChange;
+    num fiftyTwoWeekHighChangePercent;
+    num fiftyTwoWeekLow;
+    num fiftyTwoWeekHigh;
+    num dividendDate;
+    num earningsTimestamp;
+    num earningsTimestampStart;
+    num earningsTimestampEnd;
+    num trailingAnnualDividendRate;
+    num trailingPE;
+    num trailingAnnualDividendYield;
+    num epsTrailingTwelveMonths;
+    num epsForward;
+    num epsCurrentYear;
+    num priceEpsCurrentYear;
+    num sharesOutstanding;
+    num bookValue;
+    num fiftyDayAverage;
+    num fiftyDayAverageChange;
+    num fiftyDayAverageChangePercent;
+    num twoHundredDayAverage;
+    num twoHundredDayAverageChange;
+    num twoHundredDayAverageChangePercent;
+    num marketCap;
+    num forwardPE;
+    num priceToBook;
+    num sourceInterval;
+    num exchangeDataDelayedBy;
+    String marketState;
+    num gmtOffSetMilliseconds;
+    bool esgPopulated;
+    String exchange;
+    String shortName;
+    String longName;
+    String messageBoardId;
+    String exchangeTimezoneName;
+    String market;
+    bool tradeable;
+    String exchangeTimezoneShortName;
+    num firstTradeDateMilliseconds;
+    num priceHint;
+    String displayName;
+    String symbol;
+    
+    factory QuoteYahoo.fromJson(Map<String,dynamic> json) => _$QuoteYahooFromJson(json);
+    Map<String, dynamic> toJson() => _$QuoteYahooToJson(this);
+}

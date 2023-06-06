@@ -1,0 +1,28 @@
+import 'package:Valuid/shared/TextStyle/customTextStyles.dart';
+import 'package:Valuid/shared/themes/themes.dart';
+import 'package:flutter/material.dart';
+
+class CustomInputDecoration {
+  final labelText;
+  final BuildContext context;
+
+  CustomInputDecoration(this.labelText, this.context);
+
+  InputDecoration mainInputDecoration;
+
+  getMainInputDecoration() {
+    return mainInputDecoration = InputDecoration(
+      border: InputBorder.none,
+      contentPadding: EdgeInsets.only(
+        left: 10,
+      ),
+      errorBorder: InputBorder.none,
+      disabledBorder: InputBorder.none,
+      hintStyle: CustomTextStyles( context)
+          .portfolioNameStyle
+          .copyWith(color: textColor, fontWeight: FontWeight.w400),
+      isDense: true,
+      hintText: labelText,
+    );
+  }
+}

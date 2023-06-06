@@ -1,0 +1,13 @@
+#Tue Jun 06 19:14:12 BST 2023
+base.0=C\:\\Users\\A Azi A\\Documents\\App\\finance\\build\\app\\intermediates\\dex\\profile\\mergeDexProfile\\classes.dex
+base.1=C\:\\Users\\A Azi A\\Documents\\App\\finance\\build\\app\\intermediates\\dex\\profile\\mergeDexProfile\\classes2.dex
+base.2=C\:\\Users\\A Azi A\\Documents\\App\\finance\\build\\app\\intermediates\\dex\\profile\\mergeDexProfile\\classes3.dex
+base.3=C\:\\Users\\A Azi A\\Documents\\App\\finance\\build\\app\\intermediates\\dex\\profile\\mergeDexProfile\\classes4.dex
+path.0=classes.dex
+path.1=classes2.dex
+path.2=classes3.dex
+path.3=classes4.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
+renamed.3=classes4.dex

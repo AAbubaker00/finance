@@ -1,0 +1,374 @@
+import 'package:finance/custome_Widgets/_navigationbar.dart';
+import 'package:finance/custome_Widgets/_stockwindow.dart';
+import 'package:finance/sections/charts.dart';
+import 'package:flutter/material.dart';
+import 'package:sticky_headers/sticky_headers.dart';
+
+import 'package:flip_card/flip_card.dart' as Flip;
+import 'dart:ui';
+
+class ViewPortfolio extends StatefulWidget {
+  @override
+  _ViewPortfolioState createState() => _ViewPortfolioState();
+}
+
+class _ViewPortfolioState extends State<ViewPortfolio>
+    with SingleTickerProviderStateMixin {
+  List stocks = [
+    "apple",
+    "apple",
+    "apple",
+    "apple",
+  ];
+
+  GlobalKey<Flip.FlipCardState> flipCardKey = GlobalKey<Flip.FlipCardState>();
+  double _fromTop;
+
+  ScrollController _scrollViewController = ScrollController();
+  TabController _tabController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    _tabController = TabController(length: 2, vsync: this, initialIndex: 0);
+
+    double aspectRatio =
+        (window.physicalSize.height / window.physicalSize.width);
+
+    print(aspectRatio);
+    print(window.physicalSize.height);
+    print(window.physicalSize.width);
+
+    if (aspectRatio >= 1.7) {
+      _fromTop = 220;
+      print("1");
+    } else if (aspectRatio <= 1.6) {
+      _fromTop = 630;
+      print("2");
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: DefaultTabController(
+        length: 4,
+        child: NestedScrollView(
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+            return <Widget>[
+              SliverAppBar(
+                title: Text('Nested Scroll View Tests'),
+                pinned: true,
+                expandedHeight: 200.0,
+                forceElevated: innerBoxIsScrolled,
+                flexibleSpace: FlexibleSpaceBar(
+                  centerTitle: true,
+                  title: Center(
+                    child: Column(
+                      children: [
+                        Container(
+                          child: Text("aaa"),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                bottom: const TabBar(
+                  tabs: <Tab>[
+                    Tab(text: 'AA'),
+                    Tab(text: 'BB'),
+                    Tab(text: 'CC'),
+                    Tab(text: 'DD'),
+                  ],
+                ),
+              ),
+            ];
+          },
+          body: TabBarView(
+            children: <Widget>[
+              ListView(
+                children: <Widget>[
+                  Container(
+                    height: 300.0,
+                    child: const Text('aaa1'),
+                  ),
+                  Container(
+                    height: 200.0,
+                    child: const Text('aaa2'),
+                  ),
+                  Container(
+                    height: 100.0,
+                    child: const Text('aaa3'),
+                  ),
+                  Container(
+                    height: 50.0,
+                    child: const Text('aaa4'),
+                  ),
+                ],
+              ),
+              ListView(
+                children: <Widget>[
+                  Container(
+                    height: 100.0,
+                    child: const Text('bbb1'),
+                  ),
+                ],
+              ),
+              Container(
+                child: const Center(child: Text('ccc1')),
+              ),
+              ListView(
+                children: <Widget>[
+                  Container(
+                    height: 10000.0,
+                    child: const Text('ddd1'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//     return SafeArea(
+//         child: DefaultTabController(
+//             length: 3,
+//             child: Scaffold(
+//               appBar: AppBar(
+//                 title: Text("dssafa"),
+//                 flexibleSpace: FlexibleSpaceBar(
+//                   centerTitle: true,
+//                   title: Center(
+//                     child: Column(
+//                       children: [
+//                         SizedBox(height: 30,),
+//                         Container(
+//                           padding: EdgeInsets.all(20),
+//                           height:
+//                               MediaQuery.of(context).copyWith().size.height * 0.2,
+//                           width: MediaQuery.of(context).copyWith().size.width * 0.9,
+//                           child: DecoratedBox(
+//                             decoration: BoxDecoration(
+//                                 color: Colors.white,
+//                                 borderRadius: BorderRadius.circular(10)),
+//                             child: Column(
+//                               mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                               children: [
+//                                 Row(
+//                                   mainAxisAlignment: MainAxisAlignment.end,
+//                                   children: [Text("Summary  ")],
+//                                 ),
+//                                 Row(
+//                                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                                   children: <Widget>[
+//                                     Column(
+//                                       children: [
+//                                         Text("5626"),
+//                                         Text("Total Shares")
+//                                       ],
+//                                     ),
+//                                     Column(
+//                                       children: [
+//                                         Text("5626"),
+//                                         Text("Total Invested")
+//                                       ],
+//                                     ),
+//                                     Column(
+//                                       children: [Text("5626"), Text("Total Gain")],
+//                                     )
+//                                   ],
+//                                 ),
+//                                 Row(
+//                                   mainAxisAlignment: MainAxisAlignment.center,
+//                                   children: [
+//                                     Column(
+//                                       children: [
+//                                         Text("£51,626,262"),
+//                                         Text("Total Investment Capital")
+//                                       ],
+//                                     )
+//                                   ],
+//                                 )
+//                               ],
+//                             ),
+//                           ),
+//                         ),
+//                       ],
+//                     ),
+//                   ),
+//                 ),
+//                 bottom: PreferredSize(
+//                   preferredSize: Size.square(200.0),
+//                   child: TabBar(
+//                     tabs: [
+//                       Icon(Icons.train),
+//                       Icon(Icons.directions_bus),
+//                       Icon(Icons.motorcycle)
+//                     ],
+//                   ),
+//                 ),
+//               ),
+//               body: TabBarView(
+//                 children: <Widget>[
+//                   Container(
+//                     child: Center(
+//                       child: Text('Tab 1'),
+//                     ),
+//                   ),
+//                   Container(
+//                     child: Center(
+//                       child: Text('Tab 2'),
+//                     ),
+//                   ),
+//                   Container(
+//                     child: Center(
+//                       child: Text('Tab 3'),
+//                     ),
+//                   ),
+//                 ],
+//               ),
+//             )));
+//   }
+// }
+//     return SafeArea(
+//       child: Scaffold(
+//         backgroundColor: Colors.grey[200],
+//         body: Stack(
+//           children: [
+
+//             //AppBar
+
+//             Positioned(
+//               top: 0,
+//               left: 0,
+//               right: 0,
+//               child: AppBar(
+//                 toolbarHeight: 40,
+//                 backgroundColor: Colors.black,
+//                 title: Text("asdasd"),
+//               ),
+//             ),
+
+//             // Summary Section
+
+//             Positioned(
+//               top: 35,
+//               left: 5,
+//               right: 5,
+// child: Container(
+//   padding: EdgeInsets.all(10),
+//   height: MediaQuery.of(context).copyWith().size.height * 0.2,
+//   width: MediaQuery.of(context).copyWith().size.width * 0.9,
+//   child: DecoratedBox(
+//     decoration: BoxDecoration(
+//         color: Colors.white,
+//         borderRadius: BorderRadius.circular(10)),
+//     child: Column(
+//       mainAxisAlignment: MainAxisAlignment.spaceAround,
+//       children: [
+//         Row(
+//           mainAxisAlignment: MainAxisAlignment.end,
+//           children: [Text("Summary  ")],
+//         ),
+//         Row(
+//           mainAxisAlignment: MainAxisAlignment.spaceAround,
+//           children: <Widget>[
+//             Column(
+//               children: [Text("5626"), Text("Total Shares")],
+//             ),
+//             Column(
+//               children: [Text("5626"), Text("Total Invested")],
+//             ),
+//             Column(
+//               children: [Text("5626"), Text("Total Gain")],
+//             )
+//           ],
+//         ),
+//         Row(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Column(
+//               children: [
+//                 Text("£51,626,262"),
+//                 Text("Total Investment Capital")
+//               ],
+//             )
+//           ],
+//         )
+//       ],
+//     ),
+//   ),
+// ),
+//             ),
+
+//             //User Stocks Section
+
+//             Positioned(
+//               bottom: 290,
+//               top: _fromTop,
+//               right: 15,
+//               left: 15,
+//               child: InkWell(
+//                 onTap: () {
+//                   print("user stocks");
+//                 },
+//                 child: Stack(
+//                   children: [
+//                     Text("Your Stocks "),
+//                     Container(
+//                         color: Colors.red,
+//                         child: DecoratedBox(
+//                           decoration: BoxDecoration(
+//                               color: Colors.white,
+//                               borderRadius: BorderRadius.circular(10),
+//                               border: Border.all(color: Colors.black)),
+//                           child: ListView(
+//                             scrollDirection: Axis.vertical,
+//                             children: stocks.map((s) {
+//                               return MiniStockWindow("symbol", "exchange");
+//                             }).toList(),
+//                           ),
+//                         )),
+//                   ],
+//                 ),
+//               ),
+//             ),
+
+//             //Graphs Section
+//             Positioned(
+//                 top: _fromTop + 320,
+//                 bottom: 10,
+//                 right: 14,
+//                 left: 14,
+//                 child: Stack(children: [
+//                   Container(
+//                       child: DecoratedBox(
+//                     decoration: BoxDecoration(
+//                         color: Colors.white,
+//                         borderRadius: BorderRadius.circular(10)),
+//                     child: Flip.FlipCard(
+//                       key: flipCardKey,
+//                       front: SectorCharts(),
+//                       back: StockCharts(),
+//                     ),
+//                   )),
+//                   Align(
+//                       alignment: Alignment.bottomRight,
+//                       child: IconButton(
+//                         onPressed: () =>
+//                             flipCardKey?.currentState?.toggleCard(),
+//                         icon: Icon(Icons.arrow_right),
+//                       ))
+//                 ])),
+//             Positioned(bottom: 10, right: 60, left: 60, child: ZNavigationBar())
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }

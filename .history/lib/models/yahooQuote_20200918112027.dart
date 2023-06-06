@@ -1,0 +1,3 @@
+class YahooQuote{
+  Str
+}

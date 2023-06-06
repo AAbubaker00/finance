@@ -1,0 +1,10 @@
+import 'dart:convert';
+import 'dart:io';
+import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
+https://www.finki.io/callAPI.php?isin=GB00BH4HKS39&function=dividendData&key=aa297f1nk1
+class FinkApiService{
+  Future<Map<String, dynamic>> getDividendData(){
+
+  }
+}

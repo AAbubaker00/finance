@@ -1,0 +1,36 @@
+import 'package:flutter/Material.dart';
+
+class zContainer extends StatefulWidget {
+  @override
+  _zContainerState createState() => _zContainerState();
+}
+
+class _zContainerState extends State<zContainer> {
+  
+  Color _themeColor = Colors.grey[500];
+
+  _zContainerState({this.name, this.symbol}) {
+    _nTxt = new Text(name);
+    _sTxt = new Text(symbol);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: DecoratedBox(
+            decoration: BoxDecoration(
+                color: _themeColor, borderRadius: BorderRadius.circular(5)),
+            child: Column(
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    _logo,
+                    Column(
+                      children: <Widget>[_nTxt, _sTxt],
+                    )
+                  ],
+                )
+              ],
+            )));
+  }
+}

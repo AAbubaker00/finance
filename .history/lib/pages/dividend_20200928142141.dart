@@ -1,0 +1,1 @@
+class Dividend extends State

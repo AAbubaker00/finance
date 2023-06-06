@@ -1,0 +1,152 @@
+import 'package:Valuid/models/quote/quote.dart';
+import 'package:Valuid/pages/news/newsCard.dart';
+import 'package:Valuid/services/yahooapi/yahoo_api_provider.dart';
+import 'package:Valuid/shared/Custome_Widgets/ListView/cw_listview.dart';
+import 'package:Valuid/shared/Custome_Widgets/loading/loading.dart';
+import 'package:Valuid/shared/Custome_Widgets/scaffold/cw_scaffold.dart';
+import 'package:Valuid/shared/TextStyle/customTextStyles.dart';
+import 'package:Valuid/shared/dataObject/data_object.dart';
+import 'package:Valuid/shared/themes/themes.dart';
+import 'package:Valuid/shared/units/units.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
+class News extends StatefulWidget {
+  final DataObject dataObject;
+
+  const News({Key key, @required this.dataObject}) : super(key: key);
+
+  @override
+  _NewsState createState() => _NewsState();
+}
+
+class _NewsState extends State<News> {
+  @override
+  void initState() {
+    super.initState();
+  for (var portfolio in widget.dataObject.portfolios) {
+      for (var holding in portfolio.holdings) {
+        var exist = allHoldings.firstWhere((h) => h.name == holding.name, orElse: () => null);
+
+        if (exist == null) {
+          allHoldings.add(holding);
+        }
+      }
+    }
+
+    selectedSymbol = allHoldings.first.symbol;
+ }
+
+  Future<bool> getNews() async {
+    try {
+      news = await YahooApiService().getNews(selectedSymbol);
+
+      isNewsLoaded = true;
+    } catch (e) {
+      print(e.toString());
+    }
+    return Future.value(true);
+  }
+
+  bool isNewsLoaded = false;
+  List<QuoteObject> allHoldings = [];
+  String selectedSymbol = '';
+
+  List<NewsObject> news = [];
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<bool>(
+      future: news.isEmpty ? getNews() : Future.value(true),
+      builder: (context, snapshot) {
+        if (isNewsLoaded) {
+          return CWScaffold(
+            scaffoldBgColour: ScaffoldBgColourOptions.LIGHT,
+            bottomAppBarBorderColour: true,
+            appBarTitleWidget: Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: allHoldings
+                      .map((holding) => Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 5),
+                            child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8),
+
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(circularRadius),
+                                  color: customColours[allHoldings.indexOf(holding)].withOpacity(.2)),
+                              child: Text(
+                                holding.name,
+                                style: CustomTextStyles(context).portfolioNameStyle,
+                              ),
+                            ),
+                          ))
+                      .toList(),
+                ),
+              ),
+            ),
+            body: CWListView(
+              padding: const EdgeInsets.only(left: 15.0, right: 15, top: 10),
+              children: news
+                  .map((feed) => Padding(
+                        padding: const EdgeInsets.only(bottom: 15.0),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(calenderCircularRadius),
+                          onTap: () async {},
+                          child: Ink(
+                            decoration: BoxDecoration(
+                                color: backgroundColour,
+                                borderRadius: BorderRadius.circular(calenderCircularRadius)),
+                            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Text(
+                                      feed.title,
+                                      style: CustomTextStyles(context).appBarTitleStyle,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 10.0),
+                                      child: Text(
+                                        feed.description,
+                                        style: CustomTextStyles(context).feedDateStyle,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 10.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(DateFormat("HH:mm:ss").format(DateTime.parse(feed.date)),
+                                          style: CustomTextStyles(context).holdingSubValueStyle),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ))
+                  .toList(),
+            ),
+          );
+        } else {
+          return Loading();
+        }
+      },
+    );
+  }
+}

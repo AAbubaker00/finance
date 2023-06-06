@@ -1,0 +1,3 @@
+class Terms{
+  var terms
+}

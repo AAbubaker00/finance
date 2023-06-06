@@ -1,0 +1,1 @@
+class Stock extends Stat

@@ -1,0 +1,4 @@
+class NewsObject {
+  String date = '';
+  
+}

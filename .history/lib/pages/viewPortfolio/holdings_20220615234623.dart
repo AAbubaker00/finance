@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+
+class HoldingsPage extends StatefulWidget {
+  final DataObject dataObject;
+  final Map onPortfolio;
+
+  HoldingsPage({Key key, this.dataObject, this.onPortfolio}) : super(key: key);
+
+  @override
+  State<HoldingsPage> createState() => _HoldingsPageState();
+}
+
+class DataObject {
+}
+
+class _HoldingsPageState extends State<HoldingsPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}

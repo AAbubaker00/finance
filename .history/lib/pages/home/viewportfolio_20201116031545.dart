@@ -1,0 +1,1593 @@
+import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:google_fonts/google_fonts.dart';
+import 'package:finance/sections/charts.dart';
+import 'package:multi_sort/multi_sort.dart';
+import 'package:flutter/material.dart';
+import 'package:fl_chart/fl_chart.dart';
+import 'package:intl/intl.dart';
+import 'dart:ui';
+
+class ViewPortfolio extends StatefulWidget {
+  @override
+  _ViewPortfolioState createState() => _ViewPortfolioState();
+}
+
+class _ViewPortfolioState extends State<ViewPortfolio>
+    with SingleTickerProviderStateMixin {
+  List<Map> months = [
+    {
+      'id': "January",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "February",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "March",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "April",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "May",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "June",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "July",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "August",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "September",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "October",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "November",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    },
+    {
+      'id': "December",
+      'stocks': [],
+      'status': 'na',
+      'upcoming': 'yes',
+      'totalPayment': '0'
+    }
+  ];
+  List upcomingDividendStocks = [];
+  List<String> timeFrame = ['1D', '1W', '3W', '1Y', 'MAX'];
+  List cagrValueData = [];
+  List cagrData = [];
+  List stocks = [];
+
+  ScrollController _scrollViewController = ScrollController();
+  ScrollController _divScrollViewController = ScrollController();
+  ScrollController scrollController;
+
+  final _formKey = GlobalKey<FormState>();
+
+  TabController _tabController;
+
+  String portfolioName = '';
+  String baseCurrency = '';
+
+  int totalStocks = 0;
+  int totalSectors = 0;
+
+  double yearlyGain = 0.0;
+  double totalGain = 0.0;
+
+  double investedValue = 0.0;
+  double portfolioValue = 0.0;
+  double totalShares = 0.0;
+  double change = 0.0;
+  double _fromTop;
+
+  bool isSelectedMonth = false;
+  bool isSectorSort = false;
+  bool isPriceSort = false;
+  bool isBuyDateSort = false;
+  bool isNameSort = false;
+  bool isValueSort = false;
+  bool isInitialize = false;
+  bool isAnalysisTab = false;
+
+  Map selectedMonth = {};
+  Map upComingDividends = {};
+  Map data = {};
+
+  Color fas = Colors.black;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _tabController = TabController(length: 3, vsync: this, initialIndex: 0);
+    // _tabController.addListener(() {
+    //   print(_tabController.index.toString());
+    //   if (_tabController.index == 2) {
+    //     setState(() {
+    //       isAnalysisTab = true;
+    //     });
+    //   } else {
+    //     if (isAnalysisTab == true) {
+    //       setState(() {
+    //         isAnalysisTab = false;
+    //       });
+    //     }
+    //   }
+    // });
+
+    double aspectRatio =
+        (window.physicalSize.height / window.physicalSize.width);
+
+    // print(aspectRatio);
+    // print(window.physicalSize.height);
+    // print(window.physicalSize.width);
+
+    if (aspectRatio >= 1.7) {
+      _fromTop = 220;
+    } else if (aspectRatio <= 1.6) {
+      _fromTop = 630;
+    }
+  }
+
+  setData() {
+    try {
+      setState(() {
+        for (var stock in stocks) {
+          totalShares += double.parse(stock['shares'].toString());
+        }
+
+        stocks = data['stocks'];
+        portfolioName = data['portfolioName'];
+        investedValue = double.parse(data['investedValue'].toString());
+        portfolioValue = double.parse(data['portfolioValue'].toString());
+        totalShares = double.parse(data['totalShares'].toString());
+        change = data['change'];
+        cagrData = data['cagarData']['valueChange'];
+        cagrValueData = data['cagarData']['investedChange'];
+        baseCurrency = data['baseCurrency'];
+
+        portfolioValue = change + investedValue;
+        // print(stocks);
+      });
+
+      setCAGRChart();
+      if (!isInitialize) {
+        isInitialize = true;
+        setSectors();
+
+        print('loaded');
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  String selectedSortOption = '';
+  @override
+  Widget build(BuildContext context) {
+    data = ModalRoute.of(context).settings.arguments;
+    data = data['portfolio'];
+    setData();
+
+    return Container(
+      color: fas,
+      child: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.black,
+          resizeToAvoidBottomPadding: false,
+          body: DefaultTabController(
+            length: 3,
+            child: NestedScrollView(
+              controller: _scrollViewController,
+              physics: BouncingScrollPhysics(),
+              headerSliverBuilder:
+                  (BuildContext context, bool innerBoxIsScrolled) {
+                return <Widget>[
+                  SliverAppBar(
+                    actions: [
+                      Padding(
+                        padding: EdgeInsets.only(right: 25.0),
+                        child: DropdownButton<String>(
+                          icon: Icon(
+                            Icons.sort,
+                            color: Colors.white,
+                          ),
+                          elevation: 0,
+                          underline: Container(
+                            color: Colors.transparent,
+                          ),
+                          onChanged: (String option) {
+                            setState(() {
+                              if (option.toString() == 'Sector') {
+                                isSectorSort = true;
+                              } else if (option.toString() == 'Edit') {
+                              } else {
+                                isSectorSort = false;
+                              }
+                            });
+                          },
+                          items: <String>[
+                            'Buy Date',
+                            'Sector',
+                            'Name',
+                            'Value',
+                            'Edit'
+                          ].map<DropdownMenuItem<String>>((String option) {
+                            return DropdownMenuItem<String>(
+                              value: option,
+                              child: Text(option),
+                            );
+                          }).toList(),
+                        ),
+                      )
+                    ],
+                    backgroundColor: fas,
+                    expandedHeight: MediaQuery.of(context).size.height * 0.47,
+                    floating: true,
+                    pinned: true,
+                    title: Text(portfolioName.capitalizeAll()),
+                    flexibleSpace: FlexibleSpaceBar(
+                        centerTitle: true,
+                        background: (isAnalysisTab)
+                            ? Container(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    ConstrainedBox(
+                                      constraints: BoxConstraints(
+                                          maxHeight: 270,
+                                          maxWidth: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.8),
+                                      child: SizedBox(
+                                        child: stocksChart(),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            : _summary()),
+                  ),
+                  SliverPersistentHeader(
+                    delegate: _SliverAppBarDelegate(
+                      TabBar(
+                        physics: BouncingScrollPhysics(),
+                        isScrollable: true,
+                        controller: _tabController,
+                        labelColor: Colors.black87,
+                        se
+                        tabs: [
+                          Tab(
+                              child: Text("Securities",
+                                  style: TextStyle(
+                                      color: Color(0xFFF5F6F8), fontSize: 15))),
+                          Tab(
+                              child: Text("Dividends",
+                                  style: TextStyle(
+                                      color: Color(0xFFF5F6F8), fontSize: 15))),
+                          Tab(
+                              child: Text("Analysis",
+                                  style: TextStyle(
+                                      color: Color(0xFFF5F6F8), fontSize: 15))),
+                        ],
+                      ),
+                    ),
+                    pinned: true,
+                  ),
+                ];
+              },
+              body: TabBarView(
+                physics: BouncingScrollPhysics(),
+                children: <Widget>[
+                  (isSectorSort
+                      ? _showSectorAllocations()
+                      : _showAllocations()),
+                  _dividends(),
+                  _analysis(),
+                ],
+                controller: _tabController,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+/* -------------------------------------------------------------------------- */
+/*                           Section: Dividend Data                           */
+/* -------------------------------------------------------------------------- */
+
+  _monthDataRest({Map month}) {
+    month['stocks'].clear();
+    month['totalPayment'] = 0.0;
+  }
+
+  _dividends() {
+    for (var month in months) {
+      _monthDataRest(month: month);
+
+      for (var stock in stocks) {
+        try {
+          String exSectorivMonth =
+              stock['marketData']['calanderEvents']['dividendDate']['fmt'];
+          DateTime parexSectorivDate = DateTime.parse(exSectorivMonth);
+          // print(parexSectorivDate.month);
+          // print(
+          //     stock['marketData']['defaultKeyStatistics']['lastDividendValue']['raw']);
+
+          if ((months.indexOf(month) + 1) < DateTime.now().month) {
+            month['upcoming'] = 'no';
+          }
+
+          if (parexSectorivDate.month == (months.indexOf(month) + 1)) {
+            month['status'] = 'active';
+
+            month['stocks'].add(stock);
+
+            month['totalPayment'] =
+                double.parse(month['totalPayment'].toString()) +
+                    (double.parse(stock['marketData']['defaultKeyStatistics']
+                                ['lastDividendValue']['raw']
+                            .toString()) *
+                        double.parse(stock['shares'].toString()));
+
+            // print(month['totalPayment']);
+
+            if (upComingDividends.isEmpty &&
+                (months.indexOf(month) + 1) >= DateTime.now().month) {
+              upComingDividends = (month);
+              upcomingDividendStocks = month['stocks'];
+              // print(month);
+            }
+
+            // print(month);
+          }
+        } catch (e) {}
+      }
+    }
+
+    return Container(
+      color: fas,
+      child: ListView(
+        scrollDirection: Axis.vertical,
+        physics: BouncingScrollPhysics(),
+        controller: _divScrollViewController,
+        children: <Widget>[
+          // Container(
+          //   child: ExpansionTile(
+          //     title: Text(
+          //       'Months',
+          //       style: TextStyle(color: Colors.white),
+          //     ),
+          //     children: [
+          //       Container(
+          //           padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+          //           height:
+          //               MediaQuery.of(context).copyWith().size.height * 0.28,
+          //           width: MediaQuery.of(context).copyWith().size.width,
+          //           child: GridView.count(
+          //             physics: BouncingScrollPhysics(),
+          //             padding: EdgeInsets.all(5),
+          //             crossAxisCount: 4,
+          //             crossAxisSpacing: 5,
+          //             mainAxisSpacing: 10,
+          //             childAspectRatio: 1.5,
+          //             children: months.map((month) {
+          //               return InkWell(
+          //                 onTap: () {
+          //                   selectedMonth = month;
+          //                   isSelectedMonth = true;
+          //                   // print(month);
+          //                 },
+          //                 child: Card(
+          //                   color: (month['upcoming'].toString() == 'yes')
+          //                       ? Colors.white
+          //                       : Colors.grey[850],
+          //                   child: Stack(
+          //                     children: [
+          //                       Center(child: Text(month['id'])),
+          //                       Align(
+          //                         alignment: Alignment.bottomRight,
+          //                         child: Icon(
+          //                           Icons.brightness_1,
+          //                           color: (month['status'] == 'active')
+          //                               ? Colors.red
+          //                               : Colors.transparent,
+          //                           size: 5,
+          //                         ),
+          //                       )
+          //                     ],
+          //                   ),
+          //                 ),
+          //               );
+          //             }).toList(),
+          //           )),
+          //     ],
+          //   ),
+          // ),
+          // Container(
+          //   padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       Text('Next Dividends', style: TextStyle(color: Colors.white)),
+          //       Text('Month Total: ${upComingDividends['totalPayment']}',
+          //           style: TextStyle(color: Colors.white))
+          //     ],
+          //   ),
+          // ),
+          ConstrainedBox(
+            constraints: BoxConstraints(
+                maxHeight: 1000), // **THIS is the important part**
+            child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                // print("$index saddsad");
+                return Container(
+                  padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(right: 10),
+                          width: MediaQuery.of(context).size.width * 0.3,
+                          height: MediaQuery.of(context).size.height * 0.1,
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(
+                                border: Border(
+                                    right: BorderSide(
+                                        color: Colors.red[900], width: 0.5))),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text(
+                                    '${months[(DateTime.parse(upcomingDividendStocks[index]['marketData']['calanderEvents']['dividendDate']['fmt']).month) - 1]['id']}',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 15)),
+                                Text(
+                                  '${DateTime.parse(upcomingDividendStocks[index]['marketData']['calanderEvents']['dividendDate']['fmt']).day}',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                    '${DateTime.parse(upcomingDividendStocks[index]['marketData']['calanderEvents']['dividendDate']['fmt']).year}',
+                                    style: TextStyle(
+                                      color: Colors.grey[600],
+                                      fontSize: 15,
+                                    ))
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.1,
+                          width: MediaQuery.of(context).size.width * 0.65,
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Text(
+                                          '${upcomingDividendStocks[index]['marketData']['quote']['symbol']} ',
+                                          style: TextStyle(
+                                              color: Color(0xFFF5F6F8),
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                            '${upcomingDividendStocks[index]['marketData']['quote']['longName']}',
+                                            style: TextStyle(
+                                                color: Colors.grey[600])),
+                                      ],
+                                    ),
+                                    Text(
+                                        'Shares: ${upcomingDividendStocks[index]['shares']}',
+                                        style: TextStyle(color: Colors.white)),
+                                    Text(
+                                        'EXDATE: ${upcomingDividendStocks[index]['marketData']['calanderEvents']['exDividendDate']['fmt']}',
+                                        style: TextStyle(
+                                          color: Colors.grey[600],
+                                        )),
+                                  ],
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                        'Announced: ${upcomingDividendStocks[index]['marketData']['defaultKeyStatistics']['lastDividendValue']['raw']}',
+                                        style:
+                                            TextStyle(color: Colors.grey[600])),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                            '${(double.parse(upcomingDividendStocks[index]['marketData']['defaultKeyStatistics']['lastDividendValue']['raw'].toString()) * double.parse(upcomingDividendStocks[index]['shares'].toString()))}',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 30,
+                                                fontWeight: FontWeight.bold)),
+                                        Text(
+                                            '${upcomingDividendStocks[index]['marketData']['quote']['currency']}',
+                                            style: TextStyle(
+                                                color: Colors.grey[600],
+                                                fontSize: 10)),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                );
+              },
+              itemCount: upcomingDividendStocks.length,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+/* -------------------------------------------------------------------------- */
+/*    Section: Summary Data; portfolio value, total gain, invested and cagr   */
+/* -------------------------------------------------------------------------- */
+
+  _summary() {
+    Color bg = fas;
+    // List<Color> pc = [
+    //   Color(0xFF1E2025);
+    // ]
+
+    Color stdc = Color(0xFFF5F6F8);
+    Color subc = Colors.white38;
+    TextStyle stdTxtSty = TextStyle(color: stdc, fontSize: 20);
+    TextStyle subTxtSty = TextStyle(color: subc);
+
+    return Center(
+      child: Container(
+        color: Colors.transparent,
+        padding: EdgeInsets.only(top: 50),
+        height: MediaQuery.of(context).copyWith().size.height * 0.5,
+        width: MediaQuery.of(context).copyWith().size.width * 0.9,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Text(
+                  portfolioValue.toStringAsFixed(2).replaceAllMapped(
+                      new RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                      (Match m) => '${m[1]},'),
+                  style: TextStyle(
+                      fontSize: 50, color: stdc, fontWeight: FontWeight.bold),
+                ),
+                Text(baseCurrency,
+                    style: TextStyle(color: Colors.grey[600], fontSize: 20))
+              ],
+            ),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'INVESTED',
+                        style: subTxtSty,
+                      ),
+                      Text(
+                        (investedValue > 999999)
+                            ? NumberFormat.compact().format(investedValue)
+                            : investedValue.toStringAsFixed(2).replaceAllMapped(
+                                new RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                                (Match m) => '${m[1]},'),
+                        style: TextStyle(fontSize: 20, color: stdc),
+                      ),
+                    ],
+                  ),
+                  // SizedBox(
+                  //   width: 40,
+                  // ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('RETURN', style: subTxtSty),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            '${(change > 0) ? '+' : ''}${change.toStringAsFixed(2).replaceAllMapped(new RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => '${m[1]},')}',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                color:
+                                    (change > 0) ? Colors.green : Colors.red),
+                          ),
+                          Text(
+                            ' ${((change / investedValue) * 100).toStringAsFixed(2)}%',
+                            style: TextStyle(
+                              color: (change > 0)
+                                  ? Colors.green[300]
+                                  : Colors.red[200],
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  SizedBox(),
+                  SizedBox(),
+                ],
+              ),
+            ),
+            Container(
+              child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                      maxHeight: 150,
+                      minWidth: MediaQuery.of(context).size.width * 0.9),
+                  child: SizedBox(child: setCAGRChart())),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+              child: GridView.count(
+                shrinkWrap: false,
+                crossAxisCount: 5,
+                childAspectRatio: 2,
+                // scrollDirection: Axis.horizontal,
+                children: timeFrame.map((time) {
+                  return InkWell(
+                    child: Card(
+                      color: Colors.transparent,
+                      child: Center(
+                        child: Text(
+                          time,
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+/* -------------------------------------------------------------------------- */
+/*                              Section: Holdings                             */
+/* -------------------------------------------------------------------------- */
+  List<Color> sectorColors = [Colors.red, Colors.purple];
+
+  _showSectorAllocations() {
+    return Container(
+      child: ListView(
+          children: sectors.map((sctr) {
+        return Container(
+          color: sectorColors[sectors.indexOf(sctr)],
+          child: Theme(
+            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+            child: ExpansionTile(
+                initiallyExpanded: (sectors.indexOf(sctr) == sectors.length - 1)
+                    ? true
+                    : false,
+                leading: Icon(
+                  Icons.compass_calibration,
+                ),
+                title: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(sctr['name']),
+                    Text(sctr['value'].toString())
+                  ],
+                ),
+                children: [
+                  Container(
+                    child: GridView.count(
+                      shrinkWrap: true,
+                      padding: EdgeInsets.only(top: 10),
+                      crossAxisCount: 1,
+                      mainAxisSpacing: 10,
+                      childAspectRatio: 5,
+                      children: sctr['stocks'].map<Widget>((stock) {
+                        return InkWell(
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.77,
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[300],
+                                  border: Border(
+                                    left: BorderSide(
+                                        color: (double.parse(stock['change']
+                                                    .toString()) >
+                                                0
+                                            ? Colors.green
+                                            : Colors.red),
+                                        width: 3),
+                                  )),
+                              child: Row(
+                                children: [
+                                  Flexible(
+                                    child: Container(
+                                      margin: EdgeInsets.only(left: 10),
+                                      color: Colors.grey[300],
+                                      width: MediaQuery.of(context).size.width *
+                                          0.2,
+                                      child: DecoratedBox(
+                                        decoration: BoxDecoration(),
+                                        child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceAround,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(stock['symbol']),
+                                              Text(stock['marketData']['quote']
+                                                  ['longName']),
+                                              Text(
+                                                  '${double.parse(stock['buyPrice'].toString())} @ ${stock['shares']}')
+                                            ]),
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    padding:
+                                        EdgeInsets.only(left: 10, right: 10),
+                                    color: Colors.white,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.77,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(''),
+                                        Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
+                                          children: [
+                                            Text(
+                                              "${(double.parse(stock['marketData']['quote']['regularMarketPrice'].toString()) * double.parse(stock['shares'].toString())).toStringAsFixed(2)}",
+                                              style: TextStyle(
+                                                  color: ((double.parse(stock['marketData']
+                                                                              [
+                                                                              'quote']
+                                                                          [
+                                                                          'regularMarketPrice']
+                                                                      .toString()) -
+                                                                  double.parse(stock[
+                                                                          'buyPrice']
+                                                                      .toString())) /
+                                                              double.parse(stock[
+                                                                      'buyPrice']
+                                                                  .toString()) *
+                                                              100) >
+                                                          0
+                                                      ? Colors.green
+                                                      : Colors.red),
+                                            ),
+                                            Row(
+                                              children: [
+                                                Text(
+                                                  '${stock['change']}  (${((double.parse((stock['marketData']['quote']['regularMarketPrice']).toString()) - double.parse(stock['buyPrice'].toString())) / double.parse(stock['buyPrice'].toString()) * 100).toStringAsFixed(2)} %)',
+                                                  style: TextStyle(
+                                                      color: ((double.parse(stock['marketData']['quote']
+                                                                              [
+                                                                              'regularMarketPrice']
+                                                                          .toString()) -
+                                                                      double.parse(
+                                                                          stock['buyPrice']
+                                                                              .toString())) /
+                                                                  double.parse(stock[
+                                                                          'buyPrice']
+                                                                      .toString()) *
+                                                                  100) >
+                                                              0
+                                                          ? Colors.green
+                                                          : Colors.red),
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                ]),
+          ),
+        );
+      }).toList()),
+    );
+  }
+
+  _showAllocations() {
+    return Container(
+      padding: EdgeInsets.only(right: 10, top: 10),
+        color: fas,
+        child: GridView.count(
+          physics: BouncingScrollPhysics(),
+          crossAxisCount: 2,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
+          childAspectRatio: 1.5,
+          children: stocks.map((stock) {
+            return InkWell(
+              child: Container(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    // color: Colors.grey[300],
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      color: (double.parse(stock['change'].toString()) > 0
+                          ? Colors.grey[300]
+                          : Colors.deepOrange[700]),
+                      width: 0.2,
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  "${stock['symbol']}",
+                                  style: TextStyle(
+                                      color: Color(0xFFF5F6F8),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  " ${stock['marketData']['quote']['longName']}",
+                                  style: TextStyle(color: Colors.grey[600]),
+                                  overflow: TextOverflow.fade,
+                                  maxLines: 1,
+                                  softWrap: false,
+                                ),
+                              ],
+                            ),
+                            Text(
+                                '${double.parse(stock['buyPrice'].toString())} @ ${stock['shares']}',
+                                style: TextStyle(
+                                  color: Colors.white38,
+                                )),
+                          ],
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('VALUE',
+                                        style: TextStyle(
+                                          color: Colors.white38,
+                                        )),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "${(double.parse(stock['marketData']['quote']['regularMarketPrice'].toString()) * double.parse(stock['shares'].toString())).toStringAsFixed(2)}",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 25),
+                                          overflow: TextOverflow.fade,
+                                          maxLines: 1,
+                                          softWrap: false,
+                                        ),
+                                        Text(
+                                          "${stock['marketData']['quote']['currency'].toString()}",
+                                          style: TextStyle(
+                                              color: Colors.grey[600],
+                                              fontSize: 10),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                        '${double.parse(stock['marketData']['quote']['regularMarketPrice'].toString())} @ ${stock['shares']}',
+                                        style: TextStyle(
+                                          color: Colors.white38,
+                                        )),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text('RETURN',
+                                    style: TextStyle(
+                                      color: Colors.white38,
+                                    )),
+                                Text(
+                                  '${stock['change']}',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: ((double.parse(stock['marketData']
+                                                                  ['quote'][
+                                                              'regularMarketPrice']
+                                                          .toString()) -
+                                                      double.parse(
+                                                          stock['buyPrice']
+                                                              .toString())) /
+                                                  double.parse(stock['buyPrice']
+                                                      .toString()) *
+                                                  100) >
+                                              0
+                                          ? Colors.green
+                                          : Colors.red),
+                                  overflow: TextOverflow.fade,
+                                  maxLines: 1,
+                                  softWrap: false,
+                                ),
+                                Text(
+                                  '${stock['percDiff']}%',
+                                  style: TextStyle(
+                                      color: ((double.parse(stock['marketData']
+                                                                  ['quote'][
+                                                              'regularMarketPrice']
+                                                          .toString()) -
+                                                      double.parse(
+                                                          stock['buyPrice']
+                                                              .toString())) /
+                                                  double.parse(stock['buyPrice']
+                                                      .toString()) *
+                                                  100) >
+                                              0
+                                          ? Colors.green[300]
+                                          : Colors.red[300]),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          }).toList(),
+        ));
+  }
+
+  _analysis() {
+    return Container(
+      color: fas,
+      child: ListView(
+        physics: BouncingScrollPhysics(),
+        children: [
+          Container(
+            padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+            child: DefaultTabController(
+              length: 2,
+              child: SizedBox(
+                height: 330,
+                child: Column(
+                  children: [
+                    TabBar(
+                      isScrollable: true,
+                      tabs: [
+                        Tab(
+                          child: Text(
+                            "Stock Allocations",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        Tab(
+                          child: Text(
+                            "Sector Allocations",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Expanded(
+                        child: TabBarView(
+                      physics: BouncingScrollPhysics(),
+                      children: [
+                        Container(
+                          child: Column(
+                            children: [
+                              ConstrainedBox(
+                                constraints: BoxConstraints(
+                                    maxHeight: 270,
+                                    maxWidth:
+                                        MediaQuery.of(context).size.width *
+                                            0.8),
+                                child: SizedBox(
+                                  child: stocksChart(),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        ConstrainedBox(
+                          constraints: BoxConstraints(maxHeight: 1000),
+                          child: SizedBox(
+                            height: 250,
+                            child: sectorChart(),
+                          ),
+                        ),
+                      ],
+                    ))
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    Text(''),
+                    Text('()'),
+                    Text('daily change'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text(''),
+                    Text('()'),
+                    Text('Yearly Change'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text(''),
+                    Text('()'),
+                    Text('Total Change'),
+                  ],
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 40,
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 10, right: 10),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    Column(
+                      children: [
+                        Text('Net Assets Return'),
+                        Text(portfolioValue.toString())
+                      ], //value of whole account
+                    ),
+                    Column(
+                      children: [
+                        Text('Number Of holdings'),
+                        Text(stocks.length.toString())
+                      ], //oldest stock held date
+                    ),
+                    Column(
+                      children: [
+                        Text('Base Currency'),
+                        Text('2323')
+                      ], //oldest stock held date
+                    ),
+                    Column(
+                      children: [
+                        Text('P/E Ratio'),
+                        Text('2323')
+                      ], //oldest stock held date
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Column(
+                      children: [
+                        Text('Inital Assets Value'),
+                        Text((investedValue.toStringAsFixed(2))),
+                      ], //oldest stock held date
+                    ),
+                    Column(
+                      children: [
+                        Text('Shares Outstanding'),
+                        Text(totalShares.toString())
+                      ], //oldest stock held date
+                    ),
+                    Column(
+                      children: [
+                        Text('Launch Date'),
+                        Text('2323')
+                      ], //oldest stock held date
+                    ),
+                    Column(
+                      children: [
+                        Text('P/B Ratio'),
+                        Text('2323')
+                      ], //oldest stock held date
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Column(
+                      children: [
+                        Text('Largest Sector Holding'),
+                        Text('2323')
+                      ], //oldest stock held date
+                    ),
+                    Column(
+                      children: [
+                        Text('Largest Asset Holding'),
+                        Text('2323')
+                      ], //oldest stock held date
+                    ),
+                    Column(
+                      children: [
+                        Text('Total Dividends Paid'),
+                        Text('2323')
+                      ], //oldest stock held date
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*   Makes the sectors invested in and allocates the stocks associated with   */
+  /* -------------------------------------------------------------------------- */
+
+  List<Map<String, dynamic>> sectors = [];
+  List<Map> sectorStocks = [];
+  Map sector = {};
+  double sectorValue = 0.0;
+  double sInvestedValue = 0.0;
+
+  setSectors() {
+    for (var stock in stocks) {
+      // print(sInvestedValue);
+      sectorStocks.add(stock);
+
+      if (sectors.isEmpty) {
+        sInvestedValue = double.parse(stock['shares'].toString()) *
+            double.parse(stock['buyPrice'].toString());
+
+        // print(sInvestedValue);
+
+        sectors.add({
+          'name': stock['marketData']['assets']['sector'],
+          'value': sInvestedValue,
+          'stocks': stockFilter(
+              sectorStocks, stock['marketData']['assets']['sector'].toString())
+        });
+      } else {
+        Map exSector = sectors.firstWhere(
+            (s) => stock['marketData']['assets']['sector'] == stock['name'],
+            orElse: () => null);
+
+        if (exSector == null) {
+          //new sector
+          sInvestedValue = double.parse(stock['shares'].toString()) *
+              double.parse(stock['buyPrice'].toString());
+
+          sectors.add({
+            'name': stock['marketData']['assets']['sector'],
+            'value': sInvestedValue,
+            'stocks': stockFilter(sectorStocks,
+                stock['marketData']['assets']['sector'].toString())
+          });
+
+          // print(sInvestedValue);
+        } else {
+          //pre existing sector
+
+          sInvestedValue = double.parse(exSector['value'].toString()) +
+              (double.parse(stock['shares'].toString()) *
+                  double.parse(stock['buyPrice'].toString()));
+
+          // exSector['stocks'].add(stock);
+          // exSector['value'] = sInvestedValue;
+
+          sectors.remove(exSector);
+
+          sectors.add({
+            'name': stock['marketData']['assets']['sector'],
+            'value': sInvestedValue,
+            'stocks': stockFilter(sectorStocks,
+                stock['marketData']['assets']['sector'].toString())
+          });
+          // print(exSector['value']);
+        }
+      }
+    }
+  }
+
+  List<Color> gradientColors = [Colors.grey[400], Colors.transparent];
+
+  setCAGRChart() {
+    // print(cagrData);
+
+    List<FlSpot> cagrDataTable = [];
+    List<FlSpot> cdt = [];
+    List<FlSpot> cdvt = [];
+
+    double interval = 0.0;
+    double index = 0.0;
+
+    for (var plot in cagrData) {
+      cagrDataTable
+          .add(FlSpot(index, double.parse(plot['value'].toStringAsFixed(2))));
+      index++;
+
+      if (interval == 0.0) {
+        interval = double.parse(plot['value'].toString());
+      } else {
+        interval = (interval > double.parse(plot['value'].toString()))
+            ? interval
+            : double.parse(plot['value'].toString());
+      }
+    }
+
+    int x = 0;
+    index = 0.0;
+    interval = 0.0;
+
+    for (var plot in cagrValueData) {
+      if (x == 2) {
+        cdvt.add(FlSpot(index, double.parse(plot['value'].toStringAsFixed(2))));
+        index++;
+        x = 0;
+      }
+      x++;
+    }
+
+    x = 0;
+    index = 0.0;
+
+    for (var plot in cagrDataTable) {
+      x++;
+      if (x == 2) {
+        cdt.add(FlSpot(index, cagrDataTable[(x * index.toInt())].y));
+        x = 0;
+        index++;
+      }
+    }
+
+    interval = interval / 4;
+
+    // print(interval);
+    return LineChart(LineChartData(
+      gridData: FlGridData(
+        show: false,
+        drawVerticalLine: true,
+      ),
+      titlesData: FlTitlesData(
+        show: true,
+        bottomTitles:
+            SideTitles(showTitles: false, reservedSize: 10, interval: 1),
+        leftTitles: SideTitles(showTitles: false),
+        rightTitles: SideTitles(
+          showTitles: false,
+          getTextStyles: (value) => const TextStyle(
+            color: Color(0xff67727d),
+            fontWeight: FontWeight.bold,
+            fontSize: 15,
+          ),
+          reservedSize: 28,
+        ),
+      ),
+      borderData: FlBorderData(
+          show: false,
+          border: Border.all(color: const Color(0xff37434d), width: 1)),
+      lineBarsData: [
+        LineChartBarData(
+          colors: [Colors.green[900], Colors.green[300]],
+          spots: cdt,
+          isCurved: true,
+          barWidth: 0.5,
+          isStrokeCapRound: true,
+          dotData: FlDotData(
+            show: false,
+          ),
+          belowBarData: BarAreaData(
+            show: false,
+            gradientFrom: Offset(0.5, 0.1),
+            gradientTo: Offset(0.5, 1.5),
+            colors: gradientColors,
+          ),
+        ),
+      ],
+    ));
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*          Section: Filter; filters stocks into the required sectors         */
+  /* -------------------------------------------------------------------------- */
+
+  List<Map<dynamic, dynamic>> stockFilter(
+      List<Map<dynamic, dynamic>> stocks, String sector) {
+    List<Map<dynamic, dynamic>> filteredStocks = [];
+
+    for (var stock in stocks) {
+      if (stock['marketData']['assets']['sector'] == sector) {
+        filteredStocks.add(stock);
+      }
+    }
+    return filteredStocks;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*               Sector: Creates dataTable for the Sector chart               */
+  /* -------------------------------------------------------------------------- */
+
+  sectorChart() {
+    List<Sectors> sectorChartDataTable = [];
+
+    for (var sector in sectors) {
+      // print(sector['value']);
+      sectorChartDataTable.add(new Sectors(
+          name: sector['name'].toString(),
+          value: double.parse(sector['value'].toString())));
+    }
+
+    return charts.BarChart(
+      [
+        charts.Series<Sectors, String>(
+            id: 'Sectors',
+            domainFn: (Sectors s, _) => s.name,
+            measureFn: (Sectors s, _) => s.value,
+            data: sectorChartDataTable,
+            labelAccessorFn: (Sectors s, _) =>
+                '${((s.value / investedValue) * 100).toStringAsFixed(2)} %')
+      ],
+      animate: true,
+      barRendererDecorator: new charts.BarLabelDecorator<String>(),
+      domainAxis: new charts.OrdinalAxisSpec(),
+      primaryMeasureAxis:
+          new charts.NumericAxisSpec(renderSpec: new charts.NoneRenderSpec()),
+    );
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                 Section: Creats datatable for stocks chart                 */
+  /* -------------------------------------------------------------------------- */
+
+  stocksChart() {
+    List<Stocks> stockChartDataTable = [];
+
+    for (var stock in stocks) {
+      stockChartDataTable.add(new Stocks(
+          name: stock['marketData']['quote']['symbol'],
+          value: (double.parse(stock['shares'].toString())) *
+              double.parse(stock['buyPrice'].toString())));
+    }
+
+    List<charts.Color> co = [
+      charts.MaterialPalette.blue.shadeDefault.darker,
+      charts.MaterialPalette.red.shadeDefault.darker,
+      charts.MaterialPalette.green.shadeDefault.darker,
+      charts.MaterialPalette.pink.shadeDefault.darker,
+      charts.MaterialPalette.gray.shadeDefault.darker,
+      charts.MaterialPalette.yellow.shadeDefault.darker,
+      charts.MaterialPalette.lime.shadeDefault.darker,
+      charts.MaterialPalette.deepOrange.shadeDefault.darker,
+      charts.MaterialPalette.cyan.shadeDefault.darker,
+      charts.MaterialPalette.indigo.shadeDefault.darker,
+      charts.MaterialPalette.purple.shadeDefault.darker,
+      charts.MaterialPalette.teal.shadeDefault.darker,
+      charts.MaterialPalette.blue.shadeDefault.lighter,
+      charts.MaterialPalette.red.shadeDefault.lighter,
+      charts.MaterialPalette.green.shadeDefault.lighter,
+      charts.MaterialPalette.pink.shadeDefault.lighter,
+      charts.MaterialPalette.gray.shadeDefault.lighter,
+      charts.MaterialPalette.yellow.shadeDefault.lighter,
+      charts.MaterialPalette.lime.shadeDefault.lighter,
+      charts.MaterialPalette.deepOrange.shadeDefault.lighter,
+      charts.MaterialPalette.cyan.shadeDefault.lighter,
+      charts.MaterialPalette.indigo.shadeDefault.lighter,
+      charts.MaterialPalette.purple.shadeDefault.lighter,
+      charts.MaterialPalette.teal.shadeDefault.lighter,
+    ];
+
+    return Stack(
+      children: [
+        charts.PieChart(
+          [
+            new charts.Series<Stocks, String>(
+                id: 'Stocks',
+                domainFn: (Stocks s, _) => s.name,
+                measureFn: (Stocks s, _) => s.value,
+                data: stockChartDataTable,
+                labelAccessorFn: (Stocks s, _) =>
+                    '${s.name}\n${((s.value / investedValue) * 100).toStringAsFixed(2)}%',
+                outsideLabelStyleAccessorFn: (Stocks s, _) =>
+                    charts.TextStyleSpec(
+                      fontSize: 10,
+                        color: charts.Color.white), //(r: 32, g: 32, b: 34)),
+                colorFn: (_, index) => co[index],
+                )                
+          ],
+          animate: false,
+          behaviors: [],
+          defaultRenderer: new charts.ArcRendererConfig(arcWidth: 30,
+              // startAngle: pi,
+              // arcLength: pi,
+              arcRendererDecorators: [
+                new charts.ArcLabelDecorator(
+                    outsideLabelStyleSpec: charts.TextStyleSpec(fontSize: 15),
+                    labelPosition: charts.ArcLabelPosition.outside)
+              ]),
+        ),
+        Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Investments",
+                  style: TextStyle(
+                    color: Colors.white,
+                  )),
+              Text(
+                "${stocks.length}",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              )
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class Stocks {
+  final String name;
+  final double value;
+
+  Stocks({this.name, this.value});
+}
+
+class Sectors {
+  final String name;
+  final double value;
+
+  Sectors({this.name, this.value});
+}
+
+extension StringExtension on String {
+  String capitalizeFirst() {
+    return '${this[0].toUpperCase()}${this.substring(1)}';
+  }
+
+  String capitalizeAll() {
+    return '${this.toUpperCase()}';
+  }
+}
+
+class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
+  _SliverAppBarDelegate(this._tabBar);
+
+  final TabBar _tabBar;
+
+  @override
+  double get minExtent => _tabBar.preferredSize.height;
+  @override
+  double get maxExtent => _tabBar.preferredSize.height;
+
+  @override
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return Container(
+      color: Color(0xFF000000),
+      child: _tabBar,
+    );
+  }
+
+  @override
+  bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
+    return false;
+  }
+}

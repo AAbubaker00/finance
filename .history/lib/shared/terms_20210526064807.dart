@@ -1,0 +1,5 @@
+
+
+class Terms{
+  var termsHTML = 
+}

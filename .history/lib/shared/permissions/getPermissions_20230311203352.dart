@@ -1,0 +1,65 @@
+import 'package:permission_handler/permission_handler.dart';
+
+class GetPermissions {
+  getAllPermissions() async {
+
+    var statusNotification = await Permission.notification.status;
+    if (!statusNotification.isGranted) {
+      await Permission.notification.request();
+    }
+
+    var statusReminder = await Permission.reminders.status;
+    if (!statusReminder.isGranted) {
+      await Permission.reminders.request();
+    }
+
+    var statusTransperency = await Permission.appTrackingTransparency.status;
+    if (!statusTransperency.isGranted) {
+      await Permission.appTrackingTransparency.request();
+    }
+  }
+
+  getS
+
+  getStoragePermission() async {
+    var status = await Permission.storage.status;
+    if (!status.isGranted) {
+      await Permission.storage.request();
+    }
+  }
+
+  getLocationPermission() async {
+    var status = await Permission.location.status;
+    if (!status.isGranted) {
+      await Permission.location.request();
+    }
+  }
+
+  getBluetoothPermission() async {
+    var status = await Permission.bluetooth.status;
+    if (!status.isGranted) {
+      await Permission.bluetooth.request();
+    }
+  }
+
+  getNotificationPermission() async {
+    var status = await Permission.notification.status;
+    if (!status.isGranted) {
+      await Permission.notification.request();
+    }
+  }
+
+  getRemindersPermission() async {
+    var status = await Permission.reminders.status;
+    if (!status.isGranted) {
+      await Permission.reminders.request();
+    }
+  }
+
+  getAppTrackingTransparencyPermission() async {
+    var status = await Permission.appTrackingTransparency.status;
+    if (!status.isGranted) {
+      await Permission.appTrackingTransparency.request();
+    }
+  }
+}

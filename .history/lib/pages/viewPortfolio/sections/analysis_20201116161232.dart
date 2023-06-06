@@ -1,0 +1,1 @@
+class Analysis extends Stateles

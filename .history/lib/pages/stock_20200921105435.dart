@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+
+class Stock extends StatefulWidget {
+
+  Stock({String })
+  @override
+  _StockState createState() => _StockState();
+}
+
+class _StockState extends State<Stock> {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        appBar: new PreferredSize(
+          preferredSize: Size.fromHeight(kToolbarHeight),
+          child:AppBar(
+            title: Text("dasdas"),
+          )
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,3 @@
+class HoldingObject{
+  String m
+}

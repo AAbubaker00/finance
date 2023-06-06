@@ -1,0 +1,1 @@
+class ViewStock extends Stateful

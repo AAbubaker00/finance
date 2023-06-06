@@ -1,0 +1,29 @@
+{
+    "maxAge": 1,
+    "earnings": {
+      "earningsDate": [
+        { "raw": 1611619200, "fmt": "2021-01-26" },
+        { "raw": 1612137600, "fmt": "2021-02-01" }
+      ],
+      "earningsAverage": { "raw": 1.37, "fmt": "1.37" },
+      "earningsLow": { "raw": 1.19, "fmt": "1.19" },
+      "earningsHigh": { "raw": 1.71, "fmt": "1.71" },
+      "revenueAverage": {
+        "raw": 101011000000,
+        "fmt": "101.01B",
+        "longFmt": "101,011,000,000"
+      },
+      "revenueLow": {
+        "raw": 91878000000,
+        "fmt": "91.88B",
+        "longFmt": "91,878,000,000"
+      },
+      "revenueHigh": {
+        "raw": 114398000000,
+        "fmt": "114.4B",
+        "longFmt": "114,398,000,000"
+      }
+    },
+    "exDividendDate": { "raw": 1596758400, "fmt": "2020-08-07" },
+    "dividendDate": { "raw": 1605139200, "fmt": "2020-11-12" }
+  }

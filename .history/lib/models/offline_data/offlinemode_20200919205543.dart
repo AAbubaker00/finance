@@ -1,0 +1,3 @@
+class OfflineMode{
+  class Offline
+}

@@ -1,0 +1,35 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "calendarEvents": {
+          "maxAge": 1,
+          "earnings": {
+            "earningsDate": [{ "raw": 1596067200, "fmt": "2020-07-30" }],
+            "earningsAverage": {},
+            "earningsLow": {},
+            "earningsHigh": {},
+            "revenueAverage": {
+              "raw": 4629340000,
+              "fmt": "4.63B",
+              "longFmt": "4,629,340,000"
+            },
+            "revenueLow": {
+              "raw": 4540680000,
+              "fmt": "4.54B",
+              "longFmt": "4,540,680,000"
+            },
+            "revenueHigh": {
+              "raw": 4718000000,
+              "fmt": "4.72B",
+              "longFmt": "4,718,000,000"
+            }
+          },
+          "exDividendDate": { "raw": 1586995200, "fmt": "2020-04-16" },
+          "dividendDate": {}
+        }
+      }
+    ],
+    "error": null
+  }
+}

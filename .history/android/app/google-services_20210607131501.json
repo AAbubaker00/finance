@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "387241671661",
+    "project_id": "strice-investmenttracker",
+    "storage_bucket": "strice-investmenttracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387241671661:android:0d600c20414231c30385e4",
+        "android_client_info": {
+          "package_name": "com.minist.strice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387241671661-jue8c45url3530ok5eg67tcm4d5d3fa1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.minist.strice",
+            "certificate_hash": "16e473c6945ef6369491454c8f021e01a7a27fc3"
+          }
+        },
+        {
+          "client_id": "387241671661-nfr2kcrla6s67fgtu0idkftgo6k2so4q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANNI1EOCs3E-cXVnxmFZh3N5S5CZUAff4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387241671661-nfr2kcrla6s67fgtu0idkftgo6k2so4q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,1 @@
+class Dividends extends Statless

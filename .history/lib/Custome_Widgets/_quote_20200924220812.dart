@@ -1,0 +1,23 @@
+import 'dart:ui';
+
+import 'package:flutter/material.dart';
+
+class ZContainer extends StatefulWidget {
+  ZContainer({int index}) {
+    _ZContainerState().index = index;
+  }
+
+  @override
+  _ZContainerState createState() => _ZContainerState();
+}
+
+class _ZContainerState extends State<ZContainer> {
+  int index;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
+    )
+  }
+}

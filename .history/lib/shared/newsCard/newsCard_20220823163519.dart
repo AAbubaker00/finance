@@ -1,0 +1,3 @@
+class NewsObject{
+  String date
+}

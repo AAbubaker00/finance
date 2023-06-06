@@ -1,0 +1,27 @@
+import 'package:flutter/Material.dart';
+
+class zContainer extends StatefulWidget {
+  @override
+  _zContainerState createState() => _zContainerState();
+}
+
+class _zContainerState extends State<zContainer> {
+  String _name;
+  String _symbol;
+
+  Icon _logo;
+
+  var _cost;
+  var _dailyChange;
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: DecoratedBox(
+      decoration: BoxDecoration(
+          color: _,
+          borderRadius: BorderRadius.circular(5)),
+    ));
+  }
+}

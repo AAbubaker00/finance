@@ -1,0 +1,76 @@
+import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/material.dart';
+
+class LineChartSample2 extends StatefulWidget {
+  @override
+  _LineChartSample2State createState() => _LineChartSample2State();
+}
+
+class _LineChartSample2State extends State<LineChartSample2> {
+  List<Color> gradientColors = [
+    const Color(0xff23b6e6),
+    const Color(0xff02d39a),
+  ];
+
+  bool showAvg = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return LineChart(mainData(),
+    );
+  }
+
+  LineChartData mainData() {
+    return LineChartData(
+      gridData: FlGridData(
+        show: false,
+        drawVerticalLine: true,
+        
+      ),
+      titlesData: FlTitlesData(
+        show: true,
+        bottomTitles: SideTitles(
+          showTitles: false,
+          reservedSize: 10
+        ),
+
+        leftTitles: SideTitles(
+          showTitles: false
+        ),
+
+        rightTitles: SideTitles(
+          showTitles: true,
+          getTextStyles: (value) => const TextStyle(
+            color: Color(0xff67727d),
+            fontWeight: FontWeight.bold,
+            fontSize: 15,
+          ),
+          reservedSize: 0,
+        ),
+      ),
+      borderData: FlBorderData(
+          show: false,
+          border: Border.all(color: const Color(0xff37434d), width: 1)),
+      lineBarsData: [
+        LineChartBarData(
+          spots: [
+            FlSpot(0, 3),
+            FlSpot(2.6, 2),
+            FlSpot(4.9, 5),
+            FlSpot(6.8, 3.1),
+            FlSpot(8, 4),
+            FlSpot(9.5, 3),
+            FlSpot(11, 4),
+          ],
+          isCurved: true,
+          barWidth: 3,
+          isStrokeCapRound: true,
+          dotData: FlDotData(
+            show: false,
+          ),
+        ),
+      ],
+    );
+  }
+
+}

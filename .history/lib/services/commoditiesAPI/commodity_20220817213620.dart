@@ -1,0 +1,3 @@
+class Commodity{
+  String name
+}

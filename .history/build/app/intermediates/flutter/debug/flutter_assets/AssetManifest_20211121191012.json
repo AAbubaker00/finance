@@ -1,0 +1,146 @@
+{
+  "assets/brokers/chs.png": ["assets/brokers/chs.png"],
+  "assets/brokers/etoro.png": ["assets/brokers/etoro.png"],
+  "assets/brokers/minimalist-nawpic-4.png": [
+    "assets/brokers/minimalist-nawpic-4.png"
+  ],
+  "assets/brokers/qwDOvn.png": ["assets/brokers/qwDOvn.png"],
+  "assets/brokers/rob.png": ["assets/brokers/rob.png"],
+  "assets/brokers/t212.png": ["assets/brokers/t212.png"],
+  "assets/brokers/wall-murals-fire-alphabet-question-mark.jpg.jpg": [
+    "assets/brokers/wall-murals-fire-alphabet-question-mark.jpg.jpg"
+  ],
+  "assets/brokers/wallpapersden.com_77061-1920x1080.jpg": [
+    "assets/brokers/wallpapersden.com_77061-1920x1080.jpg"
+  ],
+  "assets/brokers/wallpapersden.com_77061-3840x2400.jpg": [
+    "assets/brokers/wallpapersden.com_77061-3840x2400.jpg"
+  ],
+  "assets/brokers/wallpapersden.com_k-minimalist-diamond-shape-pattern_3840x2160.jpg": [
+    "assets/brokers/wallpapersden.com_k-minimalist-diamond-shape-pattern_3840x2160.jpg"
+  ],
+  "assets/brokers/wallpapersden.com_minimalist-comet-colorful_2560x1440.jpg": [
+    "assets/brokers/wallpapersden.com_minimalist-comet-colorful_2560x1440.jpg"
+  ],
+  "assets/icons/calender.png": ["assets/icons/calender.png"],
+  "assets/icons/dc.png": ["assets/icons/dc.png"],
+  "assets/icons/del.png": ["assets/icons/del.png"],
+  "assets/icons/edit.png": ["assets/icons/edit.png"],
+  "assets/icons/empty.png": ["assets/icons/empty.png"],
+  "assets/icons/logo.png": ["assets/icons/logo.png"],
+  "assets/icons/logoL.png": ["assets/icons/logoL.png"],
+  "assets/icons/logos.png": ["assets/icons/logos.png"],
+  "assets/icons/logout.png": ["assets/icons/logout.png"],
+  "assets/icons/mai.png": ["assets/icons/mai.png"],
+  "assets/icons/master.png": ["assets/icons/master.png"],
+  "assets/icons/playLogo.png": ["assets/icons/playLogo.png"],
+  "assets/icons/search.png": ["assets/icons/search.png"],
+  "assets/icons/send.png": ["assets/icons/send.png"],
+  "assets/icons/settings.png": ["assets/icons/settings.png"],
+  "assets/icons/update2.png": ["assets/icons/update2.png"],
+  "packages/cupertino_icons/assets/CupertinoIcons.ttf": [
+    "packages/cupertino_icons/assets/CupertinoIcons.ttf"
+  ],
+  "packages/emoji_feedback/assets/ambitious.png": [
+    "packages/emoji_feedback/assets/ambitious.png"
+  ],
+  "packages/emoji_feedback/assets/ambitious_big.png": [
+    "packages/emoji_feedback/assets/ambitious_big.png"
+  ],
+  "packages/emoji_feedback/assets/sad.png": [
+    "packages/emoji_feedback/assets/sad.png"
+  ],
+  "packages/emoji_feedback/assets/sad_big.png": [
+    "packages/emoji_feedback/assets/sad_big.png"
+  ],
+  "packages/emoji_feedback/assets/smile.png": [
+    "packages/emoji_feedback/assets/smile.png"
+  ],
+  "packages/emoji_feedback/assets/smile_big.png": [
+    "packages/emoji_feedback/assets/smile_big.png"
+  ],
+  "packages/emoji_feedback/assets/surprised.png": [
+    "packages/emoji_feedback/assets/surprised.png"
+  ],
+  "packages/emoji_feedback/assets/surprised_big.png": [
+    "packages/emoji_feedback/assets/surprised_big.png"
+  ],
+  "packages/emoji_feedback/assets/worried.png": [
+    "packages/emoji_feedback/assets/worried.png"
+  ],
+  "packages/emoji_feedback/assets/worried_big.png": [
+    "packages/emoji_feedback/assets/worried_big.png"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_AMS-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_AMS-Regular.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Caligraphic-Bold.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Caligraphic-Bold.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Caligraphic-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Caligraphic-Regular.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Fraktur-Bold.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Fraktur-Bold.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Fraktur-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Fraktur-Regular.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Main-Bold.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Main-Bold.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Main-BoldItalic.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Main-BoldItalic.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Main-Italic.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Main-Italic.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Main-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Main-Regular.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Math-BoldItalic.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Math-BoldItalic.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Math-Italic.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Math-Italic.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_SansSerif-Bold.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_SansSerif-Bold.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_SansSerif-Italic.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_SansSerif-Italic.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_SansSerif-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_SansSerif-Regular.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Script-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Script-Regular.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Size1-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Size1-Regular.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Size2-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Size2-Regular.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Size3-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Size3-Regular.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Size4-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Size4-Regular.ttf"
+  ],
+  "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Typewriter-Regular.ttf": [
+    "packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Typewriter-Regular.ttf"
+  ],
+  "packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": [
+    "packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf"
+  ],
+  "packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": [
+    "packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf"
+  ],
+  "packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": [
+    "packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf"
+  ],
+  "packages/wakelock_web/assets/no_sleep.js": [
+    "packages/wakelock_web/assets/no_sleep.js"
+  ]
+}

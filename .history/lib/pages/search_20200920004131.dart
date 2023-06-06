@@ -1,0 +1,83 @@
+import 'dart:io';
+
+import 'package:finance/models/offline_data/storeddata.dart';
+import 'package:finance/models/yahoo/yahoo_result.dart';
+import 'package:flutter/material.dart';
+import 'package:finance/services/services.dart';
+
+class Search extends StatefulWidget {
+  @override
+  _SearchState createState() => _SearchState();
+}
+
+class _SearchState extends State<Search> {
+  static List<YahooQuoteResult> quote;
+  List<StoredData> oData = List<StoredData>();
+
+  Map data = {};
+  data
+  @override
+  Widget build(BuildContext context) {
+    data = ModalRoute.of(context).settings.arguments;
+    oData = oData.isNotEmpty ? oData : data['storeddata'];
+
+    print(oData[0].name);
+
+    return Scaffold(
+        body: Container(
+      child: Column(
+        children: <Widget>[
+          Container(
+              padding: EdgeInsets.all(10),
+              child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        enabledBorder: InputBorder.none,
+                        errorBorder: InputBorder.none,
+                        disabledBorder: InputBorder.none,
+                        contentPadding: EdgeInsets.only(
+                            left: 15, bottom: 11, top: 11, right: 15),
+                        hintText: "Search"),
+                    onChanged: (txt) {
+                      txt = txt.toLowerCase();
+                      setState(() {
+                        oData = oData.where((stock) {
+                          var quoteName = stock.name.toLowerCase();
+                          return quoteName.contains(txt);
+                        }).toList();
+                      });
+                    },
+                  ))),
+          Container(
+            height: 700,
+            padding: EdgeInsets.all(10),
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return Card(child: Text(oData[index].name));
+              },
+              itemCount: oData.length,
+              scrollDirection: Axis.vertical,
+            ),
+          )
+          // Text(quote[0].displayName)
+        ],
+      ),
+    ));
+  }
+
+  void setData() async {
+    await Future.delayed(Duration(seconds: 1), () async {
+      quote = await Services.getYahooQuote();
+
+      setState(() {
+        //name = quote[0].displayName;
+      });
+      // print(quote[0].displayName);
+    });
+  }
+}

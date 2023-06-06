@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+
+class Nd extends StatefulWidget {
+  @override
+  _NdState createState() => _NdState();
+}
+
+class _NdState extends State<Nd> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: SafeArea(
+              child: Scaffold(
+              body: Stack(
+            children: [
+              Positioned(
+                top: 10,
+                right: 10,
+                left: 50,
+                child: Container(
+                  
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

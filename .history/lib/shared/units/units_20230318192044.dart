@@ -1,0 +1,28 @@
+
+  final double circularRadius = 10;
+
+  final double buttonRadius = 50;
+
+  final double calenderCircularRadius = 15;
+
+  final double iconSize = 24;
+
+  final double calenderIconSize = 45;
+
+  final double headerIconSize = 30;
+
+  final double verticalSpacing = 20;
+
+  final double settingsVericalSpacing = 5;
+
+  final double mainSpacing = 10;
+
+  final double dividerPaddingSpacing = 5;
+
+  final double subBtnSpacingPadding = 5;
+
+  final double loginSignupButtonText = 17;
+
+  final double largerScreenMultiplier = 0.05;
+
+  final double smallerScreenMultiplier = -0.03;

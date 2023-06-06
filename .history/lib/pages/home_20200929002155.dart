@@ -1,0 +1,87 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  List portfolios = [""];
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+          body: Stack(
+        children: [
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 20,
+                  ),
+                  Column(
+                    children: [
+                      Text("Abdull Abubaker"),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            top: 100,
+            right: 20,
+            left: 20,
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.2,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(50)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          border: Border.all(color: Colors.red)
+                        ),
+                        child: Center(child: Text()),
+                      ),
+                    ),
+                    Icon(Icons.data_usage, color: Colors.white,size: 150,),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text("Stock Portfolio"),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: [Text("Vlaue"), Text("£7272")],
+                            ),
+                            Column(
+                              children: [Text("Gain/Loss"), Text("+12.2%")],
+                            )
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
+          )
+        ],
+      )),
+    );
+  }
+}

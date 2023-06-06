@@ -1,0 +1,6 @@
+class OfflineData{
+  
+  OfflineData{
+
+  }
+}

@@ -1,0 +1,2 @@
+IMPOR
+class StyledContainer extends 

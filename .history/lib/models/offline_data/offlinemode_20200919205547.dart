@@ -1,0 +1,5 @@
+class OfflineMode{
+  class OfflineData{
+    
+  }
+}

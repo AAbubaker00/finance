@@ -1,0 +1,3 @@
+class MarketChangeNotifier with ChangeNotifier {
+
+}

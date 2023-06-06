@@ -1,0 +1,2502 @@
+[
+ {
+   "symbol": "RSA",
+   "name": "Rsa Insurance Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BP",
+   "name": "BP Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "RIO",
+   "name": "Rio Tinto Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "DGE",
+   "name": "Diageo Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "ULVR",
+   "name": "Unilever Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "GSK",
+   "name": "Glaxosmithkline Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "AZN",
+   "name": "Astrazeneca Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "UANC",
+   "name": "Urban&Civic Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "HSBA",
+   "name": "HSBC Holdings Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "NG",
+   "name": "National Grid Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BATS",
+   "name": "British American Tobacco Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "RB",
+   "name": "Reckitt Benckiser Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BHP",
+   "name": "Bhp Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "GLEN",
+   "name": "Glencore Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "PRU",
+   "name": "Prudential Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "RR",
+   "name": "Rolls-Royce Holdings Plc",           
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "REL",
+   "name": "Reed Elsevier Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "RDSA",
+   "name": "Royal Dutch Shell Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "VOD",
+   "name": "Vodaphone Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "TSCO",
+   "name": "Tesco Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "AAL",
+   "name": "Anglo American Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "RDSB",
+   "name": "Royal Dutch Shell Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "WIZZ",
+   "name": "Wizz Air Holdings Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "WTB",
+   "name": "Whitbread Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BARC",
+   "name": "Barclays Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "CRH",
+   "name": "CRH Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "LLOY",
+   "name": "Lloyds Banking Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "PSN",
+   "name": "Persimmon Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BRBY",
+   "name": "Burberry Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "LSE",
+   "name": "London Stock Exchange Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "ISF",
+   "name": "Ishares Core Ftse100 Ucits ETF Gbp[Dist]",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BA",
+   "name": "Bae Systems Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "EXPN",
+   "name": "Experian Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "CPG",
+   "name": "Compass Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "SN",
+   "name": "Smith & Nephew Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "MNDI",
+   "name": "Mondi Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "RRN",
+   "name": "New Ord 20P [Np-11/11/20]",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BME",
+   "name": "B&M European Value Retail S.A.",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "AHT",
+   "name": "Ashtead Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "AV",
+   "name": "Aviva Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "FRES",
+   "name": "Fresnillo Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "DLN",
+   "name": "Derwent London Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "IAG",
+   "name": "International Consolidated Airlines Group S.A.",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "RTO",
+   "name": "Rentokil Initial Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "SMT",
+   "name": "Scottish Mortgage Investment Trust Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "ACI",
+   "name": "Alternative Credit Investments Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "AVV",
+   "name": "Aveva Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "POLY",
+   "name": "Polymetal International Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "LGEN",
+   "name": "Legal & General Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "CDM",
+   "name": "Codemasters Group Holdings Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "ANTO",
+   "name": "Antofagasta Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BTA",
+   "name": "Bt Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "OCDO",
+   "name": "Ocado Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "MRW",
+   "name": "Morrison [Wm] Supermarkets Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "SBRY",
+   "name": "Sainsbury [J] Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "WG",
+   "name": "Wood Group [John] Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "LAND",
+   "name": "Land Securities Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "FERG",
+   "name": "Ferguson Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "DCC",
+   "name": "Dcc Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "IHG",
+   "name": "Intercontinental Hotels Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "IMB",
+   "name": "Imperial Brands Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "ABF",
+   "name": "Associated British Foods Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "STAN",
+   "name": "Standard Chartered Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "TW",
+   "name": "Taylor Wimpey Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "ADM",
+   "name": "Admiral Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "KGF",
+   "name": "Kingfisher Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "YOU",
+   "name": "Yougov Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "SMDS",
+   "name": "Smith [Ds] Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "EZJ",
+   "name": "Easyjet Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "SSE",
+   "name": "Sse Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BDEV",
+   "name": "Barratt Developments Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "SVT",
+   "name": "Severn Trent Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "GVC",
+   "name": "Gvc Holdings Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "AUTO",
+   "name": "Auto Trader Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "WMH",
+   "name": "William Hill Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "STJ",
+   "name": "St. James's Place Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "WPP",
+   "name": "Wpp Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BNZL",
+   "name": "Bunzl Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "JET",
+   "name": "Just Eat Takeaway.com N.V.",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "NWG",
+   "name": "Natwest Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BLND",
+   "name": "British Land Company Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "INF",
+   "name": "Informa Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "DLG",
+   "name": "Direct Line Insurance Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "CEY",
+   "name": "Centamin Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BOO",
+   "name": "Boohoo Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "PHNX",
+   "name": "Phoenix Group Holdings",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "ASC",
+   "name": "Asos Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "ITRK",
+   "name": "Intertek Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "CRDA",
+   "name": "Croda International Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "SCT",
+   "name": "Softcat Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "RMV",
+   "name": "Rightmove Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "GFS",
+   "name": "G4S Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "BKG",
+   "name": "Berkeley Group Holdings [The] Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "HWDN",
+   "name": "Howden Joinery Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "NXT",
+   "name": "Next Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "KAZ",
+   "name": "Kaz Minerals Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "ITV",
+   "name": "Itv Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "SMIN",
+   "name": "Smiths Group Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "HLMA",
+   "name": "Halma Plc",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "NCYT",
+   "name": "Eur1/15Th [Cdi]",
+   "exchange": "LSE"
+ },
+ {
+   "symbol": "ACB",
+   "name": "Aurora Cannabis Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "NIO",
+   "name": "Nio Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "XPEV",
+   "name": "Xpeng Inc ADR",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "PLTR",
+   "name": "Palantir Technologies Inc Cl A",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "GE",
+   "name": "General Electric Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "UBER",
+   "name": "Uber Technologies Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "BAC",
+   "name": "Bank of America Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "F",
+   "name": "Ford Motor Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "COTY",
+   "name": "Coty Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "SNAP",
+   "name": "Snap Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "AVTR",
+   "name": "Avantor Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "ITUB",
+   "name": "Itau Unibanco Banco Holding S.A.",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "CGC",
+   "name": "Canopy Growth Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "XOM",
+   "name": "Exxon Mobil Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "MRO",
+   "name": "Marathon Oil Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "WFC",
+   "name": "Wells Fargo & Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "NOK",
+   "name": "Nokia Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "SQ",
+   "name": "Square",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "T",
+   "name": "AT&T Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "VALE",
+   "name": "Vale S.A.",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "TEVA",
+   "name": "Teva Pharmaceutical Industries Ltd",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "BABA",
+   "name": "Alibaba Group Holding",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "CVS",
+   "name": "CVS Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "BBD",
+   "name": "Banco Bradesco S.A.",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "M",
+   "name": "Macy's Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "ABEV",
+   "name": "Ambev S.A.",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "PFE",
+   "name": "Pfizer Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "OXY",
+   "name": "Occidental Petroleum Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "ET",
+   "name": "Energy Transfer LP",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "KEY",
+   "name": "Keycorp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "MTG",
+   "name": "Mgic Investment Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "CCL",
+   "name": "Carnival Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "GM",
+   "name": "General Motors Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "C",
+   "name": "Citigroup Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "BP",
+   "name": "BP Plc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "FCX",
+   "name": "Freeport-Mcmoran Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "TWTR",
+   "name": "Twitter Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "NET",
+   "name": "Cloudflare Inc Cl A",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "PBR",
+   "name": "Petroleo Brasileiro S.A. Petrobras",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "AUY",
+   "name": "Yamana Gold",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "SWN",
+   "name": "Southwestern Energy Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "HBI",
+   "name": "Hanesbrands Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "JKS",
+   "name": "Jinkosolar Holding Company Ltd",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "KMI",
+   "name": "Kinder Morgan",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "TME",
+   "name": "Tencent Music Entertainment Group ADR",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "NCLH",
+   "name": "Norwegian Cruise Ord",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "GOLD",
+   "name": "Barrick Gold Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "SPCE",
+   "name": "Virgin Galactic Holdings Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "DVN",
+   "name": "Devon Energy Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "JPM",
+   "name": "JP Morgan Chase & Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "LTHM",
+   "name": "Livent Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "LUMN",
+   "name": "Centurylink",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "PINS",
+   "name": "Pinterest Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "VZ",
+   "name": "Verizon Communications Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "X",
+   "name": "United States Steel Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "DAL",
+   "name": "Delta Air Lines Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "WPX",
+   "name": "Wpx Energy Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "BSX",
+   "name": "Boston Scientific Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "BFT",
+   "name": "Foley Trasimene Acquisition Corp. II Cl A",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "HAL",
+   "name": "Halliburton Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "PE",
+   "name": "Parsley Energy",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "RF",
+   "name": "Regions Financial Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "ELAN",
+   "name": "Elanco Animal Health Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "COP",
+   "name": "Conocophillips",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "SLB",
+   "name": "Schlumberger N.V.",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "HPE",
+   "name": "Hewlett Packard Enterprise Comp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "NLY",
+   "name": "Annaly Capital Management Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "AG",
+   "name": "First Majestic Silver",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "KGC",
+   "name": "Kinross Gold Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "FTCH",
+   "name": "Farfetch Ltd Cl A",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "BMY",
+   "name": "Bristol-Myers Squibb Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "WMB",
+   "name": "Williams Companies",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "JMIA",
+   "name": "Jumia Technologies Ag ADR",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "PCG",
+   "name": "Pacific Gas & Electric Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "HL",
+   "name": "Hecla Mining Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "KO",
+   "name": "Coca-Cola Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "AMC",
+   "name": "Amc Entertainment Holdings Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "BA",
+   "name": "Boeing Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "EOG",
+   "name": "Eog Resources",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "GEO",
+   "name": "Geo Group Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "CX",
+   "name": "Cemex S.A.B. DE C.V.",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "CVX",
+   "name": "Chevron Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "VER",
+   "name": "Vereit Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "AIG",
+   "name": "American International Group",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "MFA",
+   "name": "MFA Financial Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "KODK",
+   "name": "Eastman Kodak",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "RKT",
+   "name": "Rocket Companies Inc Cl A",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "MO",
+   "name": "Altria Group",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "MBT",
+   "name": "Mobile Telesystems",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "RTX",
+   "name": "Raytheon Technologies Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "JWN",
+   "name": "Nordstrom",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "IBN",
+   "name": "Icici Bank Ltd",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "ORCL",
+   "name": "Oracle Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "KR",
+   "name": "Kroger Company",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "MPC",
+   "name": "Marathon Petroleum Corp",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "MGM",
+   "name": "MGM Resorts International",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "MAXR",
+   "name": "Maxar Technologies Ltd",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "BKR",
+   "name": "Baker Hughes A Ge CO Cl A",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "ABBV",
+   "name": "Abbvie Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "CNK",
+   "name": "Cinemark Holdings Inc",
+   "exchange": "NYSE"
+ },
+ {
+   "symbol": "FTSI",
+   "name": "Fts International Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "BTG",
+   "name": "B2Gold Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "UAVS",
+   "name": "Ageagle Aerial Systems Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "YCBD",
+   "name": "Cbdmd Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "GORO",
+   "name": "Gold Resource Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "LNG",
+   "name": "Cheniere Energy",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "SVM",
+   "name": "Silvercorp Metals Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "AMBO",
+   "name": "Ambow Education Holding Ltd",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "AXU",
+   "name": "Alexco Resource Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "NOG",
+   "name": "Northern Oil and Gas",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "EQX",
+   "name": "Equinox Gold Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "NG",
+   "name": "Novagold Resources Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "APT",
+   "name": "Alpha Pro Tech",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "SILV",
+   "name": "Silvercrest Metals Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "USAS",
+   "name": "Americas Silver Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "MTA",
+   "name": "Metalla Royalty and Streaming Ltd",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "IMO",
+   "name": "Imperial Oil Ltd",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "MAG",
+   "name": "MAG Silver Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CBOE",
+   "name": "CBOE Global Markets Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "AIM",
+   "name": "Aim Immunotech Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "GLDG",
+   "name": "Goldmining Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "ATNM",
+   "name": "Actinium Pharmaceuticals Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "FSP",
+   "name": "Franklin Street Properties",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "UUU",
+   "name": "Universal Security Instruments",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "PLM",
+   "name": "Polymet Mining",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CVM",
+   "name": "Cel-Sci Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "DSS",
+   "name": "Document Security Systems",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "GOED",
+   "name": "1847 Goedeker Inc Commom Stock",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CRMD",
+   "name": "Cormedix Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "GSS",
+   "name": "Golden Star Resources Ltd",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "EMX",
+   "name": "Emx Royalty Group",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CQP",
+   "name": "Cheniere Energy Partners LP",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "SMTS",
+   "name": "Sierra Metals Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "RVP",
+   "name": "Retractable Technologies",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "GV",
+   "name": "Goldfield Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "MMX",
+   "name": "Maverix Metals Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "BRG",
+   "name": "Bluerock Residential Growth Rei",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "STXS",
+   "name": "Stereotaxis Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "ZDGE",
+   "name": "Zedge Inc Cl B",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "EPM",
+   "name": "Evolution Petroleum Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "RLGT",
+   "name": "Radiant Logistics",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "KLR",
+   "name": "Kaleyra Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "EXN",
+   "name": "Excellon Resources",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "COHN",
+   "name": "Cohen & CO Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "ELA",
+   "name": "Envela Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "SACH",
+   "name": "Sachem Capital Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CMT",
+   "name": "Core Molding Technologies Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "VNRX",
+   "name": "Volitionrx Ltd",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "NAVB",
+   "name": "Navidea Biopharmaceuticals Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "NNVC",
+   "name": "Nanoviricides Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "ITRG",
+   "name": "Integra Resources Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CRHM",
+   "name": "CRH Medical Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "MYO",
+   "name": "Myomo Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "ELMD",
+   "name": "Electromed Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "TMP",
+   "name": "Tompkinstrustco",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "ISDR",
+   "name": "Issuer Direct Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "PW",
+   "name": "Power REIT [Md]",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "PRK",
+   "name": "Park National Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "LEU",
+   "name": "Centrus Energy Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CMCL",
+   "name": "Caledonia Mining Cp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "PLX",
+   "name": "Protalix Biotherapeutics",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "OBLG",
+   "name": "Oblong Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "LSF",
+   "name": "Laird Superfood Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "NHC",
+   "name": "National Healthcare Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "BHB",
+   "name": "Bar Harbor Bankshares",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "INS",
+   "name": "Intelligent Systems Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "LOV",
+   "name": "Spark Networks Plc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CVU",
+   "name": "CPI Aerostructures",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "MXC",
+   "name": "Mexco Energy Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "FSI",
+   "name": "Flexible Solutions International Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CTO",
+   "name": "Consolidated-Tomoka Land Company",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "INTT",
+   "name": "Intest Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "BIOX",
+   "name": "Bioceres Crop Solutions Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "INFU",
+   "name": "Infusystems Holdings",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "MHH",
+   "name": "Mastech Holdings Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "TRT",
+   "name": "Trio-Tech International",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "NES",
+   "name": "Nuverra Environmental Solutions",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "ARMP",
+   "name": "Armata Pharmaceuticals Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "LGL",
+   "name": "LGL Group",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "ACU",
+   "name": "Acme United Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CDOR",
+   "name": "Condor Hospitality T",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "ANVS",
+   "name": "Annovis Bio Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "DLA",
+   "name": "Delta Apparel",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CCF",
+   "name": "Chase Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "GDP",
+   "name": "Goodrich Petroleum Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "CIX",
+   "name": "Compx International Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "EVBN",
+   "name": "Evans Bancorp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "BKTI",
+   "name": "Bk Technologies Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "EVI",
+   "name": "Evi Industries Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "BATL",
+   "name": "Battalion Oil Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "PTK",
+   "name": "Ptk Acquisition Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "NTIP",
+   "name": "Network-1 Sec Solu",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "PHGE",
+   "name": "Biomx Ltd",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "FRD",
+   "name": "Friedman Industries Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "SEB",
+   "name": "Seaboard Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "ESP",
+   "name": "Espey Mfg. & Electronics",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "AE",
+   "name": "Adams Resources & Energy",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "BDL",
+   "name": "Flanigan's Enterprises",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "DXR",
+   "name": "Daxor Corp",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "UFAB",
+   "name": "Unique Fabricating Inc",
+   "exchange": "AMEX"
+ },
+ {
+   "symbol": "TLRY",
+   "name": "Tilray Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "AAPL",
+   "name": "Apple Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "AMD",
+   "name": "Adv Micro Devices",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "ZNGA",
+   "name": "Zynga Inc Cl A",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "CRON",
+   "name": "Cronos Group Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "APHA",
+   "name": "Aphria Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "AAL",
+   "name": "American Airlines Gp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "INTC",
+   "name": "Intel Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "LI",
+   "name": "Li Auto Inc ADR",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "PLUG",
+   "name": "Plug Power Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "VIAC",
+   "name": "Viacomcbs Inc Cl B",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "KERN",
+   "name": "Akerna Corp Cl A",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "MSFT",
+   "name": "Microsoft Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "PTON",
+   "name": "Peloton Interactive Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "MRVL",
+   "name": "Marvell Tech Group",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "TSLA",
+   "name": "Tesla Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "ASMB",
+   "name": "Assembly Biosciences",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "SIRI",
+   "name": "Sirius XM Holdings",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "NNDM",
+   "name": "Nano Dimension Ads",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "CSCO",
+   "name": "Cisco Systems Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "DKNG",
+   "name": "Draftkings Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "ANGI",
+   "name": "Homeservices Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "GPRO",
+   "name": "Gopro Inc Cl A",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "ONCT",
+   "name": "Oncternal Therapeutics Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "ROKU",
+   "name": "Roku Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "GLUU",
+   "name": "Glu Mobile Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "LYFT",
+   "name": "Lyft Inc Cl A",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "SPWR",
+   "name": "Sunpower Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "GBT",
+   "name": "Global Blood Ther",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "CMCSA",
+   "name": "Comcast Corp A",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "MU",
+   "name": "Micron Technology",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "FB",
+   "name": "Facebook Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "SOLO",
+   "name": "Electrameccanica Vehs Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "UAL",
+   "name": "United Airlines Holdings Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "HST",
+   "name": "Host Marriott Financial Trust",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "WKHS",
+   "name": "Workhorse Grp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "NLOK",
+   "name": "Nortonlifelock Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "APA",
+   "name": "Apache Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "EA",
+   "name": "Electronic Arts Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "FCEL",
+   "name": "Fuelcell Energy Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "Z",
+   "name": "Zillow Group Cl C",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "KNDI",
+   "name": "Kandi Techs Group",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "EBAY",
+   "name": "Ebay Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "JD",
+   "name": "Jd.com Inc Ads",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "NVDA",
+   "name": "Nvidia Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "ENDP",
+   "name": "Endo Int'l Plc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "MYL",
+   "name": "Mylan NV Ord Shs",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "MARA",
+   "name": "Marathon Patent Grou",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "TMUS",
+   "name": "T-Mobile US",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "EXC",
+   "name": "Exelon Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "AMRN",
+   "name": "Amarin Corp Ads",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "DBX",
+   "name": "Dropbox Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "NKLA",
+   "name": "Nikola Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "AMAT",
+   "name": "Applied Materials",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "HBAN",
+   "name": "Huntington Bcshs",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "RUN",
+   "name": "Sunrun Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "PS",
+   "name": "Pluralsight Inc Cl A",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "SRNE",
+   "name": "Sorrento Therpt",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "PYPL",
+   "name": "Paypal Holdings",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "ON",
+   "name": "On Semiconductor",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "FOXA",
+   "name": "Fox Corp Cl A",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "AVXL",
+   "name": "Anavex Lf SC",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "DGLY",
+   "name": "Digital Ally Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "ATVI",
+   "name": "Activision Blizzard",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "APVO",
+   "name": "Aptevo Therapeutics Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "CLVS",
+   "name": "Clovis Oncology Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "IRWD",
+   "name": "Ironwood Pharmaceuti",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "QCOM",
+   "name": "Qualcomm Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "PEIX",
+   "name": "Pacific Ethanol Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "GILD",
+   "name": "Gilead Sciences Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "BILI",
+   "name": "Bilibili Inc ADR",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "GRWG",
+   "name": "Growgeneration Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "HALO",
+   "name": "Halozyme Therapeutic",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "FLEX",
+   "name": "Flextronics Intl Ltd",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "SBUX",
+   "name": "Starbucks Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "PBCT",
+   "name": "People's United Finl",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "AGNC",
+   "name": "American Capital Age",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "WBA",
+   "name": "Walgreens Boots Alliance",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "TRUE",
+   "name": "Truecar Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "IQ",
+   "name": "Iqiyi Inc ADR",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "WWR",
+   "name": "Westwater Resources",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "MGNI",
+   "name": "Magnite Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "MRNA",
+   "name": "Moderna Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "UPWK",
+   "name": "Upwork Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "DISH",
+   "name": "Dish Network Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "WMGI",
+   "name": "Wright Med Grp NV",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "RIOT",
+   "name": "Riot Blockchain Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "QRTEA",
+   "name": "Qurate Retail Inc Series A",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "IMGN",
+   "name": "Immunogen Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "JBLU",
+   "name": "Jetblue Airways Cp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "ERIC",
+   "name": "Ericsson ADR",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "OPK",
+   "name": "Opko Health Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "INSG",
+   "name": "Inseego Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "XLNX",
+   "name": "Xilinx Inc",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "VFF",
+   "name": "Village Farms Intl",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "NBEV",
+   "name": "New Age Beverages Corp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "FITB",
+   "name": "Fifth Third Bncp",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "DISCA",
+   "name": "Discovery Comm A",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "KXIN",
+   "name": "Kaixin Auto Holdings",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "DNKN",
+   "name": "Dunkin' Brands Group",
+   "exchange": "NASDAQ"
+ },
+ {
+   "symbol": "HTZGQ",
+   "name": "Hertz Global Holdings Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "GBTC",
+   "name": "Bitcoin Invt TR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "RLFTF",
+   "name": "Mondobiotech Holding Ag Basel",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "NWBO",
+   "name": "Northwest Bioth Cmn",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "TCEHY",
+   "name": "Tencent Holdings ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "FNMA",
+   "name": "Fannie Mae",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "LHSIF",
+   "name": "Liberty Health Sciences Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "ZNOG",
+   "name": "Zion Oil & Gas Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "CYDY",
+   "name": "Cytodyn Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "LKNCY",
+   "name": "Luckin Coffee Inc ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "CURLF",
+   "name": "Curaleaf Holdings Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "DKMR",
+   "name": "Duke Mountain Res Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "PLNHF",
+   "name": "Planet 13 Holdings Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "KSHB",
+   "name": "Kush Bottles Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "MMEDF",
+   "name": "Mind Medicine Mindmed Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "RHHBY",
+   "name": "Roche Holdings Ltd ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "HVBTF",
+   "name": "Hive Blockchain Technologies Ltd",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "CWBHF",
+   "name": "Charlotte's Web Holdings Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "CVSI",
+   "name": "Cv Sciences Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "BAESY",
+   "name": "Bae Systems ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "SMNNY",
+   "name": "Shimano Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "FMCC",
+   "name": "Freddie Mac",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "HRVSF",
+   "name": "Harvest Health & Recreation Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "CANN",
+   "name": "General Cannabis Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "SLVRF",
+   "name": "Silver One Resources Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "KHRNF",
+   "name": "Khiron Life Sciences Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "CCHWF",
+   "name": "Columbia Care Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "TLLTF",
+   "name": "Tilt Holdings Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "CRLBF",
+   "name": "Cresco Labs Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "FNMAS",
+   "name": "Fannie Mae Pfd S",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "CBDS",
+   "name": "Cannabis Sativa Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "RYCRF",
+   "name": "Rolls Royce Holdings Plc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "BUDZ",
+   "name": "Weed Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "GTBIF",
+   "name": "Green Thumb Industries Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "NTDOY",
+   "name": "Nintendo CO Ltd ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "ACCYY",
+   "name": "Accor S.A.",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "ABBRF",
+   "name": "Abraplata Resource Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "MGMLF",
+   "name": "Maple Gold Mines Ltd",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "VRYYF",
+   "name": "Very Good Food CO",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "TRSSF",
+   "name": "Terrascend Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "GELYF",
+   "name": "Geely Automobile Hld",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "FMCKJ",
+   "name": "Freddie Mac Pfd Z",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "MAKSY",
+   "name": "Marks & SP Gp ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "MGDDY",
+   "name": "Compagnie Generale D",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "BVNNF",
+   "name": "Bevcanna Enterprises Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "BYDDF",
+   "name": "Byd CO Ltd H Shs",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "FFMGF",
+   "name": "First Mining Gold Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "EMHLF",
+   "name": "European Metals Holdings Ltd",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "EMIS",
+   "name": "Emisphere Tech",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "RYCEY",
+   "name": "Rolls Royce Grp ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "WUHN",
+   "name": "Wuhan General Group [China]",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "SGRPW",
+   "name": "Sirius International Insurance Group Ltd WT Exp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "ALLIF",
+   "name": "Alpha Lithium Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "BDORY",
+   "name": "Banco Do Brasil S.A.",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "AUNFF",
+   "name": "Aurcana Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "ACRHF",
+   "name": "Acreage Holdings",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "MDRPF",
+   "name": "Midas Gold Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "BDRFY",
+   "name": "Beiersdorf A G",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "MEDIF",
+   "name": "Medipharm Labs Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "LRTNF",
+   "name": "Pure Gold Mining Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "NSUPF",
+   "name": "Northern Superior",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "BMWLF",
+   "name": "Bluma Wellness Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "AAGFF",
+   "name": "Aftermath Silver Ltd",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "DNCVF",
+   "name": "Defiance Silver Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "BLFE",
+   "name": "Biolife Sciences Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "SHRMF",
+   "name": "Champignon Brands",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "PAASF",
+   "name": "Pan American Silver Corp Contingent Value Rights",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "VREOF",
+   "name": "Vireo Health International Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "PKKFF",
+   "name": "Peak Positioning",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "CAIXY",
+   "name": "Caixabank",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "VNNHF",
+   "name": "Belo Sun Mng Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "MRGE",
+   "name": "Mirage Energy Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "DOCRF",
+   "name": "Cloudmd Software & Services Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "TLTZY",
+   "name": "Tele2 Ab ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "OGZPY",
+   "name": "Oao Gazprom ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "DSVMF",
+   "name": "Discovery Metals Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "AUOTY",
+   "name": "Au Optronics Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "SILEF",
+   "name": "Silver Elephant Mining Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "SPAZF",
+   "name": "Spanish Mtn Gold Ltd",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "CNTMF",
+   "name": "Cansortium Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "HEINY",
+   "name": "Heineken N V/S ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "LKYSF",
+   "name": "Numinus Wellness Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "ALFFF",
+   "name": "Alfa S.A.B. DE C.V.",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "NLST",
+   "name": "Netlist Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "TUESQ",
+   "name": "Tuesday Morning Company",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "ICAGY",
+   "name": "International Cons A",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "BHPLF",
+   "name": "Bhp Billition Ltd",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "TCNNF",
+   "name": "Trulieve Cannabis Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "RIOFF",
+   "name": "Rio2 Ltd",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "ELYGF",
+   "name": "Ely Gold & Minerals",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "PROSY",
+   "name": "Prosus NV ADR",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "NGCRF",
+   "name": "Nagacorp Ltd",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "ACUIF",
+   "name": "Acuityads Holdings",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "AAGIY",
+   "name": "Aia Group Ltd",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "KOOYF",
+   "name": "Kootenay Gold Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "JUSHF",
+   "name": "Jushi Holdings Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "APVTW",
+   "name": "Aptevo Therapeutics Inc",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "RECAF",
+   "name": "Reconnaissance Energy Africa Ltd",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "FFNTF",
+   "name": "4Front Ventures Corp",
+   "exchange": "OTC"
+ },
+ {
+   "symbol": "BBBXF",
+   "name": "Brixton Metals Corp",
+   "exchange": "OTC"
+ }
+]
