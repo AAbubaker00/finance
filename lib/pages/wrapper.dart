@@ -15,6 +15,7 @@ import 'package:valuid/services/forex/forex_conversion.dart';
 import 'package:valuid/services/marketbeat/marketbeat.dart';
 import 'package:valuid/shared/Custome_Widgets/botomSheet/custome_Bottom_Sheet.dart';
 import 'package:valuid/shared/Custome_Widgets/loading/loading.dart';
+import 'package:valuid/shared/calculations/portfolio_calculations.dart';
 import 'package:valuid/shared/custom_scaffold/custom_navigator.dart';
 import 'package:valuid/shared/dataObject/data_object.dart';
 import 'package:valuid/shared/pageLoaders/noPortfolio.dart';
@@ -51,41 +52,12 @@ class _WrapperState extends State<Wrapper> {
       if ((dataObject.oldDoc == null ||
               !DeepCollectionEquality().equals(doc['portfolios'], dataObject.oldDoc!['portfolios'])) &&
           doc['portfolios'].length > 0) {
-            
-
         dataObject.portfolios = PortfolioObject().listPortfolioObjectFromMap(doc);
 
         if (dataObject.portfolios.length > 0) {
           for (var portfolio in dataObject.portfolios) {
-            portfolio.value = 0;
-            portfolio.invested = 0;
-            portfolio.change = 0;
-            portfolio.changePercent = 0;
-
-            if (portfolio.holdings.isNotEmpty) {
-              List<QuoteObject> b = await Marketbeat().getMarketbeatQuoteList(portfolio.holdings);
-
-              portfolio.holdings = QuoteObject().combineToList(portfolio.holdings, b);
-
-              for (var holding in portfolio.holdings) {
-                double conversion = ForexConversion(baseCurrency: dataObject.account.currency)
-                    .getRate(await DatabaseService().getRates(), holding.currency);
-
-                holding.regularMarketPrice *= conversion;
-                holding.regularMarketChange *= conversion;
-
-                holding.change =
-                    (holding.regularMarketPrice - (holding.purchasePrice * conversion)) * holding.quantity;
-                holding.changePercent = (holding.change / holding.purchasePrice) * 100;
-                holding.invested = holding.purchasePrice * holding.quantity * conversion;
-                holding.value = holding.change + holding.invested;
-
-                portfolio.value += holding.value;
-                portfolio.invested += holding.invested;
-                portfolio.change += holding.change;
-                portfolio.changePercent = (portfolio.change / portfolio.invested) * 100;
-              }
-            }
+            portfolio = await PortfolioCalculations()
+                .portfolioCalculations(portfolio: portfolio, dataObject: dataObject);
           }
 
           dataObject.onPortfolio = dataObject.portfolios.first;
@@ -93,9 +65,6 @@ class _WrapperState extends State<Wrapper> {
 
           dataObject.oldDoc = doc;
         }
-
-
-        
       }
     } catch (e) {
       PrintFunctions().printError('initalise: $e');
@@ -140,7 +109,7 @@ class _WrapperState extends State<Wrapper> {
         startTimer();
       }
 
-      return Loading();
+      return MainLoading();
     } else {
       timer.cancel();
 
@@ -204,12 +173,12 @@ class _WrapperState extends State<Wrapper> {
                           ),
                         );
                       } else {
-                        return Loading();
+                        return MainLoading();
                       }
                     },
                   );
                 } else {
-                  return Loading();
+                  return MainLoading();
                 }
               });
         } else {
@@ -220,7 +189,7 @@ class _WrapperState extends State<Wrapper> {
         print('object');
       }
 
-      return Loading();
+      return MainLoading();
     }
   }
 }

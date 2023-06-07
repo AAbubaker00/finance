@@ -6,7 +6,6 @@ import 'package:valuid/shared/GeneralObject/generalObject.dart';
 import 'package:valuid/shared/TextStyle/customTextStyles.dart';
 import 'package:valuid/shared/charts/charts.dart';
 import 'package:valuid/shared/dataObject/data_object.dart';
-import 'package:valuid/shared/decoration/customDecoration.dart';
 import 'package:valuid/shared/pageLoaders/noHolding.dart';
 import 'package:valuid/shared/themes/themes.dart';
 import 'package:valuid/shared/units/units.dart';
@@ -47,117 +46,118 @@ class _AllocationsState extends State<Allocations> {
         ? NoHoldings()
         : Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15),
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border(bottom: BorderSide(width: .7, color: seperator.withOpacity(.7))),
-                  ),
-                  padding: EdgeInsets.only(top: 20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+              Container(
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
+                decoration: BoxDecoration(
+                    color: summaryColour,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.15),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                    border: Border(bottom: BorderSide(width: .7, color: seperator.withOpacity(.7)))),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Flexible(
+                          child: Text(
+                            diversificationCDT[diversificationSelectedIndex].name!,
+                            style: CustomTextStyles(widget.dataObject.context).portfolioNameStyle.copyWith(
+                                color: customColours[diversificationSelectedIndex],
+                                fontWeight: FontWeight.w600),
+                            maxLines: 2,
+                          ),
+                        ),
+                        Text(
+                            diversificationCDT[diversificationSelectedIndex].weight!.toStringAsFixed(2) + '%',
+                            style: CustomTextStyles(widget.dataObject.context).holdingValueStyle)
+                      ],
+                    ),
+                    SizedBox(
+                      height: widget.dataObject.height * 0.07,
+                      child: CustomCharts(widget.dataObject.context).createSampleData(
+                        data: diversificationCDT,
+                        dataObject: widget.dataObject,
+                        selectedIndex: diversificationSelectedIndex,
+                        centerData: diversificationCDT.isEmpty
+                            ? ''
+                            : diversificationCDT[diversificationSelectedIndex].weight!.toStringAsFixed(2),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(top: 7.0, bottom: 5),
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Flexible(
-                            child: Text(
-                              diversificationCDT[diversificationSelectedIndex].name!,
-                              style: CustomTextStyles(widget.dataObject.context).portfolioNameStyle.copyWith(
-                                  color: customColours[diversificationSelectedIndex],
-                                  fontWeight: FontWeight.w600),
-                              maxLines: 2,
-                            ),
-                          ),
-                          Text(
-                              diversificationCDT[diversificationSelectedIndex].weight!.toStringAsFixed(2) +
-                                  '%',
-                              style: CustomTextStyles(widget.dataObject.context).holdingValueStyle)
-                        ],
-                      ),
-                      SizedBox(
-                        height: widget.dataObject.height * 0.07,
-                        // width: widget.dataObject.width*0.99,
-                        child: CustomCharts(widget.dataObject.context).createSampleData(
-                          data: diversificationCDT,
-                          dataObject: widget.dataObject,
-                          selectedIndex: diversificationSelectedIndex,
-                          centerData: diversificationCDT.isEmpty
-                              ? ''
-                              : diversificationCDT[diversificationSelectedIndex].weight!.toStringAsFixed(2),
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(top: 7.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            InkWell(
+                          InkWell(
                               splashColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               focusColor: Colors.transparent,
-                                customBorder: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(circularRadius)),
-                                onTap: () => showDiversificationPanel(),
-                                borderRadius: BorderRadius.circular(50),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(vertical: 5.0),
-                                  child: Row(
-                                    children: [
-                                      Text(diversificationOption,
-                                          style: CustomTextStyles(widget.dataObject.context)
-                                              .portfolioNameStyle
-                                              .copyWith(fontWeight: FontWeight.w600)),
-                                      Icon(Icons.keyboard_arrow_down_rounded)
-                                    ],
-                                  ),
-                                )),
-                            Text('Invested',
-                                style: CustomTextStyles(widget.dataObject.context).portfolioNameStyle),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                              customBorder:
+                                  RoundedRectangleBorder(borderRadius: BorderRadius.circular(circularRadius)),
+                              onTap: () => showDiversificationPanel(),
+                              borderRadius: BorderRadius.circular(50),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 5.0),
+                                child: Row(
+                                  children: [
+                                    Text(diversificationOption,
+                                        style: CustomTextStyles(widget.dataObject.context)
+                                            .portfolioNameStyle
+                                            .copyWith(fontWeight: FontWeight.w600)),
+                                    Icon(Icons.keyboard_arrow_down_rounded)
+                                  ],
+                                ),
+                              )),
+                          Text('Invested',
+                              style: CustomTextStyles(widget.dataObject.context).portfolioNameStyle),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               ),
               Expanded(
-                child: Ink(
+                child: ListView(
                   padding: const EdgeInsets.symmetric(horizontal: 12),
-                  child: ListView(
-                    shrinkWrap: true,
-                    children: diversificationCDT
-                        .map((diverOption) => Column(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                      top: diverOption == diversificationCDT.first ? 8 : 0,
-                                      bottom: diverOption == diversificationCDT.last ? 8 : 0),
-                                  child: InkWell(
-                                      borderRadius: BorderRadius.circular(circularRadius),
-                                      onTap: () {
-                                        setState(() {
-                                          diversificationSelectedIndex =
-                                              diversificationCDT.indexOf(diverOption);
-                                        });
-                                      },
-                                      child: SectorCard(
-                                          dataObject: widget.dataObject,
-                                          diverOption: diverOption,
-                                          diversificationOption: diversificationOption,
-                                          diversificationSelectedIndex: diversificationSelectedIndex,
-                                          diversificationCDT: diversificationCDT)),
-                                ),
-                                diverOption == diversificationCDT.last
-                                    ? Container()
-                                    : Padding(
-                                        padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 4),
-                                        child: CustomDivider())
-                              ],
-                            ))
-                        .toList(),
-                  ),
+                  shrinkWrap: true,
+                  children: diversificationCDT
+                      .map((diverOption) => Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: diverOption == diversificationCDT.first ? 8 : 0,
+                                    bottom: diverOption == diversificationCDT.last ? 10 : 0),
+                                child: InkWell(
+                                    borderRadius: BorderRadius.circular(circularRadius),
+                                    onTap: () {
+                                      setState(() {
+                                        diversificationSelectedIndex =
+                                            diversificationCDT.indexOf(diverOption);
+                                      });
+                                    },
+                                    child: SectorCard(
+                                        dataObject: widget.dataObject,
+                                        diverOption: diverOption,
+                                        diversificationOption: diversificationOption,
+                                        diversificationSelectedIndex: diversificationSelectedIndex,
+                                        diversificationCDT: diversificationCDT)),
+                              ),
+                              diverOption == diversificationCDT.last
+                                  ? Container()
+                                  : Padding(
+                                      padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 4),
+                                      child: CustomDivider())
+                            ],
+                          ))
+                      .toList(),
                 ),
               ),
             ],

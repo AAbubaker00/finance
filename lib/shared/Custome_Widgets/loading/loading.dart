@@ -39,9 +39,54 @@ class _LoadingState extends State<Loading> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Container(
         color: widget.isbgColourActive ? summaryColour : Colors.transparent,
-        child: Image.asset(
-          'assets/icons/onvestingLoadLogo.png',
-          scale: 10,
+        child: FadeTransition(
+          opacity: _animation,
+          child: ClipRRect(
+              child: Image.asset(
+            'assets/icons/onvestingLoadLogo.png',
+            scale: 10,
+          )),
         ));
+  }
+}
+
+class MainLoading extends StatefulWidget {
+  final bool isbgColourActive;
+
+  MainLoading({Key? key, this.isbgColourActive = true}) : super(key: key);
+
+  @override
+  State<MainLoading> createState() => _MainLoadingState();
+}
+
+class _MainLoadingState extends State<MainLoading> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: summaryColour,
+      child: Stack(
+        children: [
+          Center(
+              child: Container(
+                  color: widget.isbgColourActive ? summaryColour : Colors.transparent,
+                  child: ClipRRect(child: Image.asset('assets/icons/onvestingLoadLogo.png', scale: 10)))),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              padding: EdgeInsets.only(bottom: 50),
+              width: 140,
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                child: LinearProgressIndicator(
+                  backgroundColor: backgroundColour,
+                  minHeight: 7,
+                  color: blueVarient,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

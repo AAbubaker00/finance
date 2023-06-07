@@ -13,6 +13,7 @@ import 'package:valuid/shared/Custome_Widgets/divider.dart/divider.dart';
 import 'package:valuid/shared/Custome_Widgets/scaffold/cw_scaffold.dart';
 import 'package:valuid/shared/TextStyle/customTextStyles.dart';
 import 'package:valuid/shared/ads/ad_helper.dart';
+import 'package:valuid/shared/calculations/portfolio_calculations.dart';
 import 'package:valuid/shared/customPageRoute/customePageRoute.dart';
 import 'package:valuid/shared/dataObject/data_object.dart';
 import 'package:valuid/shared/pageLoaders/offline.dart';
@@ -70,38 +71,8 @@ class _ViewPortfolioState extends State<ViewPortfolio> {
         if (await Network().getConnectionStatus()) {
           isOnline = true;
 
-          widget.dataObject.onPortfolio!.value = 0;
-          widget.dataObject.onPortfolio!.invested = 0;
-          widget.dataObject.onPortfolio!.change = 0;
-          widget.dataObject.onPortfolio!.changePercent = 0;
-
-          if (widget.dataObject.onPortfolio!.holdings.length > 0) {
-            List<QuoteObject> b =
-                await Marketbeat().getMarketbeatQuoteList(widget.dataObject.onPortfolio!.holdings);
-
-            widget.dataObject.onPortfolio!.holdings =
-                QuoteObject().combineToList(widget.dataObject.onPortfolio!.holdings, b);
-
-            for (var holding in widget.dataObject.onPortfolio!.holdings) {
-              double conversion = ForexConversion(baseCurrency: widget.dataObject.account.currency)
-                  .getRate(await DatabaseService().getRates(), holding.currency);
-
-              holding.regularMarketPrice *= conversion;
-              holding.regularMarketChange *= conversion;
-
-              holding.change =
-                  (holding.regularMarketPrice - (holding.purchasePrice * conversion)) * holding.quantity;
-              holding.changePercent = (holding.change / holding.purchasePrice) * 100;
-              holding.invested = holding.purchasePrice * holding.quantity * conversion;
-              holding.value = holding.change + holding.invested;
-
-              widget.dataObject.onPortfolio!.value += holding.value;
-              widget.dataObject.onPortfolio!.invested += holding.invested;
-              widget.dataObject.onPortfolio!.change += holding.change;
-              widget.dataObject.onPortfolio!.changePercent =
-                  (widget.dataObject.onPortfolio!.change / widget.dataObject.onPortfolio!.invested) * 100;
-            }
-          }
+          widget.dataObject.onPortfolio = await PortfolioCalculations().portfolioCalculations(
+              portfolio: widget.dataObject.onPortfolio!, dataObject: widget.dataObject);
 
           setSort(dataObject: widget.dataObject);
         } else {
@@ -124,15 +95,15 @@ class _ViewPortfolioState extends State<ViewPortfolio> {
   void initState() {
     super.initState();
 
-    floatingBottomAd = BannerAd(
-        size: AdSize.banner,
-        adUnitId: AdHelper.bannerAdUnitId,
-        listener: BannerAdListener(
-            onAdLoaded: (_) => setState(() => isAdLoaded = true),
-            onAdFailedToLoad: (_, error) => PrintFunctions().printStartEndLine(error)),
-        request: AdRequest());
+    // floatingBottomAd = BannerAd(
+    //     size: AdSize.banner,
+    //     adUnitId: AdHelper.bannerAdUnitId,
+    //     listener: BannerAdListener(
+    //         onAdLoaded: (_) => setState(() => isAdLoaded = true),
+    //         onAdFailedToLoad: (_, error) => PrintFunctions().printStartEndLine(error)),
+    //     request: AdRequest());
 
-    floatingBottomAd.load();
+    // floatingBottomAd.load();
 
     updateFrequency = Timer.periodic(Duration(seconds: 10), (timer) {
       updateState == false

@@ -27,10 +27,15 @@ class QuoteObject {
   QuoteObject();
 
   QuoteObject.fromMap(var document, {String? n, String? s, String? e})
-      : name = n?? document.getElementsByClassName('PageTitleHOne').first.text.replaceRange(
-            document.getElementsByClassName('PageTitleHOne').first.text.indexOf('('),
-            document.getElementsByClassName('PageTitleHOne').first.text.length,
-            '').toString().trim(),
+      : name = n ??
+            document
+                .getElementsByClassName('PageTitleHOne')
+                .first
+                .text
+                .replaceRange(document.getElementsByClassName('PageTitleHOne').first.text.indexOf('('),
+                    document.getElementsByClassName('PageTitleHOne').first.text.length, '')
+                .toString()
+                .trim(),
         currency = e == null
             ? ''
             : (e == 'LSE'
@@ -100,7 +105,92 @@ class QuoteObject {
             .replaceAll(')', '')
             .replaceAll('%', '')),
         dividendSupport =
-            (document.getElementsByClassName('price-data-col col-31')[1].children[1].children[1].text != 'N/A');
+            (document.getElementsByClassName('price-data-col col-31')[1].children[1].children[1].text !=
+                'N/A');
+
+  Future fromMap(var document, {String? n, String? s, String? e}) async {
+    QuoteObject q = new QuoteObject();
+    q.name = n ??
+        document
+            .getElementsByClassName('PageTitleHOne')
+            .first
+            .text
+            .replaceRange(document.getElementsByClassName('PageTitleHOne').first.text.indexOf('('),
+                document.getElementsByClassName('PageTitleHOne').first.text.length, '')
+            .toString()
+            .trim();
+    q.currency = e == null
+        ? ''
+        : (e == 'LSE'
+            ? 'GBP'
+            : ForexConversion().currencySymbols.firstWhere(
+                (currency) =>
+                    currency['symbol'] ==
+                    document.getElementsByClassName('price')[0].children.first.text.replaceRange(
+                        1, document.getElementsByClassName('price')[0].children.first.text.length, ''),
+                orElse: () => null)['short']);
+    q.symbol = s;
+    q.exchange = e;
+    q.sector = document.getElementsByClassName('m-0 p-0')[1].children[3].children[1].text;
+    q.industry = document.getElementsByClassName('m-0 p-0')[1].children[1].children[1].text;
+    q.subIndustry = document.getElementsByClassName('m-0 p-0')[1].children[2].children[1].text;
+    q.regularMarketPrice = double.parse(
+        document.getElementsByClassName('price')[0].children.first.text.replaceRange(0, 1, '').replaceAll(
+            new RegExp(
+              r'[A-Z]',
+            ),
+            ''));
+    q.regularMarketChange = double.parse(document
+        .getElementsByClassName('price')[0]
+        .children[1]
+        .text
+        .replaceRange(0, 1, '')
+        .split(' ')
+        .first
+        .replaceRange(
+            document
+                .getElementsByClassName('price')[0]
+                .children[1]
+                .text
+                .replaceRange(0, 1, '')
+                .split(' ')
+                .first
+                .indexOf('('),
+            document
+                .getElementsByClassName('price')[0]
+                .children[1]
+                .text
+                .replaceRange(0, 1, '')
+                .split(' ')
+                .first
+                .length,
+            '')
+        .trim());
+    q.regularMarketChangePercent = double.parse(document
+        .getElementsByClassName('price')[0]
+        .children[1]
+        .text
+        .replaceRange(0, 1, '')
+        .split(' ')
+        .first
+        .replaceRange(
+            0,
+            document
+                .getElementsByClassName('price')[0]
+                .children[1]
+                .text
+                .replaceRange(0, 1, '')
+                .split(' ')
+                .first
+                .indexOf('('),
+            '')
+        .replaceAll('(', '')
+        .replaceAll(')', '')
+        .replaceAll('%', ''));
+    q.dividendSupport =
+        (document.getElementsByClassName('price-data-col col-31')[1].children[1].children[1].text != 'N/A');
+    return q;
+  }
 
   Map quoteToMap(QuoteObject holding) => {
         'symbol': holding.symbol,
@@ -128,9 +218,7 @@ class QuoteObject {
   }
 
   List<QuoteObject> combineToList(List<QuoteObject> a, List<QuoteObject> b) => List.generate(
-      b.length,
-      (index) =>
-          combineTo(a[a.indexWhere((aExc) => aExc.symbol == b[index].symbol)], b[index]));
+      b.length, (index) => combineTo(a[a.indexWhere((aExc) => aExc.symbol == b[index].symbol)], b[index]));
 
   List listQuoteToMap(List<QuoteObject> holdings) =>
       List.generate(holdings.length, (index) => quoteToMap(holdings[index]));
