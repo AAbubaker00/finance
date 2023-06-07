@@ -1,5 +1,3 @@
-
-
 import 'package:valuid/extensions/stringExt.dart';
 import 'package:valuid/shared/Custome_Widgets/cards/eventContainer%20.dart';
 import 'package:valuid/shared/TextStyle/customTextStyles.dart';
@@ -13,13 +11,15 @@ class Earnings {
 
   late double estimate;
 
-  Earnings();
+  Earnings(text);
 
   Earnings.fromMarketMap(Map data, String symbol, String name)
       : date = data['earningsDate'][0]['fmt'],
         estimate = data['earningsAverage']['raw'],
         name = name,
         symbol = symbol;
+
+  Earnings.fromDocument();
 
   Earnings.fromMap(Map earning)
       : date = earning['date'],
@@ -78,7 +78,7 @@ class EarningsWidget extends StatelessWidget {
                             style: CustomTextStyles(context, value: 18)
                                 .portfolioNameStyle
                                 .copyWith(color: textColor.withOpacity(.6))),
-                        Text(earnigns.estimate == null? '...' : '~${earnigns.estimate}',
+                        Text(earnigns.estimate == null ? '...' : '~${earnigns.estimate}',
                             style: CustomTextStyles(context)
                                 .holdingValueStyle
                                 .copyWith(color: purpleVarient.withOpacity(.7), fontWeight: FontWeight.w600)),

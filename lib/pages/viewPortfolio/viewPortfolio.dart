@@ -1,18 +1,13 @@
 import 'dart:async';
 
-import 'package:valuid/models/quote/quote.dart';
 import 'package:valuid/pages/home/info.dart';
 import 'package:valuid/pages/viewPortfolio/allocations.dart';
 import 'package:valuid/pages/viewPortfolio/holdingsSection.dart';
 import 'package:valuid/services/Network/network.dart';
-import 'package:valuid/services/database/database.dart';
-import 'package:valuid/services/forex/forex_conversion.dart';
-import 'package:valuid/services/marketbeat/marketbeat.dart';
 import 'package:valuid/shared/Custome_Widgets/botomSheet/custome_Bottom_Sheet.dart';
 import 'package:valuid/shared/Custome_Widgets/divider.dart/divider.dart';
 import 'package:valuid/shared/Custome_Widgets/scaffold/cw_scaffold.dart';
 import 'package:valuid/shared/TextStyle/customTextStyles.dart';
-import 'package:valuid/shared/ads/ad_helper.dart';
 import 'package:valuid/shared/calculations/portfolio_calculations.dart';
 import 'package:valuid/shared/customPageRoute/customePageRoute.dart';
 import 'package:valuid/shared/dataObject/data_object.dart';
@@ -117,9 +112,9 @@ class _ViewPortfolioState extends State<ViewPortfolio> {
   late Timer updateFrequency;
   bool updateState = false, isOnline = true, isAdLoaded = false;
 
-  List tabs = ['Summary', 'Investments', 'Allocations', 'Projection'];
+  List tabs = ['Summary', 'Investments', 'Allocations'];
 
-  String selectedTab = 'Summary';
+  String selectedTab = 'Allocations';
 
   late BannerAd floatingBottomAd;
 

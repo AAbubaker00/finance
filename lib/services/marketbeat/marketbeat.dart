@@ -32,7 +32,7 @@ class Marketbeat {
             '${holding.symbol!.capitalizeAll().replaceAll('.L', '')}' +
             '$_sDividendsEndPoint';
 
-        PrintFunctions().printStartEndLine(_sFixedEndPoint);
+        // PrintFunctions().printStartEndLine(_sFixedEndPoint);
 
         final response = await http.Client().get(Uri.parse(_sFixedEndPoint));
 
@@ -42,10 +42,11 @@ class Marketbeat {
           // print(document.getElementsByTagName('tbody').last.children.first.children[0].text);
 
           for (var element in document.getElementsByTagName('tbody').last.children) {
+            // print(element.innerHtml);
+
             if (element.children.length == 7 && element.children[3].text.isNotEmpty) {
-              if (dividends.isEmpty) {
-                dividends.add(Dividends.fromElement(element, holding));
-              }
+              dividends.add(Dividends.fromElement(element, holding));
+              // print(dividends.length);
             }
           }
         }
@@ -210,7 +211,6 @@ class Marketbeat {
       //     (index) => QuoteObject.fromMap(parser.parse(response[index].body),
       //         s: holdings[index].symbol, e: holdings[index].exchange));
 
-
       // ignore: non_constant_identifier_names
       List a_split = [], b_split = [];
 
@@ -218,18 +218,18 @@ class Marketbeat {
       b_split = response.getRange(response.length ~/ 2, response.length).toList();
 
       for (var pairs in IterableZip([a_split, b_split])) {
-        responseJson.add(await QuoteObject().fromMap(parser.parse(pairs.first.body),
+        responseJson.add(await QuoteObject.fromMap(parser.parse(pairs.first.body),
             s: holdings[response.indexOf(pairs.first)].symbol,
             e: holdings[response.indexOf(pairs.first)].exchange));
 
-        responseJson.add(await QuoteObject().fromMap(parser.parse(pairs.last.body),
+        responseJson.add(await QuoteObject.fromMap(parser.parse(pairs.last.body),
             s: holdings[response.indexOf(pairs.last)].symbol,
             e: holdings[response.indexOf(pairs.last)].exchange));
       }
 
       if (response.length.isOdd) {
-        responseJson.add(await QuoteObject()
-            .fromMap(parser.parse(response.last.body), s: holdings.last.symbol, e: holdings.last.exchange));
+        responseJson.add(await QuoteObject.fromMap(parser.parse(response.last.body),
+            s: holdings.last.symbol, e: holdings.last.exchange));
       }
 
       sp.stop();

@@ -56,15 +56,15 @@ class _Calender extends State<Calender> {
   void initState() {
     super.initState();
 
-    floatingBottomAd = BannerAd(
-        size: AdSize.banner,
-        adUnitId: AdHelper.bannerAdUnitId,
-        listener: BannerAdListener(
-            onAdLoaded: (_) => setState(() => isAdLoaded = true),
-            onAdFailedToLoad: (_, error) => PrintFunctions().printStartEndLine(error)),
-        request: AdRequest());
+    // floatingBottomAd = BannerAd(
+    //     size: AdSize.banner,
+    //     adUnitId: AdHelper.bannerAdUnitId,
+    //     listener: BannerAdListener(
+    //         onAdLoaded: (_) => setState(() => isAdLoaded = true),
+    //         onAdFailedToLoad: (_, error) => PrintFunctions().printStartEndLine(error)),
+    //     request: AdRequest());
 
-    floatingBottomAd.load();
+    // floatingBottomAd.load();
 
     selectedMonth = months[DateTime.now().month - 1];
 
@@ -91,16 +91,21 @@ class _Calender extends State<Calender> {
   Future<bool> init() async {
     await checkStored();
 
-    if (widget.dataObject.lastCalenderUpdate == '' ||
-        DateTime.parse(widget.dataObject.lastCalenderUpdate).difference(DateTime.now()).inDays >= 5) {
-      await getDividends();
-      await getEarning();
+    // if (widget.dataObject.lastCalenderUpdate == '' ||
+    //     DateTime.parse(widget.dataObject.lastCalenderUpdate).difference(DateTime.now()).inDays >= 5) {
+    // await getDividends();
+    await getEarning();
 
-      widget.dataObject.lastCalenderUpdate = DateFormat('yyyy-MM-dd').format(DateTime.now());
-      await LocalDataSet().updateLocalData(widget.dataObject);
+    // widget.dataObject.lastCalenderUpdate = DateFormat('yyyy-MM-dd').format(DateTime.now());
+    // await LocalDataSet().updateLocalData(widget.dataObject);
+    // }
+
+    try {
+      setMonthsEvents();
+    } catch (e) {
+      print(e.toString());
     }
 
-    setMonthsEvents();
     return Future.value(true);
   }
 
@@ -114,13 +119,9 @@ class _Calender extends State<Calender> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<bool>(
-      future: widget.dataObject.dividends.isEmpty && widget.dataObject.earnings.isEmpty
-          ? init()
-          : Future.value(true),
+      future: widget.dataObject.dividends.isEmpty ? init() : Future.value(true),
       builder: (context, snapshot) {
-        if (snapshot.data == true ||
-            widget.dataObject.dividends.isNotEmpty ||
-            widget.dataObject.earnings.isNotEmpty) {
+        if (snapshot.data == true || widget.dataObject.dividends.isNotEmpty) {
           return CWScaffold(
             bottomAppBarBorderColour: true,
             appBarTitleWidget: Padding(
@@ -196,14 +197,14 @@ class _Calender extends State<Calender> {
     }
 
     for (var dividend in widget.dataObject.dividends) {
-      var eventMonthPaymentDate = months
-          .firstWhere((month) => month['index'] == DateTime.parse(dividend.date).month, orElse: () => null);
+      var eventMonthPaymentDate =
+          months.firstWhere((month) => month['index'] == DateTime.parse(dividend.date).month);
 
       eventMonthPaymentDate['events'].add(dividend);
       eventMonthPaymentDate['divTotal']++;
 
-      var eventMonthExDate = months
-          .firstWhere((month) => month['index'] == DateTime.parse(dividend.exDate).month, orElse: () => null);
+      var eventMonthExDate =
+          months.firstWhere((month) => month['index'] == DateTime.parse(dividend.exDate).month);
 
       if (eventMonthPaymentDate != null && eventMonthExDate != null) {
         var exDividend = Dividends();
@@ -227,15 +228,15 @@ class _Calender extends State<Calender> {
       }
     }
 
-    for (var earning in widget.dataObject.earnings) {
-      var eventMonthEarning = months
-          .firstWhere((month) => month['index'] == DateTime.parse(earning!.date).month, orElse: () => null);
+    // for (var earning in widget.dataObject.earnings) {
+    //   var eventMonthEarning = months
+    //       .firstWhere((month) => month['index'] == DateTime.parse(earning!.date).month, orElse: () => null);
 
-      if (eventMonthEarning != null) {
-        eventMonthEarning['events'].add(earning);
-        eventMonthEarning['earnTotal']++;
-      }
-    }
+    //   if (eventMonthEarning != null) {
+    //     eventMonthEarning['events'].add(earning);
+    //     eventMonthEarning['earnTotal']++;
+    //   }
+    // }
 
     for (var month in months) {
       month['groupedEvents'] = [];
@@ -280,8 +281,9 @@ class _Calender extends State<Calender> {
       }
     }
 
-    if (dividendHolding.length > 0)
+    if (dividendHolding.length > 0) {
       widget.dataObject.dividends = await Marketbeat().getDividends(holdings: dividendHolding);
+    }
   }
 
   getEarning() async {
@@ -289,9 +291,7 @@ class _Calender extends State<Calender> {
 
     for (var portfolio in widget.dataObject.portfolios) {
       for (var holding in portfolio.holdings) {
-        var exist = allHoldings.indexWhere((h) => h.name == holding.name);
-
-        if (exist == -1) allHoldings.add(holding);
+        widget.dataObject.earnings.addAll(holding.earnings);
       }
     }
 

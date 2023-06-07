@@ -48,7 +48,7 @@ class CustomScaffold extends StatefulWidget {
 class _CustomScaffoldState extends State<CustomScaffold> {
   GlobalKey<NavigatorState> _key = GlobalKey<NavigatorState>();
 
-  int _index = 0;
+  int _index = 1;
 
   @override
   Widget build(BuildContext context) {

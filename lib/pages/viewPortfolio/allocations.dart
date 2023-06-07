@@ -80,15 +80,18 @@ class _AllocationsState extends State<Allocations> {
                             style: CustomTextStyles(widget.dataObject.context).holdingValueStyle)
                       ],
                     ),
-                    SizedBox(
-                      height: widget.dataObject.height * 0.07,
-                      child: CustomCharts(widget.dataObject.context).createSampleData(
-                        data: diversificationCDT,
-                        dataObject: widget.dataObject,
-                        selectedIndex: diversificationSelectedIndex,
-                        centerData: diversificationCDT.isEmpty
-                            ? ''
-                            : diversificationCDT[diversificationSelectedIndex].weight!.toStringAsFixed(2),
+                    ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      child: SizedBox(
+                        height: widget.dataObject.height * 0.07,
+                        child: CustomCharts(widget.dataObject.context).createSampleData(
+                          data: diversificationCDT,
+                          dataObject: widget.dataObject,
+                          selectedIndex: diversificationSelectedIndex,
+                          centerData: diversificationCDT.isEmpty
+                              ? ''
+                              : diversificationCDT[diversificationSelectedIndex].weight!.toStringAsFixed(2),
+                        ),
                       ),
                     ),
                     Container(

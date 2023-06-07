@@ -8,12 +8,6 @@ import 'package:charts_flutter/flutter.dart' as charts;
 
 class CustomCharts {
   CustomCharts(this.context);
-  bool isPlotsLoaded = false;
-  double interval = 0.0;
-  double index = 0.0;
-  double crossPoint = 0.0;
-  // double invested = 0.0;
-  String inceptionDate = '';
   BuildContext context;
 
   charts.Color getChartColourText(int index) {
@@ -45,9 +39,7 @@ class CustomCharts {
         rightMarginSpec: charts.MarginSpec.fixedPixel(0),
         bottomMarginSpec: charts.MarginSpec.fixedPixel(0),
       ),
-      primaryMeasureAxis: new charts.PercentAxisSpec(
-        renderSpec: charts.NoneRenderSpec()
-      ),
+      primaryMeasureAxis: new charts.PercentAxisSpec(renderSpec: charts.NoneRenderSpec()),
       domainAxis: new charts.OrdinalAxisSpec(showAxisLine: false, renderSpec: new charts.NoneRenderSpec()),
       vertical: false,
     );

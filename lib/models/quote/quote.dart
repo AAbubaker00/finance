@@ -1,6 +1,9 @@
 import 'package:valuid/services/forex/forex_conversion.dart';
+import 'package:valuid/shared/earnings/earnings.dart';
 
 class QuoteObject {
+  List<Earnings> earnings = [];
+
   late String name = '';
   late String? exchange = '';
   late String? symbol = '';
@@ -48,6 +51,10 @@ class QuoteObject {
                     orElse: () => null)['short']),
         symbol = s,
         exchange = e,
+        earnings = [
+          Earnings(document.getElementsByClassName('m-0 p-0')[0].children[1].children[1].text),
+          Earnings(document.getElementsByClassName('m-0 p-0')[0].children[4].children[1].text)
+        ],
         sector = document.getElementsByClassName('m-0 p-0')[1].children[3].children[1].text,
         industry = document.getElementsByClassName('m-0 p-0')[1].children[1].children[1].text,
         subIndustry = document.getElementsByClassName('m-0 p-0')[1].children[2].children[1].text,
@@ -108,90 +115,7 @@ class QuoteObject {
             (document.getElementsByClassName('price-data-col col-31')[1].children[1].children[1].text !=
                 'N/A');
 
-  Future fromMap(var document, {String? n, String? s, String? e}) async {
-    QuoteObject q = new QuoteObject();
-    q.name = n ??
-        document
-            .getElementsByClassName('PageTitleHOne')
-            .first
-            .text
-            .replaceRange(document.getElementsByClassName('PageTitleHOne').first.text.indexOf('('),
-                document.getElementsByClassName('PageTitleHOne').first.text.length, '')
-            .toString()
-            .trim();
-    q.currency = e == null
-        ? ''
-        : (e == 'LSE'
-            ? 'GBP'
-            : ForexConversion().currencySymbols.firstWhere(
-                (currency) =>
-                    currency['symbol'] ==
-                    document.getElementsByClassName('price')[0].children.first.text.replaceRange(
-                        1, document.getElementsByClassName('price')[0].children.first.text.length, ''),
-                orElse: () => null)['short']);
-    q.symbol = s;
-    q.exchange = e;
-    q.sector = document.getElementsByClassName('m-0 p-0')[1].children[3].children[1].text;
-    q.industry = document.getElementsByClassName('m-0 p-0')[1].children[1].children[1].text;
-    q.subIndustry = document.getElementsByClassName('m-0 p-0')[1].children[2].children[1].text;
-    q.regularMarketPrice = double.parse(
-        document.getElementsByClassName('price')[0].children.first.text.replaceRange(0, 1, '').replaceAll(
-            new RegExp(
-              r'[A-Z]',
-            ),
-            ''));
-    q.regularMarketChange = double.parse(document
-        .getElementsByClassName('price')[0]
-        .children[1]
-        .text
-        .replaceRange(0, 1, '')
-        .split(' ')
-        .first
-        .replaceRange(
-            document
-                .getElementsByClassName('price')[0]
-                .children[1]
-                .text
-                .replaceRange(0, 1, '')
-                .split(' ')
-                .first
-                .indexOf('('),
-            document
-                .getElementsByClassName('price')[0]
-                .children[1]
-                .text
-                .replaceRange(0, 1, '')
-                .split(' ')
-                .first
-                .length,
-            '')
-        .trim());
-    q.regularMarketChangePercent = double.parse(document
-        .getElementsByClassName('price')[0]
-        .children[1]
-        .text
-        .replaceRange(0, 1, '')
-        .split(' ')
-        .first
-        .replaceRange(
-            0,
-            document
-                .getElementsByClassName('price')[0]
-                .children[1]
-                .text
-                .replaceRange(0, 1, '')
-                .split(' ')
-                .first
-                .indexOf('('),
-            '')
-        .replaceAll('(', '')
-        .replaceAll(')', '')
-        .replaceAll('%', ''));
-    q.dividendSupport =
-        (document.getElementsByClassName('price-data-col col-31')[1].children[1].children[1].text != 'N/A');
-    return q;
-  }
-
+ 
   Map quoteToMap(QuoteObject holding) => {
         'symbol': holding.symbol,
         'quantity': holding.quantity,
