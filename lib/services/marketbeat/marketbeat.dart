@@ -63,6 +63,7 @@ class Marketbeat {
           dividend.exDate.isNotEmpty &&
           dividend.date != '' &&
           dividend.exDate != '') {
+
         var inputExDate = inputFormat.parse(dividend.exDate);
         dividend.exDate = outputFormat.format(inputExDate);
 
@@ -228,8 +229,8 @@ class Marketbeat {
       }
 
       if (response.length.isOdd) {
-        responseJson.add(await QuoteObject.fromMap(parser.parse(response.last.body),
-            s: holdings.last.symbol, e: holdings.last.exchange));
+        responseJson.add(await QuoteObject
+            .fromMap(parser.parse(response.last.body), s: holdings.last.symbol, e: holdings.last.exchange));
       }
 
       sp.stop();
