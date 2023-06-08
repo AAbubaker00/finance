@@ -117,7 +117,7 @@ class DividendsWidget extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 6.0),
                         child: Text(dividend.name.toString().removeStr(),
-                            style: CustomTextStyles(context, value: 18).portfolioNameStyle),
+                            style: CustomTextStyles(context, value: 19).portfolioNameStyle),
                       ),
                       Flexible(
                         child: Row(

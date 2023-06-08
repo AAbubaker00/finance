@@ -50,14 +50,14 @@ class _AllocationsState extends State<Allocations> {
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
                 decoration: BoxDecoration(
                     color: summaryColour,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.15),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
+                    // boxShadow: [
+                    //   BoxShadow(
+                    //     color: Colors.grey.withOpacity(0.12),
+                    //     spreadRadius: 5,
+                    //     blurRadius: 7,
+                    //     offset: Offset(0, 3), // changes position of shadow
+                    //   ),
+                    // ],
                     border: Border(bottom: BorderSide(width: .7, color: seperator.withOpacity(.7)))),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,7 +136,7 @@ class _AllocationsState extends State<Allocations> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.only(
-                                    top: diverOption == diversificationCDT.first ? 8 : 0,
+                                    top: diverOption == diversificationCDT.first ? 10 : 0,
                                     bottom: diverOption == diversificationCDT.last ? 10 : 0),
                                 child: InkWell(
                                     borderRadius: BorderRadius.circular(circularRadius),

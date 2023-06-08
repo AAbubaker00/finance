@@ -52,17 +52,17 @@ class DataObject {
       }
     }
 
-    List<Map> earningsToMap = [];
+    // List<Map> earningsToMap = [];
 
-    if (_data.earnings.isNotEmpty) {
-      for (var earning in _data.earnings) {
-        earningsToMap.add(Earnings().earningsToMap(earning!));
-      }
-    }
+    // if (_data.earnings.isNotEmpty) {
+    //   for (var earning in _data.earnings) {
+    //     earningsToMap.add(Earnings().earningsToMap(earning!));
+    //   }
+    // }
 
     return {
       'dividends': dividendsToMap,
-      'earnings': earningsToMap,
+      // 'earnings': earningsToMap,
       'lastCalenderUpdate': _data.lastCalenderUpdate
     };
   }

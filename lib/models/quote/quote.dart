@@ -51,10 +51,32 @@ class QuoteObject {
                     orElse: () => null)['short']),
         symbol = s,
         exchange = e,
-        earnings = [
-          Earnings(document.getElementsByClassName('m-0 p-0')[0].children[1].children[1].text),
-          Earnings(document.getElementsByClassName('m-0 p-0')[0].children[4].children[1].text)
-        ],
+        // earnings = [
+        //   Earnings().earningsfromDocument(
+        //       date: document.getElementsByClassName('m-0 p-0')[0].children[1].children[1].text,
+        //       s: s,
+        //       n: n ??
+        //           document
+        //               .getElementsByClassName('PageTitleHOne')
+        //               .first
+        //               .text
+        //               .replaceRange(document.getElementsByClassName('PageTitleHOne').first.text.indexOf('('),
+        //                   document.getElementsByClassName('PageTitleHOne').first.text.length, '')
+        //               .toString()
+        //               .trim()),
+        //   Earnings().earningsfromDocument(
+        //       date: document.getElementsByClassName('m-0 p-0')[0].children[4].children[1].text,
+        //       s: s,
+        //       n: n ??
+        //           document
+        //               .getElementsByClassName('PageTitleHOne')
+        //               .first
+        //               .text
+        //               .replaceRange(document.getElementsByClassName('PageTitleHOne').first.text.indexOf('('),
+        //                   document.getElementsByClassName('PageTitleHOne').first.text.length, '')
+        //               .toString()
+        //               .trim()),
+        // ],
         sector = document.getElementsByClassName('m-0 p-0')[1].children[3].children[1].text,
         industry = document.getElementsByClassName('m-0 p-0')[1].children[1].children[1].text,
         subIndustry = document.getElementsByClassName('m-0 p-0')[1].children[2].children[1].text,
@@ -115,7 +137,8 @@ class QuoteObject {
             (document.getElementsByClassName('price-data-col col-31')[1].children[1].children[1].text !=
                 'N/A');
 
- 
+  formatDate() {}
+
   Map quoteToMap(QuoteObject holding) => {
         'symbol': holding.symbol,
         'quantity': holding.quantity,

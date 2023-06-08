@@ -1,3 +1,4 @@
+import 'package:valuid/shared/TextStyle/customTextStyles.dart';
 import 'package:valuid/shared/themes/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -72,17 +73,29 @@ class _MainLoadingState extends State<MainLoading> {
                   child: ClipRRect(child: Image.asset('assets/icons/onvestingLoadLogo.png', scale: 10)))),
           Align(
             alignment: Alignment.bottomCenter,
-            child: Container(
-              padding: EdgeInsets.only(bottom: 50),
-              width: 140,
-              child: ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                child: LinearProgressIndicator(
-                  backgroundColor: backgroundColour,
-                  minHeight: 7,
-                  color: blueVarient,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                DefaultTextStyle(
+                    child: Text(
+                      'Connecting',
+                    ),
+                    style:
+                        CustomTextStyles(context).portfolioNameStyle.copyWith(fontWeight: FontWeight.w600)),
+                SizedBox(height: 7),
+                Container(
+                  padding: EdgeInsets.only(bottom: 50),
+                  width: 200,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    child: LinearProgressIndicator(
+                      backgroundColor: backgroundColourVarient,
+                      color: blueVarient,
+                      minHeight: 6,     
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
           ),
         ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const Color backgroundColour = Color(0xFFF3F3F5);
-const Color backgroundColourVarient = Color(0xFFd0d0d7);
+const Color backgroundColourVarient = Color(0xFFe5e5e9);
 Color iconColour = Color(0xFF000000).withOpacity(.87);
 Color summaryColour = Color(0xFFFDFDFD);
 Color primary = Color(0xFFFDFDFD);

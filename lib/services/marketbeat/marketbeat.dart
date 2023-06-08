@@ -63,7 +63,6 @@ class Marketbeat {
           dividend.exDate.isNotEmpty &&
           dividend.date != '' &&
           dividend.exDate != '') {
-
         var inputExDate = inputFormat.parse(dividend.exDate);
         dividend.exDate = outputFormat.format(inputExDate);
 
@@ -204,42 +203,39 @@ class Marketbeat {
       Stopwatch sp = Stopwatch();
       sp.start();
 
-      List<QuoteObject> responseJson = [];
+      // List<QuoteObject> responseJson = [];
 
-      // List<QuoteObject> responseJson
-      // = List.generate(
-      //     response.length,
-      //     (index) => QuoteObject.fromMap(parser.parse(response[index].body),
-      //         s: holdings[index].symbol, e: holdings[index].exchange));
-
+      List<QuoteObject> responseJson = List.generate(
+          response.length,
+          (index) => QuoteObject.fromMap(parser.parse(response[index].body),
+              s: holdings[index].symbol, e: holdings[index].exchange));
+      
       // ignore: non_constant_identifier_names
-      List a_split = [], b_split = [];
+      // List a_split = [], b_split = [];
 
-      a_split = response.getRange(0, response.length ~/ 2).toList();
-      b_split = response.getRange(response.length ~/ 2, response.length).toList();
+      // a_split = response.getRange(0, response.length ~/ 2).toList();
+      // b_split = response.getRange(response.length ~/ 2, response.length).toList();
 
-      for (var pairs in IterableZip([a_split, b_split])) {
-        responseJson.add(await QuoteObject.fromMap(parser.parse(pairs.first.body),
-            s: holdings[response.indexOf(pairs.first)].symbol,
-            e: holdings[response.indexOf(pairs.first)].exchange));
+      // for (var pairs in IterableZip([a_split, b_split])) {
+      //   responseJson.add(await QuoteObject.fromMap(parser.parse(pairs.first.body),
+      //       s: holdings[response.indexOf(pairs.first)].symbol,
+      //       e: holdings[response.indexOf(pairs.first)].exchange));
 
-        responseJson.add(await QuoteObject.fromMap(parser.parse(pairs.last.body),
-            s: holdings[response.indexOf(pairs.last)].symbol,
-            e: holdings[response.indexOf(pairs.last)].exchange));
-      }
+      //   responseJson.add(await QuoteObject.fromMap(parser.parse(pairs.last.body),
+      //       s: holdings[response.indexOf(pairs.last)].symbol,
+      //       e: holdings[response.indexOf(pairs.last)].exchange));
+      // }
 
-      if (response.length.isOdd) {
-        responseJson.add(await QuoteObject
-            .fromMap(parser.parse(response.last.body), s: holdings.last.symbol, e: holdings.last.exchange));
-      }
+      // if (response.length.isOdd) {
+      //   responseJson.add(await QuoteObject
+      //       .fromMap(parser.parse(response.last.body), s: holdings.last.symbol, e: holdings.last.exchange));
+      // }
 
       sp.stop();
       print(sp.elapsedMilliseconds);
 
       return responseJson;
     } catch (e) {
-      // TODO
-
       PrintFunctions().printError('getMarketbeatQuoteList: $e');
       return [QuoteObject()];
     }

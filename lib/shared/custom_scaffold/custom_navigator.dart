@@ -48,7 +48,7 @@ class CustomScaffold extends StatefulWidget {
 class _CustomScaffoldState extends State<CustomScaffold> {
   GlobalKey<NavigatorState> _key = GlobalKey<NavigatorState>();
 
-  int _index = 1;
+  int _index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +128,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                       color: _index == 1 ? blueVarient : navIconColour),
                   Column(children: [
                     SizedBox(height: 5),
-                    Text('Calender',
+                    Text('Dividends',
                         style: CustomTextStyles(context, isChange: (_index == 1)).deleteTextStyle)
                   ])
                 ]),

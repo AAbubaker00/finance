@@ -3,6 +3,7 @@ import 'package:valuid/shared/Custome_Widgets/cards/eventContainer%20.dart';
 import 'package:valuid/shared/TextStyle/customTextStyles.dart';
 import 'package:valuid/shared/themes/themes.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Earnings {
   late String date;
@@ -11,7 +12,7 @@ class Earnings {
 
   late double estimate;
 
-  Earnings(text);
+  Earnings();
 
   Earnings.fromMarketMap(Map data, String symbol, String name)
       : date = data['earningsDate'][0]['fmt'],
@@ -19,7 +20,18 @@ class Earnings {
         name = name,
         symbol = symbol;
 
-  Earnings.fromDocument();
+  Earnings earningsfromDocument({required date, required s, required n}) {
+    var inputFormat = DateFormat('MM/dd/yyyy');
+    var outputFormat = DateFormat('yyyy-MM-dd');
+
+    Earnings e = new Earnings();
+    e.date = outputFormat.format(inputFormat.parse(date));
+    e.symbol = s;
+
+    return e;
+  }
+
+  // Earnings.fromJson(Map jsonEarnings): symbol = json
 
   Earnings.fromMap(Map earning)
       : date = earning['date'],

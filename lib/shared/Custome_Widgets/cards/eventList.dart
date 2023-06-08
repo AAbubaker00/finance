@@ -25,10 +25,9 @@ class EventList extends StatelessWidget {
                           color: summaryColour,
                           padding: EdgeInsets.symmetric(vertical: 10),
                           child: Row(
-                            
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right: 15.0),
+                                padding: const EdgeInsets.only(right: 7.0),
                                 child: Text(
                                     '${CustomDateFormatter().formatDateWeekdays(DateTime.parse(groupedEvent['date']).toString())}',
                                     style: CustomTextStyles(context).portfolioNameStyle.copyWith(
@@ -38,7 +37,21 @@ class EventList extends StatelessWidget {
                                             ? textColor.withOpacity(.5)
                                             : textColor)),
                               ),
-                              Flexible(child: CustomDivider(color: null,))
+                              Flexible(
+                                  child: Row(
+                                    children: [
+                                      Flexible(
+                                        child: CustomDivider(),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 7.0),
+                                        child: Text(
+                                          'Events: ' + groupedEvent['events'].length.toString(),
+                                          style: CustomTextStyles(context).holdingSubValueStyle,
+                                        ),
+                                      )
+                                    ],
+                                  ))
                             ],
                           )),
                       sliver: SliverList(
@@ -56,7 +69,9 @@ class EventList extends StatelessWidget {
                                           ? Container()
                                           : Padding(
                                               padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                                              child: CustomDivider(color: null,),
+                                              child: CustomDivider(
+                                                color: null,
+                                              ),
                                             ),
                                     ],
                                   ),

@@ -8,6 +8,7 @@ import 'package:valuid/shared/Custome_Widgets/botomSheet/custome_Bottom_Sheet.da
 import 'package:valuid/shared/Custome_Widgets/divider.dart/divider.dart';
 import 'package:valuid/shared/Custome_Widgets/scaffold/cw_scaffold.dart';
 import 'package:valuid/shared/TextStyle/customTextStyles.dart';
+import 'package:valuid/shared/ads/ad_helper.dart';
 import 'package:valuid/shared/calculations/portfolio_calculations.dart';
 import 'package:valuid/shared/customPageRoute/customePageRoute.dart';
 import 'package:valuid/shared/dataObject/data_object.dart';
@@ -90,15 +91,15 @@ class _ViewPortfolioState extends State<ViewPortfolio> {
   void initState() {
     super.initState();
 
-    // floatingBottomAd = BannerAd(
-    //     size: AdSize.banner,
-    //     adUnitId: AdHelper.bannerAdUnitId,
-    //     listener: BannerAdListener(
-    //         onAdLoaded: (_) => setState(() => isAdLoaded = true),
-    //         onAdFailedToLoad: (_, error) => PrintFunctions().printStartEndLine(error)),
-    //     request: AdRequest());
+    floatingBottomAd = BannerAd(
+        size: AdSize.banner,
+        adUnitId: AdHelper.bannerAdUnitId,
+        listener: BannerAdListener(
+            onAdLoaded: (_) => setState(() => isAdLoaded = true),
+            onAdFailedToLoad: (_, error) => PrintFunctions().printStartEndLine(error)),
+        request: AdRequest());
 
-    // floatingBottomAd.load();
+    floatingBottomAd.load();
 
     updateFrequency = Timer.periodic(Duration(seconds: 10), (timer) {
       updateState == false
@@ -114,7 +115,7 @@ class _ViewPortfolioState extends State<ViewPortfolio> {
 
   List tabs = ['Summary', 'Investments', 'Allocations'];
 
-  String selectedTab = 'Allocations';
+  String selectedTab = 'Summary';
 
   late BannerAd floatingBottomAd;
 

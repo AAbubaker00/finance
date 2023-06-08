@@ -80,7 +80,7 @@ class _WrapperState extends State<Wrapper> {
   }
 
   startTimer() {
-    timer = Timer(Duration(seconds: 3), () {
+    timer = Timer(Duration(seconds: 300), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (ctxt) {
         return Login();
       }));

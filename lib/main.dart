@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
 
+
     return FutureBuilder(
       future: Firebase.initializeApp(),
       builder: (context, snapshot) {
@@ -75,7 +76,7 @@ class MyApp extends StatelessWidget {
                 backgroundColor: Colors.transparent,
               )),
               debugShowCheckedModeBanner: false,
-              home: Loading());
+              home: MainLoading());
         }
       },
     );

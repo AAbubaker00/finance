@@ -81,7 +81,7 @@ class _Calender extends State<Calender> {
 
         widget.dataObject.lastCalenderUpdate = jsonlocalCalenderEvents['lastCalenderUpdate'];
         widget.dataObject.dividends = Dividends().getMapToDividendList(jsonlocalCalenderEvents['dividends']);
-        widget.dataObject.earnings = Earnings().getMapToEarningsList(jsonlocalCalenderEvents['earnings']);
+        // widget.dataObject.earnings = Earnings().getMapToEarningsList(jsonlocalCalenderEvents['earnings']);
       }
     } catch (e) {
       print(e.toString());
@@ -91,14 +91,16 @@ class _Calender extends State<Calender> {
   Future<bool> init() async {
     await checkStored();
 
-    // if (widget.dataObject.lastCalenderUpdate == '' ||
-    //     DateTime.parse(widget.dataObject.lastCalenderUpdate).difference(DateTime.now()).inDays >= 5) {
-    // await getDividends();
-    await getEarning();
+    print(widget.dataObject.lastCalenderUpdate);
 
-    // widget.dataObject.lastCalenderUpdate = DateFormat('yyyy-MM-dd').format(DateTime.now());
-    // await LocalDataSet().updateLocalData(widget.dataObject);
-    // }
+    if (widget.dataObject.lastCalenderUpdate == '' ||
+        DateTime.parse(widget.dataObject.lastCalenderUpdate).difference(DateTime.now()).inDays >= 5) {
+      await getDividends();
+      // await getEarning();
+
+      widget.dataObject.lastCalenderUpdate = DateFormat('yyyy-MM-dd').format(DateTime.now());
+      await LocalDataSet().updateLocalData(widget.dataObject);
+    }
 
     try {
       setMonthsEvents();
@@ -286,16 +288,16 @@ class _Calender extends State<Calender> {
     }
   }
 
-  getEarning() async {
-    List<QuoteObject> allHoldings = [];
+  // getEarning() async {
+  //   List<QuoteObject> allHoldings = [];
 
-    for (var portfolio in widget.dataObject.portfolios) {
-      for (var holding in portfolio.holdings) {
-        widget.dataObject.earnings.addAll(holding.earnings);
-      }
-    }
+  //   for (var portfolio in widget.dataObject.portfolios) {
+  //     for (var holding in portfolio.holdings) {
+  //       widget.dataObject.earnings.addAll(holding.earnings);
+  //     }
+  //   }
 
-    if (allHoldings.length > 0)
-      widget.dataObject.earnings = (await YahooApiService().getYahooCalenderEvents(allHoldings))!;
-  }
+  //   if (allHoldings.length > 0)
+  //     widget.dataObject.earnings = (await YahooApiService().getYahooCalenderEvents(allHoldings))!;
+  // }
 }
