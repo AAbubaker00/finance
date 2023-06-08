@@ -1,5 +1,7 @@
 
 
+// ignore_for_file: must_be_immutable, unnecessary_null_comparison
+
 import 'package:valuid/pages/community/postCard.dart';
 import 'package:valuid/services/database/database.dart';
 import 'package:valuid/shared/Custome_Widgets/ListView/cw_listview.dart';
@@ -128,7 +130,7 @@ class _ReportState extends State<Report> {
           CWApplyButton(
             function: () async {
               if (_formKey.currentState!.validate() && reason != '') {
-                if (widget.comment == null || widget.comment.isEmpty) {
+                if (widget.comment.isEmpty) {
                   widget.post.reports.add({'reason': reason});
                 } else {
                   widget.post.comments

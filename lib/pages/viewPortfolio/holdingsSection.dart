@@ -156,6 +156,5 @@ class _HoldingsSectionState extends State<HoldingsSection> {
         ),
       ),
     );
-    ;
   }
 }

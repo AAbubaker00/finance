@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_null_comparison
+// ignore_for_file: unnecessary_null_comparison, deprecated_member_use
 
 import 'dart:ui';
 
@@ -63,7 +63,7 @@ class CustomNavigator extends StatefulWidget {
 class _CustomNavigatorState extends State<CustomNavigator> implements WidgetsBindingObserver {
   late GlobalKey<NavigatorState> _navigator;
 
-  void _setNavigator() => _navigator = widget.navigatorKey ?? GlobalObjectKey<NavigatorState>(this);
+  void _setNavigator() => _navigator = widget.navigatorKey;
 
   @override
   Future<bool> didPushRouteInformation(RouteInformation routeInformation) {
@@ -86,7 +86,7 @@ class _CustomNavigatorState extends State<CustomNavigator> implements WidgetsBin
       // is in [widget.initialRoute].
       initialRoute: WidgetsBinding.instance.window.defaultRouteName != Navigator.defaultRouteName
           ? WidgetsBinding.instance.window.defaultRouteName
-          : widget.initialRoute ?? WidgetsBinding.instance.window.defaultRouteName,
+          : widget.initialRoute,
       onGenerateRoute: _onGenerateRoute,
       onUnknownRoute: _onUnknownRoute,
       observers: widget.navigatorObservers,
@@ -174,13 +174,11 @@ class _CustomNavigatorState extends State<CustomNavigator> implements WidgetsBin
 
   @override
   Future<AppExitResponse> didRequestAppExit() {
-    // TODO: implement didRequestAppExit
     throw UnimplementedError();
   }
 
   @override
   void didChangeLocales(List<Locale>? locales) {
-    // TODO: implement didChangeLocales
   }
 }
 

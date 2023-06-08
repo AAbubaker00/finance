@@ -1,9 +1,8 @@
+// ignore_for_file: unused_field, unused_local_variable
+
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:html/parser.dart' as parser;
-import 'package:valuid/models/stocktwits/stocktwits_object.dart';
-import 'package:valuid/shared/printFunctions/custom_Print_Functions.dart';
 
 class StockTwits {
   final _sFixedEndPoint =

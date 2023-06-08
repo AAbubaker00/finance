@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:valuid/models/user/user.dart';
 import 'package:valuid/services/Login/authentication.dart';
-import 'package:valuid/services/marketbeat/marketbeat.dart';
 import 'package:valuid/shared/Custome_Widgets/loading/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';

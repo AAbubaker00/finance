@@ -3,7 +3,6 @@ import 'dart:core';
 
 import 'package:valuid/models/account/account.dart';
 import 'package:valuid/models/portfolio/portfolio.dart';
-import 'package:valuid/models/quote/quote.dart';
 import 'package:valuid/models/user/user.dart';
 import 'package:valuid/pages/calender/calender.dart';
 import 'package:valuid/pages/login_register/login.dart';
@@ -12,7 +11,6 @@ import 'package:valuid/pages/search/search.dart';
 import 'package:valuid/pages/viewPortfolio/viewPortfolio.dart';
 import 'package:valuid/services/database/database.dart';
 import 'package:valuid/services/forex/forex_conversion.dart';
-import 'package:valuid/services/marketbeat/marketbeat.dart';
 import 'package:valuid/shared/Custome_Widgets/botomSheet/custome_Bottom_Sheet.dart';
 import 'package:valuid/shared/Custome_Widgets/loading/loading.dart';
 import 'package:valuid/shared/calculations/portfolio_calculations.dart';

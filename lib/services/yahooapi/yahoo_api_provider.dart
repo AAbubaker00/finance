@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'dart:convert';
 import 'package:valuid/extensions/stringExt.dart';
 import 'package:valuid/models/quote/quote.dart';
@@ -6,7 +8,6 @@ import 'package:valuid/shared/earnings/earnings.dart';
 import 'package:valuid/shared/printFunctions/custom_Print_Functions.dart';
 import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' as parser;
-import 'package:intl/intl.dart';
 
 class YahooApiService {
   String _sQuoteEndPoint = 'https://query1.finance.yahoo.com/v7/finance/quote?symbols=';

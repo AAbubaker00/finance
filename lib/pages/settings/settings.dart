@@ -144,7 +144,7 @@ class _SettingsState extends State<Settings> {
               fireb.User? _u = fireb.FirebaseAuth.instance.currentUser;
 
               try {
-                if (_u!.providerData.isNotEmpty && _u!.providerData[0].providerId == 'google.com') {
+                if (_u!.providerData.isNotEmpty && _u.providerData[0].providerId == 'google.com') {
                   await AuthService().googleLogout();
                 } else {
                   await AuthService().signOut();

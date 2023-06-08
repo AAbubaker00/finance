@@ -5,7 +5,6 @@ import 'package:valuid/shared/printFunctions/custom_Print_Functions.dart';
 import 'package:html/parser.dart' as parser;
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
-import 'package:collection/collection.dart';
 
 String _sFixedEndPoint = 'https://www.marketbeat.com/stocks/';
 String _sDividendsEndPoint = '/dividend/';
@@ -183,8 +182,6 @@ class Marketbeat {
         return QuoteObject.fromMap(document, s: result['symbol'], e: result['exchDisp'], n: result['name']);
       }
     } catch (e) {
-      // TODO
-
       PrintFunctions().printError('getMarketbeatQuote: $e');
 
       return null;

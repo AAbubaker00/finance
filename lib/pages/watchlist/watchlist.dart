@@ -1,8 +1,9 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'dart:async';
 
 import 'package:valuid/models/watchlist/watchlist.dart';
 import 'package:valuid/services/Network/network.dart';
-import 'package:valuid/services/yahooapi/yahoo_api_provider.dart';
 import 'package:valuid/shared/Custome_Widgets/loading/loading.dart';
 import 'package:valuid/shared/Custome_Widgets/scaffold/cw_scaffold.dart';
 import 'package:valuid/shared/TextStyle/customTextStyles.dart';

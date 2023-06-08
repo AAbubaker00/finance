@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:valuid/extensions/stringExt.dart';
 import 'package:valuid/shared/Custome_Widgets/cards/eventContainer%20.dart';
 import 'package:valuid/shared/TextStyle/customTextStyles.dart';

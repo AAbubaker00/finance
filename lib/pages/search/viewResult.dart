@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:valuid/models/quote/quote.dart';
 import 'package:valuid/services/database/database.dart';
 import 'package:valuid/services/marketbeat/marketbeat.dart';

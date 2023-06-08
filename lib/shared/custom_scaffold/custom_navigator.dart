@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison, body_might_complete_normally_nullable
+
 import 'package:valuid/shared/TextStyle/customTextStyles.dart';
 import 'package:valuid/shared/custom_scaffold/custom_scaffold.dart';
 import 'package:valuid/shared/dataObject/data_object.dart';
